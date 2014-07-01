@@ -1,0 +1,359 @@
+﻿<!doctype html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PrettyPrintState | TypeDoc Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">TypeDoc Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-filter">
+					<input type="checkbox" id="tsd-filter-inherited" checked />
+					<label for="tsd-filter-inherited">Inherited</label>
+					<input type="checkbox" id="tsd-filter-private" checked />
+					<label for="tsd-filter-private">Private</label>
+					<input type="checkbox" id="tsd-filter-externals" checked />
+					<label for="tsd-filter-externals">Externals</label>
+					<input type="checkbox" id="tsd-filter-only-exported" />
+					<label for="tsd-filter-only-exported">Only exported</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li>
+					<a href="../globals.html">TypeDoc Documentation</a>
+				</li>
+				<li>
+					<a href="../modules/typedoc.html">TypeDoc</a>
+				</li>
+				<li>
+					<a href="../modules/typedoc.output.html">Output</a>
+				</li>
+				<li>
+					<a href="typedoc.output.prettyprintstate.html">PrettyPrintState</a>
+				</li>
+			</ul>
+			<h1>Enumeration PrettyPrintState</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8">
+			<p>List of states the parser of <a href="../classes/typedoc.output.prettyprintplugin.html">PrettyPrintPlugin</a> can be in.</p>
+			<section class="tsd-member-index">
+				<h2>Index</h2>
+				<section class="tsd-member-index-group tsd-is-not-exported">
+					<h3>Enumeration members</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="typedoc.output.prettyprintstate.html#comment" class="tsd-kind-icon">Comment</a></li>
+						<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="typedoc.output.prettyprintstate.html#default" class="tsd-kind-icon">Default</a></li>
+						<li class="tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported"><a href="typedoc.output.prettyprintstate.html#pre" class="tsd-kind-icon">Pre</a></li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-member-group tsd-is-not-exported">
+				<h2>Enumeration members</h2>
+				<section class="tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="comment" class="anchor"></a>
+					<h3>Comment</h3>
+					<div class="tsd-signature tsd-kind-icon">Comment<span class="tsd-signature-symbols">:</span> <a href="typedoc.output.prettyprintstate.html" class="tsd-signature-type">PrettyPrintState</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/output/plugins/PrettyPrintPlugin.ts:14</li>
+						</ul>
+					</aside>
+					<p>Comment state, the parser waits for a comment closing tag.</p>
+				</section>
+				<section class="tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="default" class="anchor"></a>
+					<h3>Default</h3>
+					<div class="tsd-signature tsd-kind-icon">Default<span class="tsd-signature-symbols">:</span> <a href="typedoc.output.prettyprintstate.html" class="tsd-signature-type">PrettyPrintState</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/output/plugins/PrettyPrintPlugin.ts:9</li>
+						</ul>
+					</aside>
+					<p>Default state of the parser. Empty lines will be removed and indention will be adjusted.</p>
+				</section>
+				<section class="tsd-member tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+					<a name="pre" class="anchor"></a>
+					<h3>Pre</h3>
+					<div class="tsd-signature tsd-kind-icon">Pre<span class="tsd-signature-symbols">:</span> <a href="typedoc.output.prettyprintstate.html" class="tsd-signature-type">PrettyPrintState</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/output/plugins/PrettyPrintPlugin.ts:19</li>
+						</ul>
+					</aside>
+					<p>Pre state, the parser waits for the closing tag of the current pre block.</p>
+				</section>
+			</section>
+		</div>
+		<div class="offset-1 col-3">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../globals.html"><em><wbr>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_assert_.html">"assert"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_buffer_.html">"buffer"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_child_process_.html">"child_<wbr>process"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_cluster_.html">"cluster"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_crypto_.html">"crypto"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_dgram_.html">"dgram"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_dns_.html">"dns"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_domain_.html">"domain"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_events_.html">"events"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_fs_.html">"fs"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_highlight_js_.html">"highlight.js"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_http_.html">"http"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_https_.html">"https"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_minimatch_.html">"minimatch"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_net_.html">"net"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_os_.html">"os"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_path_.html">"path"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_punycode_.html">"punycode"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_querystring_.html">"querystring"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_readline_.html">"readline"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_repl_.html">"repl"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_stream_.html">"stream"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_tls_.html">"tls"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_tty_.html">"tty"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_url_.html">"url"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_util_.html">"util"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_vm_.html">"vm"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_zlib_.html">"zlib"</a>
+					</li>
+					<li class=" tsd-kind-container tsd-is-external">
+						<a href="../modules/nodejs.html">NodeJS</a>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="../modules/typedoc.html">Type<wbr>Doc</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
+					</li>
+					<li class="current tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
+						<ul>
+						</ul>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="../modules/typescript.html">Type<wbr>Script</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary">
+				<ul>
+					<li class="current tsd-kind-enum tsd-parent-kind-container tsd-is-not-exported">
+						<a href="typedoc.output.prettyprintstate.html" class="tsd-kind-icon">Pretty<wbr>Print<wbr>State</a>
+						<ul>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="typedoc.output.prettyprintstate.html#comment" class="tsd-kind-icon">Comment</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="typedoc.output.prettyprintstate.html#default" class="tsd-kind-icon">Default</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum tsd-is-not-exported">
+								<a href="typedoc.output.prettyprintstate.html#pre" class="tsd-kind-icon">Pre</a>
+							</li>
+						</ul>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="../interfaces/typedoc.output.ihandlebartemplate.html" class="tsd-kind-icon">IHandlebar<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplate<wbr>Mapping</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.assetsplugin.html" class="tsd-kind-icon">Assets<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.baseplugin.html" class="tsd-kind-icon">Base<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.basetheme.html" class="tsd-kind-icon">Base<wbr>Theme</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.defaulttheme.html" class="tsd-kind-icon">Default<wbr>Theme</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">Javascript<wbr>Index<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.layoutplugin.html" class="tsd-kind-icon">Layout<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.markedplugin.html" class="tsd-kind-icon">Marked<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.navigationplugin.html" class="tsd-kind-icon">Navigation<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.outputevent.html" class="tsd-kind-icon">Output<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.outputpageevent.html" class="tsd-kind-icon">Output<wbr>Page<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.partialsplugin.html" class="tsd-kind-icon">Partials<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.prettyprintplugin.html" class="tsd-kind-icon">Pretty<wbr>Print<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.output.renderer.html" class="tsd-kind-icon">Renderer</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../modules/typedoc.output.html#highlighttypescript" class="tsd-kind-icon">highlight<wbr>Type<wbr>Script</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

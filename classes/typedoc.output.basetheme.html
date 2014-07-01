@@ -1,1081 +1,559 @@
 ﻿<!doctype html>
 <html class="no-js">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>BaseTheme | TypeDoc Documentation</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../assets/css/main.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BaseTheme | TypeDoc Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-
 <header>
-    <div class="tsd-page-toolbar">
-        <div class="container">
-            <div class="table-wrap">
-                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
-                    <div class="field">
-                        <label for="tsd-search-field">Search</label>
-                        <input id="tsd-search-field" type="text" />
-                    </div>
-
-                    <ul class="results">
-                        <li class="state loading">Preparing search index...</li>
-                        <li class="state failure">The search index is not available</li>
-                    </ul>
-
-                    <a href="../index.html" class="title">TypeDoc Documentation</a>
-                </div>
-
-                <div class="table-cell" id="tsd-filter">
-                    <input type="checkbox" id="tsd-filter-inherited" checked />
-                    <label for="tsd-filter-inherited">Inherited</label>
-
-                    <input type="checkbox" id="tsd-filter-private" checked />
-                    <label for="tsd-filter-private">Private</label>
-
-                    <input type="checkbox" id="tsd-filter-externals" checked />
-                    <label for="tsd-filter-externals">Externals</label>
-
-                    <input type="checkbox" id="tsd-filter-only-exported" />
-                    <label for="tsd-filter-only-exported">Only exported</label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tsd-page-title">
-        <div class="container">
-            <ul class="breadcrumb">
-                
-    
-    
-    
-    <li>
-        <a href="../modules/typedoc.html">TypeDoc</a>
-    </li>
-
-    <li>
-        <a href="../modules/typedoc.output.html">Output</a>
-    </li>
-
-    <li>
-        <a href="typedoc.output.basetheme.html">BaseTheme</a>
-    </li>
-
-            </ul>
-            <h1>Class BaseTheme</h1>
-        </div>
-    </div>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">TypeDoc Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-filter">
+					<input type="checkbox" id="tsd-filter-inherited" checked />
+					<label for="tsd-filter-inherited">Inherited</label>
+					<input type="checkbox" id="tsd-filter-private" checked />
+					<label for="tsd-filter-private">Private</label>
+					<input type="checkbox" id="tsd-filter-externals" checked />
+					<label for="tsd-filter-externals">Externals</label>
+					<input type="checkbox" id="tsd-filter-only-exported" />
+					<label for="tsd-filter-only-exported">Only exported</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li>
+					<a href="../globals.html">TypeDoc Documentation</a>
+				</li>
+				<li>
+					<a href="../modules/typedoc.html">TypeDoc</a>
+				</li>
+				<li>
+					<a href="../modules/typedoc.output.html">Output</a>
+				</li>
+				<li>
+					<a href="typedoc.output.basetheme.html">BaseTheme</a>
+				</li>
+			</ul>
+			<h1>Class BaseTheme</h1>
+		</div>
+	</div>
 </header>
-
 <div class="container container-main">
-    <div class="row">
-        <div class="col-8">
-            
-    
-    <p>Base class of all themes.</p>
-
-
-
-
-    <p>A theme defines the logical and graphical output of a documentation. Themes are
-directories containing a <code>theme.js</code> file defining a <a href="typedoc.output.basetheme.html">BaseTheme</a> subclass and a
-series of subdirectories containing templates and assets. You can select a theme
-through the <code>--theme &lt;path/to/theme&gt;</code> commandline argument.</p>
-<p>The theme class controls which files will be created through the <a href="typedoc.output.basetheme.html#geturls">BaseTheme.getUrls</a>
-function. It returns an array of <a href="typedoc.models.urlmapping.html">UrlMapping</a> instances defining the target files, models
-and templates to use. Additionally themes can subscribe to the events emitted by
-<a href="typedoc.output.renderer.html">Renderer</a> to control and manipulate the output process.</p>
-<p>The default file structure of a theme looks like this:</p>
-<ul>
-<li><p><code>/assets/</code><br>
-Contains static assets like stylesheets, images or javascript files used by the theme.
-The <a href="typedoc.output.assetsplugin.html">AssetsPlugin</a> will deep copy this directory to the output directory.</p>
-</li>
-<li><p><code>/layouts/</code><br>
-Contains layout templates that the <a href="typedoc.output.layoutplugin.html">LayoutPlugin</a> wraps around the output of the
-page template. Currently only one <code>default.hbs</code> layout is supported. Layout templates
-receive the current <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance as their handlebars context. Place the
-<code>{{{contents}}}</code> variable to render the actual body of the document within this template.</p>
-</li>
-<li><p><code>/partials/</code><br>
-Contains partial templates that can be used by other templates using handlebars partial
-syntax <code>{{&gt; partial-name}}</code>. The <a href="typedoc.output.partialsplugin.html">PartialsPlugin</a> loads all files in this directory
-and combines them with the partials of the default theme.</p>
-</li>
-<li><p><code>/templates/</code><br>
-Contains the main templates of the theme. The theme maps models to these templates through
-the <a href="typedoc.output.basetheme.html#geturls">BaseTheme.getUrls</a> function. If the <a href="typedoc.output.renderer.html#gettemplate">Renderer.getTemplate</a> function cannot find a
-given template within this directory, it will try to find it in the default theme
-<code>/templates/</code> directory. Templates receive the current <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance as
-their handlebars context. You can access the target model through the <code>{{model}}</code> variable.</p>
-</li>
-<li><p><code>/theme.js</code><br>
-A javascript file that returns the definition of a <a href="typedoc.output.basetheme.html">BaseTheme</a> subclass. This file will
-be executed within the context of TypeDoc, one may directly access all classes and functions
-of TypeDoc. If this file is not present, an instance of <a href="typedoc.output.defaulttheme.html">DefaultTheme</a> will be used to render
-this theme.</p>
-</li>
-</ul>
-
-
-
-
-
-
-
-    <section class="tsd-hierarchy">
-        <h2>Hierarchy</h2>
-        <ul>
-            
-                <li class="target">
-    
-        BaseTheme
-    
-
-    
-        <ul>
-            
-                <li >
-    
-        
-    
-        <a href="typedoc.output.defaulttheme.html" class="tsd-signature-type">DefaultTheme</a>
-    
-
-    
-
-    
-</li>
-            
-        </ul>
-    
-</li>
-            
-        </ul>
-    </section>
-
-
-
-    <section class="tsd-member-index">
-    <h2>Index</h2>
-    
-        <section class="tsd-member-index-group ">
-            <h3>Constructor methods</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#constructor" class="tsd-kind-icon">constructor</a></li>
-                
-                <li>&nbsp;</li>
-            </ul>
-        </section>
-    
-        <section class="tsd-member-index-group ">
-            <h3>Properties</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#basepath" class="tsd-kind-icon">base<wbr>Path</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#renderer" class="tsd-kind-icon">renderer</a></li>
-                
-                <li>&nbsp;</li>
-            </ul>
-        </section>
-    
-        <section class="tsd-member-index-group ">
-            <h3>Methods</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#getnavigation" class="tsd-kind-icon">get<wbr>Navigation</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#geturls" class="tsd-kind-icon">get<wbr>Urls</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#isoutputdirectory" class="tsd-kind-icon">is<wbr>Output<wbr>Directory</a></li>
-                
-                <li>&nbsp;</li>
-            </ul>
-        </section>
-    
-</section>
-    
-    
-        <section class="tsd-member-group ">
-    <h2>Constructor methods</h2>
-    
-        
-            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
-    <a name="constructor" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>renderer<span class="tsd-signature-symbols">: </span><a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a>, basePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.output.basetheme.html" class="tsd-signature-type">BaseTheme</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:64</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Create a new BaseTheme instance.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>renderer: <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h5>
-                
-    <p>The renderer this theme is attached to.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>basePath: <span class="tsd-signature-type">string</span></h5>
-                
-    <p>The base path of this theme.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <a href="typedoc.output.basetheme.html" class="tsd-signature-type">BaseTheme</a>
-    
-</h4>
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-    
-        <section class="tsd-member-group ">
-    <h2>Properties</h2>
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="basepath" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon">base<wbr>Path<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:55</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>The base path of this theme.</p>
-
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="renderer" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon">renderer<span class="tsd-signature-symbols">:</span> <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:50</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>The renderer this theme is attached to.</p>
-
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-    
-        <section class="tsd-member-group ">
-    <h2>Methods</h2>
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="getnavigation" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">get<wbr>Navigation<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.navigationitem.html" class="tsd-signature-type">NavigationItem</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:120</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Create a navigation structure for the given project.</p>
-
-
-
-
-    <p>A navigation is a tree structure consisting of <a href="typedoc.models.navigationitem.html">NavigationItem</a> nodes. This
-function should return the root node of the desired navigation tree.</p>
-<p>The <a href="typedoc.output.navigationplugin.html">NavigationPlugin</a> will call this hook before a project will be rendered.
-The plugin will update the state of the navigation tree and pass it to the
-templates.</p>
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
-                
-    <p>The project whose navigation should be generated.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <a href="typedoc.models.navigationitem.html" class="tsd-signature-type">NavigationItem</a>
-    
-</h4>
-    
-        <p>The root navigation item.</p>
-
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="geturls" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">get<wbr>Urls<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a><span class="tsd-signature-symbols">[]</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:102</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Map the models of the given project to the desired output files.</p>
-
-
-
-
-    <p>Every theme must have an own implementation of this function, the default
-implementation always returns an empty array.</p>
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
-                
-    <p>The project whose urls should be generated.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a><span class="tsd-signature-symbols">[]</span>
-    
-</h4>
-    
-        <p>A list of <a href="typedoc.models.urlmapping.html">UrlMapping</a> instances defining which models
-                should be rendered to which files.</p>
-
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="isoutputdirectory" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">is<wbr>Output<wbr>Directory<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/output/BaseTheme.ts:87</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Test whether the given path contains a documentation generated by this theme.</p>
-
-
-
-
-    <p>TypeDoc empties the output directory before rendering a project. This function
-is used to ensure that only previously generated documentations are deleted.
-When this function returns FALSE, the documentation will not be created and an
-error message will be displayed.</p>
-<p>Every theme must have an own implementation of this function, the default
-implementation always returns FALSE.</p>
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>see</dt>
-            <dd><p><a href="typedoc.output.renderer.html#prepareoutputdirectory">Renderer.prepareOutputDirectory</a></p>
-</dd>
-        
-    </dl>
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>path: <span class="tsd-signature-type">string</span></h5>
-                
-    <p>The path of the directory that should be tested.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <span class="tsd-signature-type">boolean</span>
-    
-</h4>
-    
-        <p>TRUE if the given path seems to be a previous output directory,
-             otherwise FALSE.</p>
-
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-
-        </div>
-        <div class="offset-1 col-3">
-            <nav class="tsd-navigation primary">
-                <ul>
-                    
-                        <li class=" ">
-    <a href="../globals.html"><em><wbr>Globals</em></a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_assert_.html">"assert"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_buffer_.html">"buffer"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_child_process_.html">"child_<wbr>process"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_cluster_.html">"cluster"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_crypto_.html">"crypto"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_dgram_.html">"dgram"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_dns_.html">"dns"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_domain_.html">"domain"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_events_.html">"events"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_fs_.html">"fs"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_highlight_js_.html">"highlight.js"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_http_.html">"http"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_https_.html">"https"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_minimatch_.html">"minimatch"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_net_.html">"net"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_os_.html">"os"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_path_.html">"path"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_punycode_.html">"punycode"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_querystring_.html">"querystring"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_readline_.html">"readline"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_repl_.html">"repl"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_stream_.html">"stream"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_tls_.html">"tls"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_tty_.html">"tty"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_url_.html">"url"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_util_.html">"util"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_vm_.html">"vm"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_zlib_.html">"zlib"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-is-external">
-    <a href="../modules/nodejs.html">NodeJS</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container">
-    <a href="../modules/typedoc.html">Type<wbr>Doc</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
-    
-</li>
-                    
-                        <li class="current tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
-    
-        
-            <ul>
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </ul>
-        
-    
-</li>
-                    
-                        <li class=" tsd-kind-container">
-    <a href="../modules/typescript.html">Type<wbr>Script</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
-    
-</li>
-                    
-                </ul>
-            </nav>
-
-            <nav class="tsd-navigation secondary">
-                
-                    
-
-    <ul>
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.output.ihandlebartemplate.html" class="tsd-kind-icon">IHandlebar<wbr>Template</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplate<wbr>Mapping</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">Assets<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.baseplugin.html" class="tsd-kind-icon">Base<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class="current tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.basetheme.html" class="tsd-kind-icon">Base<wbr>Theme</a>
-                    
-
-    <ul>
-        
-            
-                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#constructor" class="tsd-kind-icon">constructor</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#basepath" class="tsd-kind-icon">base<wbr>Path</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#renderer" class="tsd-kind-icon">renderer</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#getnavigation" class="tsd-kind-icon">get<wbr>Navigation</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#geturls" class="tsd-kind-icon">get<wbr>Urls</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.output.basetheme.html#isoutputdirectory" class="tsd-kind-icon">is<wbr>Output<wbr>Directory</a>
-                    
-                </li>
-            
-        
-    </ul>
-
-
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">Default<wbr>Theme</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">Javascript<wbr>Index<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.layoutplugin.html" class="tsd-kind-icon">Layout<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.markedplugin.html" class="tsd-kind-icon">Marked<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.navigationplugin.html" class="tsd-kind-icon">Navigation<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.outputevent.html" class="tsd-kind-icon">Output<wbr>Event</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">Output<wbr>Page<wbr>Event</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.partialsplugin.html" class="tsd-kind-icon">Partials<wbr>Plugin</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.output.renderer.html" class="tsd-kind-icon">Renderer</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
-                    <a href="../modules/typedoc.output.html#highlighttypescript" class="tsd-kind-icon">highlight<wbr>Type<wbr>Script</a>
-                    
-                </li>
-            
-        
-    </ul>
-
-
-                
-            </nav>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-8">
+			<p>Base class of all themes.</p>
+			<p>A theme defines the logical and graphical output of a documentation. Themes are
+				directories containing a <code>theme.js</code> file defining a <a href="typedoc.output.basetheme.html">BaseTheme</a> subclass and a
+				series of subdirectories containing templates and assets. You can select a theme
+			through the <code>--theme &lt;path/to/theme&gt;</code> commandline argument.</p>
+			<p>The theme class controls which files will be created through the <a href="typedoc.output.basetheme.html#geturls">BaseTheme.getUrls</a>
+				function. It returns an array of <a href="typedoc.models.urlmapping.html">UrlMapping</a> instances defining the target files, models
+				and templates to use. Additionally themes can subscribe to the events emitted by
+			<a href="typedoc.output.renderer.html">Renderer</a> to control and manipulate the output process.</p>
+			<p>The default file structure of a theme looks like this:</p>
+			<ul>
+				<li><p><code>/assets/</code><br>
+						Contains static assets like stylesheets, images or javascript files used by the theme.
+					The <a href="typedoc.output.assetsplugin.html">AssetsPlugin</a> will deep copy this directory to the output directory.</p>
+				</li>
+				<li><p><code>/layouts/</code><br>
+						Contains layout templates that the <a href="typedoc.output.layoutplugin.html">LayoutPlugin</a> wraps around the output of the
+						page template. Currently only one <code>default.hbs</code> layout is supported. Layout templates
+						receive the current <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance as their handlebars context. Place the
+					<code>{{{contents}}}</code> variable to render the actual body of the document within this template.</p>
+				</li>
+				<li><p><code>/partials/</code><br>
+						Contains partial templates that can be used by other templates using handlebars partial
+						syntax <code>{{&gt; partial-name}}</code>. The <a href="typedoc.output.partialsplugin.html">PartialsPlugin</a> loads all files in this directory
+					and combines them with the partials of the default theme.</p>
+				</li>
+				<li><p><code>/templates/</code><br>
+						Contains the main templates of the theme. The theme maps models to these templates through
+						the <a href="typedoc.output.basetheme.html#geturls">BaseTheme.getUrls</a> function. If the <a href="typedoc.output.renderer.html#gettemplate">Renderer.getTemplate</a> function cannot find a
+						given template within this directory, it will try to find it in the default theme
+						<code>/templates/</code> directory. Templates receive the current <a href="typedoc.output.outputpageevent.html">OutputPageEvent</a> instance as
+					their handlebars context. You can access the target model through the <code>{{model}}</code> variable.</p>
+				</li>
+				<li><p><code>/theme.js</code><br>
+						A javascript file that returns the definition of a <a href="typedoc.output.basetheme.html">BaseTheme</a> subclass. This file will
+						be executed within the context of TypeDoc, one may directly access all classes and functions
+						of TypeDoc. If this file is not present, an instance of <a href="typedoc.output.defaulttheme.html">DefaultTheme</a> will be used to render
+					this theme.</p>
+				</li>
+			</ul>
+			<section class="tsd-hierarchy">
+				<h2>Hierarchy</h2>
+				<ul>
+					<li class="target">
+						BaseTheme
+						<ul>
+							<li >
+								<a href="typedoc.output.defaulttheme.html" class="tsd-signature-type">DefaultTheme</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-member-index">
+				<h2>Index</h2>
+				<section class="tsd-member-index-group ">
+					<h3>Constructor methods</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#constructor" class="tsd-kind-icon">constructor</a></li>
+					</ul>
+				</section>
+				<section class="tsd-member-index-group ">
+					<h3>Properties</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#basepath" class="tsd-kind-icon">base<wbr>Path</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#renderer" class="tsd-kind-icon">renderer</a></li>
+					</ul>
+				</section>
+				<section class="tsd-member-index-group ">
+					<h3>Methods</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#getnavigation" class="tsd-kind-icon">get<wbr>Navigation</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#geturls" class="tsd-kind-icon">get<wbr>Urls</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.output.basetheme.html#isoutputdirectory" class="tsd-kind-icon">is<wbr>Output<wbr>Directory</a></li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-member-group ">
+				<h2>Constructor methods</h2>
+				<section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+					<a name="constructor" class="anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>basePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, renderer<span class="tsd-signature-symbols">: </span><a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.output.basetheme.html" class="tsd-signature-type">BaseTheme</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/output/BaseTheme.ts:64</li>
+								</ul>
+							</aside>
+							<p>Create a new BaseTheme instance.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>basePath: <span class="tsd-signature-type">string</span></h5>
+									<p>The base path of this theme.</p>
+								</li>
+								<li>
+									<h5>renderer: <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></h5>
+									<p>The renderer this theme is attached to.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<a href="typedoc.output.basetheme.html" class="tsd-signature-type">BaseTheme</a>
+							</h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="basepath" class="anchor"></a>
+					<h3>base<wbr>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">base<wbr>Path<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/output/BaseTheme.ts:55</li>
+						</ul>
+					</aside>
+					<p>The base path of this theme.</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="renderer" class="anchor"></a>
+					<h3>renderer</h3>
+					<div class="tsd-signature tsd-kind-icon">renderer<span class="tsd-signature-symbols">:</span> <a href="typedoc.output.renderer.html" class="tsd-signature-type">Renderer</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/output/BaseTheme.ts:50</li>
+						</ul>
+					</aside>
+					<p>The renderer this theme is attached to.</p>
+				</section>
+			</section>
+			<section class="tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getnavigation" class="anchor"></a>
+					<h3>get<wbr>Navigation</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Navigation<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.navigationitem.html" class="tsd-signature-type">NavigationItem</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/output/BaseTheme.ts:120</li>
+								</ul>
+							</aside>
+							<p>Create a navigation structure for the given project.</p>
+							<p>A navigation is a tree structure consisting of <a href="typedoc.models.navigationitem.html">NavigationItem</a> nodes. This
+							function should return the root node of the desired navigation tree.</p>
+							<p>The <a href="typedoc.output.navigationplugin.html">NavigationPlugin</a> will call this hook before a project will be rendered.
+								The plugin will update the state of the navigation tree and pass it to the
+							templates.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
+									<p>The project whose navigation should be generated.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<a href="typedoc.models.navigationitem.html" class="tsd-signature-type">NavigationItem</a>
+							</h4>
+							<p>The root navigation item.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="geturls" class="anchor"></a>
+					<h3>get<wbr>Urls</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Urls<span class="tsd-signature-symbols">(</span>project<span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a><span class="tsd-signature-symbols">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/output/BaseTheme.ts:102</li>
+								</ul>
+							</aside>
+							<p>Map the models of the given project to the desired output files.</p>
+							<p>Every theme must have an own implementation of this function, the default
+							implementation always returns an empty array.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>project: <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h5>
+									<p>The project whose urls should be generated.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<a href="typedoc.models.urlmapping.html" class="tsd-signature-type">UrlMapping</a><span class="tsd-signature-symbols">[]</span>
+							</h4>
+							<p>A list of <a href="typedoc.models.urlmapping.html">UrlMapping</a> instances defining which models
+							should be rendered to which files.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isoutputdirectory" class="anchor"></a>
+					<h3>is<wbr>Output<wbr>Directory</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Output<wbr>Directory<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/output/BaseTheme.ts:87</li>
+								</ul>
+							</aside>
+							<p>Test whether the given path contains a documentation generated by this theme.</p>
+							<p>TypeDoc empties the output directory before rendering a project. This function
+								is used to ensure that only previously generated documentations are deleted.
+								When this function returns FALSE, the documentation will not be created and an
+							error message will be displayed.</p>
+							<p>Every theme must have an own implementation of this function, the default
+							implementation always returns FALSE.</p>
+							<dl class="tsd-comment-tags">
+								<dt>see</dt>
+								<dd><p><a href="typedoc.output.renderer.html#prepareoutputdirectory">Renderer.prepareOutputDirectory</a></p>
+								</dd>
+							</dl>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<p>The path of the directory that should be tested.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<span class="tsd-signature-type">boolean</span>
+							</h4>
+							<p>TRUE if the given path seems to be a previous output directory,
+							otherwise FALSE.</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="offset-1 col-3">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../globals.html"><em><wbr>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_assert_.html">"assert"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_buffer_.html">"buffer"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_child_process_.html">"child_<wbr>process"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_cluster_.html">"cluster"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_crypto_.html">"crypto"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_dgram_.html">"dgram"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_dns_.html">"dns"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_domain_.html">"domain"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_events_.html">"events"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_fs_.html">"fs"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_highlight_js_.html">"highlight.js"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_http_.html">"http"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_https_.html">"https"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_minimatch_.html">"minimatch"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_net_.html">"net"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_os_.html">"os"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_path_.html">"path"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_punycode_.html">"punycode"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_querystring_.html">"querystring"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_readline_.html">"readline"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_repl_.html">"repl"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_stream_.html">"stream"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_tls_.html">"tls"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_tty_.html">"tty"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_url_.html">"url"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_util_.html">"util"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_vm_.html">"vm"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_zlib_.html">"zlib"</a>
+					</li>
+					<li class=" tsd-kind-container tsd-is-external">
+						<a href="../modules/nodejs.html">NodeJS</a>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="../modules/typedoc.html">Type<wbr>Doc</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
+					</li>
+					<li class="current tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
+						<ul>
+						</ul>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="../modules/typescript.html">Type<wbr>Script</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary">
+				<ul>
+					<li class=" tsd-kind-enum tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../enums/typedoc.output.prettyprintstate.html" class="tsd-kind-icon">Pretty<wbr>Print<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="../interfaces/typedoc.output.ihandlebartemplate.html" class="tsd-kind-icon">IHandlebar<wbr>Template</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="../interfaces/typedoc.output.itemplatemapping.html" class="tsd-kind-icon">ITemplate<wbr>Mapping</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.assetsplugin.html" class="tsd-kind-icon">Assets<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.baseplugin.html" class="tsd-kind-icon">Base<wbr>Plugin</a>
+					</li>
+					<li class="current tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.basetheme.html" class="tsd-kind-icon">Base<wbr>Theme</a>
+						<ul>
+							<li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+								<a href="typedoc.output.basetheme.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.output.basetheme.html#basepath" class="tsd-kind-icon">base<wbr>Path</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.output.basetheme.html#renderer" class="tsd-kind-icon">renderer</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="typedoc.output.basetheme.html#getnavigation" class="tsd-kind-icon">get<wbr>Navigation</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="typedoc.output.basetheme.html#geturls" class="tsd-kind-icon">get<wbr>Urls</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="typedoc.output.basetheme.html#isoutputdirectory" class="tsd-kind-icon">is<wbr>Output<wbr>Directory</a>
+							</li>
+						</ul>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.defaulttheme.html" class="tsd-kind-icon">Default<wbr>Theme</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.javascriptindexplugin.html" class="tsd-kind-icon">Javascript<wbr>Index<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.layoutplugin.html" class="tsd-kind-icon">Layout<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.markedplugin.html" class="tsd-kind-icon">Marked<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.navigationplugin.html" class="tsd-kind-icon">Navigation<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.outputevent.html" class="tsd-kind-icon">Output<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.outputpageevent.html" class="tsd-kind-icon">Output<wbr>Page<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.partialsplugin.html" class="tsd-kind-icon">Partials<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.prettyprintplugin.html" class="tsd-kind-icon">Pretty<wbr>Print<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.output.renderer.html" class="tsd-kind-icon">Renderer</a>
+					</li>
+					<li class=" tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../modules/typedoc.output.html#highlighttypescript" class="tsd-kind-icon">highlight<wbr>Type<wbr>Script</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
 </div>
-
 <script src="../assets/js/main.js"></script>
 <script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
-
 </body>
 </html>

@@ -1,2282 +1,1049 @@
 ﻿<!doctype html>
 <html class="no-js">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dispatcher | TypeDoc Documentation</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="../assets/css/main.css">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Dispatcher | TypeDoc Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-
 <header>
-    <div class="tsd-page-toolbar">
-        <div class="container">
-            <div class="table-wrap">
-                <div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
-                    <div class="field">
-                        <label for="tsd-search-field">Search</label>
-                        <input id="tsd-search-field" type="text" />
-                    </div>
-
-                    <ul class="results">
-                        <li class="state loading">Preparing search index...</li>
-                        <li class="state failure">The search index is not available</li>
-                    </ul>
-
-                    <a href="../index.html" class="title">TypeDoc Documentation</a>
-                </div>
-
-                <div class="table-cell" id="tsd-filter">
-                    <input type="checkbox" id="tsd-filter-inherited" checked />
-                    <label for="tsd-filter-inherited">Inherited</label>
-
-                    <input type="checkbox" id="tsd-filter-private" checked />
-                    <label for="tsd-filter-private">Private</label>
-
-                    <input type="checkbox" id="tsd-filter-externals" checked />
-                    <label for="tsd-filter-externals">Externals</label>
-
-                    <input type="checkbox" id="tsd-filter-only-exported" />
-                    <label for="tsd-filter-only-exported">Only exported</label>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tsd-page-title">
-        <div class="container">
-            <ul class="breadcrumb">
-                
-    
-    
-    
-    <li>
-        <a href="../modules/typedoc.html">TypeDoc</a>
-    </li>
-
-    <li>
-        <a href="../modules/typedoc.factories.html">Factories</a>
-    </li>
-
-    <li>
-        <a href="typedoc.factories.dispatcher.html">Dispatcher</a>
-    </li>
-
-            </ul>
-            <h1>Class Dispatcher</h1>
-        </div>
-    </div>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">TypeDoc Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-filter">
+					<input type="checkbox" id="tsd-filter-inherited" checked />
+					<label for="tsd-filter-inherited">Inherited</label>
+					<input type="checkbox" id="tsd-filter-private" checked />
+					<label for="tsd-filter-private">Private</label>
+					<input type="checkbox" id="tsd-filter-externals" checked />
+					<label for="tsd-filter-externals">Externals</label>
+					<input type="checkbox" id="tsd-filter-only-exported" />
+					<label for="tsd-filter-only-exported">Only exported</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="breadcrumb">
+				<li>
+					<a href="../globals.html">TypeDoc Documentation</a>
+				</li>
+				<li>
+					<a href="../modules/typedoc.html">TypeDoc</a>
+				</li>
+				<li>
+					<a href="../modules/typedoc.factories.html">Factories</a>
+				</li>
+				<li>
+					<a href="typedoc.factories.dispatcher.html">Dispatcher</a>
+				</li>
+			</ul>
+			<h1>Class Dispatcher</h1>
+		</div>
+	</div>
 </header>
-
 <div class="container container-main">
-    <div class="row">
-        <div class="col-8">
-            
-    
-    <p>The dispatcher receives documents from the compiler and emits
-events for all discovered declarations.</p>
-
-
-
-
-    <p><a href="typedoc.factories.basehandler.html">BaseHandler</a> instances are the actual workhorses behind the dispatcher. They listen
-to the events emitted by the dispatcher and populate the generated <a href="typedoc.models.basereflection.html">BaseReflection</a>
-instances. Each event contains a <a href="typedoc.factories.basestate.html">BaseState</a> instance describing the current state the
-dispatcher is in. Handlers can alter the state or stop it from being further processed.</p>
-<p>For each document (a single *.ts file) the dispatcher will generate the following event flow.
-Declarations are processed according to their hierarchy.</p>
-<ul>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin">Dispatcher.EVENT_BEGIN</a><br>
-Triggered when the dispatcher starts processing a project. The listener receives
-an instance of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>. By calling <a href="typedoc.factories.dispatcherevent.html#preventdefault">DispatcherEvent.preventDefault</a> the
-project file will not be processed.</p>
-</li>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_document">Dispatcher.EVENT_BEGIN_DOCUMENT</a><br>
-Triggered when the dispatcher starts processing a TypeScript document. The listener receives
-an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>. By calling <a href="typedoc.factories.documentstate.html#preventdefault">DocumentState.preventDefault</a> the entire
-TypeScript file will be ignored.</p>
-<ul>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_declaration">Dispatcher.EVENT_BEGIN_DECLARATION</a><br>
-Triggered when the dispatcher starts processing a declaration. The listener receives
-an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The <a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of
-the state is undefined at this moment. By calling <a href="typedoc.factories.declarationstate.html#preventdefault">DeclarationState.preventDefault</a>
-the declaration will be skipped.</p>
-<ul>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_create_reflection">Dispatcher.EVENT_CREATE_REFLECTION</a><br>
-Triggered when the dispatcher creates a new reflection instance. The listener receives
-an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The <a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of
-the state contains a newly created <a href="typedoc.models.declarationreflection.html">DeclarationReflection</a> instance.</p>
-</li>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_merge_reflection">Dispatcher.EVENT_MERGE_REFLECTION</a><br>
-Triggered when the dispatcher merges an existing reflection with a new declaration.
-The listener receives an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The
-<a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of the state contains the persistent
-<a href="typedoc.models.declarationreflection.html">DeclarationReflection</a> instance.</p>
-</li>
-</ul>
-</li>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_declaration">Dispatcher.EVENT_DECLARATION</a><br>
-Triggered when the dispatcher processes a declaration. The listener receives an instance
-of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>.</p>
-</li>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_end_declaration">Dispatcher.EVENT_END_DECLARATION</a><br>
-Triggered when the dispatcher has finished processing a declaration. The listener receives
-an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>.</p>
-</li>
-</ul>
-</li>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_end_document">Dispatcher.EVENT_END_DOCUMENT</a><br>
-Triggered when the dispatcher has finished processing a TypeScript document. The listener
-receives an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>.</p>
-</li>
-</ul>
-<p> After the dispatcher has processed all documents, it will enter the resolving phase and
- trigger the following event flow.</p>
-<ul>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_resolve">Dispatcher.EVENT_BEGIN_RESOLVE</a><br>
-Triggered when the dispatcher enters the resolving phase. The listener receives an instance
-of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>.</p>
-<ul>
-<li><a href="typedoc.factories.dispatcher.html#static-event_resolve">Dispatcher.EVENT_RESOLVE</a><br>
-Triggered when the dispatcher resolves a reflection. The listener receives an instance
-of <a href="typedoc.factories.reflectionevent.html">ReflectionEvent</a>.</li>
-</ul>
-</li>
-<li><p><a href="typedoc.factories.dispatcher.html#static-event_end_resolve">Dispatcher.EVENT_END_RESOLVE</a><br>
-Triggered when the dispatcher leaves the resolving phase. The listener receives an instance
-of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>.</p>
-</li>
-</ul>
-
-
-
-
-
-
-
-    <section class="tsd-hierarchy">
-        <h2>Hierarchy</h2>
-        <ul>
-            
-                <li >
-    
-        
-    
-        <a href="typedoc.eventdispatcher.html" class="tsd-signature-type">EventDispatcher</a>
-    
-
-    
-
-    
-        <ul>
-            
-                <li class="target">
-    
-        Dispatcher
-    
-
-    
-</li>
-            
-        </ul>
-    
-</li>
-            
-        </ul>
-    </section>
-
-
-
-    <section class="tsd-member-index">
-    <h2>Index</h2>
-    
-        <section class="tsd-member-index-group ">
-            <h3>Constructor methods</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#constructor" class="tsd-kind-icon">constructor</a></li>
-                
-                <li>&nbsp;</li>
-            </ul>
-        </section>
-    
-        <section class="tsd-member-index-group ">
-            <h3>Properties</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin" class="tsd-kind-icon">EVENT_<wbr>BEGIN</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_declaration" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DECLARATION</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_document" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DOCUMENT</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_resolve" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>RESOLVE</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_create_reflection" class="tsd-kind-icon">EVENT_<wbr>CREATE_<wbr>REFLECTION</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_declaration" class="tsd-kind-icon">EVENT_<wbr>DECLARATION</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_end_declaration" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DECLARATION</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_end_document" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DOCUMENT</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_end_resolve" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>RESOLVE</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_merge_reflection" class="tsd-kind-icon">EVENT_<wbr>MERGE_<wbr>REFLECTION</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_resolve" class="tsd-kind-icon">EVENT_<wbr>RESOLVE</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-handlers" class="tsd-kind-icon">HANDLERS</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a></li>
-                
-                    <li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#handlers" class="tsd-kind-icon">handlers</a></li>
-                
-                <li>&nbsp;</li>
-            </ul>
-        </section>
-    
-        <section class="tsd-member-index-group ">
-            <h3>Methods</h3>
-            <ul class="tsd-member-index">
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#createproject" class="tsd-kind-icon">create<wbr>Project</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#ensurereflection" class="tsd-kind-icon">ensure<wbr>Reflection</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-explaindeclaration" class="tsd-kind-icon">explain<wbr>Declaration</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-flagstostring" class="tsd-kind-icon">flags<wbr>ToString</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#off" class="tsd-kind-icon">off</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#on" class="tsd-kind-icon">on</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">process<wbr>State</a></li>
-                
-                    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a></li>
-                
-                <li>&nbsp;</li>
-            </ul>
-        </section>
-    
-</section>
-    
-    
-        <section class="tsd-member-group ">
-    <h2>Constructor methods</h2>
-    
-        
-            <section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
-    <a name="constructor" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>application<span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:160</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Create a new Dispatcher instance.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>application: <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h5>
-                
-    <p>The application this dispatcher is attached to.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a>
-    
-</h4>
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-    
-        <section class="tsd-member-group ">
-    <h2>Properties</h2>
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_begin" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:85</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered once per project before the dispatcher invokes the compiler.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_begin_declaration" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN_<wbr>DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:115</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher starts processing a declaration.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_begin_document" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN_<wbr>DOCUMENT<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:91</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher starts processing a TypeScript document.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_begin_resolve" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN_<wbr>RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:133</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher enters the resolving phase.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_create_reflection" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>CREATE_<wbr>REFLECTION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:103</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher creates a new reflection instance.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_declaration" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:121</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher processes a declaration.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_end_declaration" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>END_<wbr>DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:127</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher has finished processing a declaration.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_end_document" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>END_<wbr>DOCUMENT<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:97</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher has finished processing a TypeScript document.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_end_resolve" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>END_<wbr>RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:145</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher leaves the resolving phase.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_merge_reflection" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>MERGE_<wbr>REFLECTION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:109</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher merges an existing reflection with a new declaration.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-event_resolve" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:139</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Triggered when the dispatcher resolves a reflection.</p>
-
-
-
-
-
-
-    <dl class="tsd-comment-tags">
-        
-            <dt>event</dt>
-            <dd></dd>
-        
-    </dl>
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
-    <a name="static-handlers" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> HANDLERS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;any&gt;</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:151</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Registry containing the handlers, that should be created by default.</p>
-
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="application" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon">application<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:74</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>The application this dispatcher is attached to.</p>
-
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-property tsd-parent-kind-class">
-    <a name="handlers" class="anchor"></a>
-    
-        <h3 class="tsd-kind-icon">handlers<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;any&gt;</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:79</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>List of all handlers that are attached to the renderer.</p>
-
-
-
-
-
-
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-    
-        <section class="tsd-member-group ">
-    <h2>Methods</h2>
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="compile" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> compile<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:195</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Run the compiler.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
-                
-    <p>The event containing the project and compiler.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="createproject" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">create<wbr>Project<span class="tsd-signature-symbols">(</span>inputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:177</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Compile the given list of source files and generate a reflection for them.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>inputFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
-                
-    <p>A list of source files.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>
-    
-</h4>
-    
-        <p>The generated root reflection.</p>
-
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="dispatch" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">dispatch<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-        <p>Inherited from 
-    
-        <a href="typedoc.eventdispatcher.html">EventDispatcher</a>.<a href="typedoc.eventdispatcher.html#dispatch">dispatch</a>
-    
-</p>
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/EventDispatcher.ts:66</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Dispatch an event with the given event name.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>event: <span class="tsd-signature-type">string</span></h5>
-                
-    <p>The name of the event to dispatch.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>Additional arguments to pass to the handlers.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="ensurereflection" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">ensure<wbr>Reflection<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:272</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Ensure that the given state holds a reflection.</p>
-
-
-
-
-    <p>Reflections should always be created through this function as the dispatcher
-will hold an array of created reflections for the final resolving phase.</p>
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
-                
-    <p>The state the reflection should be created for.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <span class="tsd-signature-type">boolean</span>
-    
-</h4>
-    
-        <p>TRUE if a new reflection has been created, FALSE if the
-              state already holds a reflection.</p>
-
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="static-explaindeclaration" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> explain<wbr>Declaration<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, indent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;&#x27;<span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:309</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Print debug information of the given declaration to the console.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>declaration: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
-                
-    <p>The declaration that should be printed.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>indent?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>Used internally to indent child declarations.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-    <a name="static-flagstostring" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagstatic">static</span> flags<wbr>ToString<span class="tsd-signature-symbols">(</span>flags<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:329</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Return a string that explains the given flag bit mask.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>flags: <span class="tsd-signature-type">any</span></h5>
-                
-    <p>A bit mask containing TypeScript.PullElementFlags bits.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-    <h4>Returns 
-    
-        <span class="tsd-signature-type">string</span>
-    
-</h4>
-    
-        <p>A string describing the given bit mask.</p>
-
-    
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="off" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">off<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, handler<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-        <p>Inherited from 
-    
-        <a href="typedoc.eventdispatcher.html">EventDispatcher</a>.<a href="typedoc.eventdispatcher.html#off">off</a>
-    
-</p>
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/EventDispatcher.ts:118</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Remove an event handler.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>event?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>The name of the event whose handlers should be removed.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>handler?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>The callback that should be removed.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>The scope of the callback that should be removed.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-    <a name="on" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0<span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-        <p>Inherited from 
-    
-        <a href="typedoc.eventdispatcher.html">EventDispatcher</a>.<a href="typedoc.eventdispatcher.html#on">on</a>
-    
-</p>
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/EventDispatcher.ts:96</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Register an event handler for the given event name.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>event: <span class="tsd-signature-type">string</span></h5>
-                
-    <p>The name of the event the handler should be registered to.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>handler: <span class="tsd-signature-type">Function</span></h5>
-                
-    <p>The callback that should be invoked.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>The scope the callback should be executed in.</p>
-
-
-
-
-
-
-            </li>
-        
-            <li>
-                <h5>priority?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-                
-    <p>A numeric value describing the priority of the handler. Handlers
-                 with higher priority will be executed earlier.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-    <a name="processstate" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon">process<wbr>State<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:245</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Process the given state.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
-                
-    <p>The state that should be processed.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-        
-            <section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-    <a name="resolve" class="anchor"></a>
-    
-        
-            <h3 class="tsd-kind-icon"><span class="tsd-flag ts-flagprivate">private</span> resolve<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></h3>
-
-<aside class="tsd-sources">
-    
-    
-    
-        <ul>
-            
-                <li>Defined in typedoc/factories/Dispatcher.ts:227</li>
-            
-        </ul>
-    
-</aside>
-
-    <p>Resolve all created reflections.</p>
-
-
-
-
-
-
-
-
-    <h4>Parameters</h4>
-    <ul>
-        
-            <li>
-                <h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
-                
-    <p>The event containing the project and compiler.</p>
-
-
-
-
-
-
-            </li>
-        
-    </ul>
-
-
-
-
-        
-    
-
-    
-</section>
-        
-    
-</section>
-    
-
-
-        </div>
-        <div class="offset-1 col-3">
-            <nav class="tsd-navigation primary">
-                <ul>
-                    
-                        <li class=" ">
-    <a href="../globals.html"><em><wbr>Globals</em></a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_assert_.html">"assert"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_buffer_.html">"buffer"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_child_process_.html">"child_<wbr>process"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_cluster_.html">"cluster"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_crypto_.html">"crypto"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_dgram_.html">"dgram"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_dns_.html">"dns"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_domain_.html">"domain"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_events_.html">"events"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_fs_.html">"fs"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_highlight_js_.html">"highlight.js"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_http_.html">"http"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_https_.html">"https"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_minimatch_.html">"minimatch"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_net_.html">"net"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_os_.html">"os"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_path_.html">"path"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_punycode_.html">"punycode"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_querystring_.html">"querystring"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_readline_.html">"readline"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_repl_.html">"repl"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_stream_.html">"stream"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_tls_.html">"tls"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_tty_.html">"tty"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_url_.html">"url"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_util_.html">"util"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_vm_.html">"vm"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-dynamic-module tsd-is-external">
-    <a href="../modules/_zlib_.html">"zlib"</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-is-external">
-    <a href="../modules/nodejs.html">NodeJS</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container">
-    <a href="../modules/typedoc.html">Type<wbr>Doc</a>
-    
-</li>
-                    
-                        <li class="current tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
-    
-        
-            <ul>
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-                    
-                
-            </ul>
-        
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container">
-    <a href="../modules/typescript.html">Type<wbr>Script</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container">
-    <a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
-    
-</li>
-                    
-                        <li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-    <a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
-    
-</li>
-                    
-                </ul>
-            </nav>
-
-            <nav class="tsd-navigation secondary">
-                
-                    
-
-    <ul>
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
-                    <a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-interface tsd-parent-kind-container">
-                    <a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.basepath.html" class="tsd-kind-icon">Base<wbr>Path</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.basestate.html" class="tsd-kind-icon">Base<wbr>State</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.commenthandler.html" class="tsd-kind-icon">Comment<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.compiler.html" class="tsd-kind-icon">Compiler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a>
-                    
-                </li>
-            
-        
-            
-                <li class="current tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
-                    
-
-    <ul>
-        
-            
-                <li class=" tsd-kind-constructor-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#constructor" class="tsd-kind-icon">constructor</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_begin" class="tsd-kind-icon">EVENT_<wbr>BEGIN</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_begin_declaration" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DECLARATION</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_begin_document" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DOCUMENT</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_begin_resolve" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>RESOLVE</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_create_reflection" class="tsd-kind-icon">EVENT_<wbr>CREATE_<wbr>REFLECTION</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_declaration" class="tsd-kind-icon">EVENT_<wbr>DECLARATION</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_end_declaration" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DECLARATION</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_end_document" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DOCUMENT</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_end_resolve" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>RESOLVE</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_merge_reflection" class="tsd-kind-icon">EVENT_<wbr>MERGE_<wbr>REFLECTION</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-event_resolve" class="tsd-kind-icon">EVENT_<wbr>RESOLVE</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-handlers" class="tsd-kind-icon">HANDLERS</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-property tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#handlers" class="tsd-kind-icon">handlers</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#createproject" class="tsd-kind-icon">create<wbr>Project</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.dispatcher.html#dispatch" class="tsd-kind-icon">dispatch</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#ensurereflection" class="tsd-kind-icon">ensure<wbr>Reflection</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-explaindeclaration" class="tsd-kind-icon">explain<wbr>Declaration</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-                    <a href="typedoc.factories.dispatcher.html#static-flagstostring" class="tsd-kind-icon">flags<wbr>ToString</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.dispatcher.html#off" class="tsd-kind-icon">off</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
-                    <a href="typedoc.factories.dispatcher.html#on" class="tsd-kind-icon">on</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class">
-                    <a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">process<wbr>State</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-                    <a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a>
-                    
-                </li>
-            
-        
-    </ul>
-
-
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.dispatcherevent.html" class="tsd-kind-icon">Dispatcher<wbr>Event</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.documentstate.html" class="tsd-kind-icon">Document<wbr>State</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.grouphandler.html" class="tsd-kind-icon">Group<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.objectliteralhandler.html" class="tsd-kind-icon">Object<wbr>Literal<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.packagehandler.html" class="tsd-kind-icon">Package<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.reflectionevent.html" class="tsd-kind-icon">Reflection<wbr>Event</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">Reflection<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">Resolve<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.signaturehandler.html" class="tsd-kind-icon">Signature<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.sourcehandler.html" class="tsd-kind-icon">Source<wbr>Handler</a>
-                    
-                </li>
-            
-        
-            
-                <li class=" tsd-kind-class tsd-parent-kind-container">
-                    <a href="typedoc.factories.typehandler.html" class="tsd-kind-icon">Type<wbr>Handler</a>
-                    
-                </li>
-            
-        
-    </ul>
-
-
-                
-            </nav>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-8">
+			<p>The dispatcher receives documents from the compiler and emits
+			events for all discovered declarations.</p>
+			<p><a href="typedoc.factories.basehandler.html">BaseHandler</a> instances are the actual workhorses behind the dispatcher. They listen
+				to the events emitted by the dispatcher and populate the generated <a href="typedoc.models.basereflection.html">BaseReflection</a>
+				instances. Each event contains a <a href="typedoc.factories.basestate.html">BaseState</a> instance describing the current state the
+			dispatcher is in. Handlers can alter the state or stop it from being further processed.</p>
+			<p>For each document (a single *.ts file) the dispatcher will generate the following event flow.
+			Declarations are processed according to their hierarchy.</p>
+			<ul>
+				<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin">Dispatcher.EVENT_BEGIN</a><br>
+						Triggered when the dispatcher starts processing a project. The listener receives
+						an instance of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>. By calling <a href="typedoc.factories.dispatcherevent.html#preventdefault">DispatcherEvent.preventDefault</a> the
+					project file will not be processed.</p>
+				</li>
+				<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_document">Dispatcher.EVENT_BEGIN_DOCUMENT</a><br>
+						Triggered when the dispatcher starts processing a TypeScript document. The listener receives
+						an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>. By calling <a href="typedoc.factories.documentstate.html#preventdefault">DocumentState.preventDefault</a> the entire
+					TypeScript file will be ignored.</p>
+					<ul>
+						<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_declaration">Dispatcher.EVENT_BEGIN_DECLARATION</a><br>
+								Triggered when the dispatcher starts processing a declaration. The listener receives
+								an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The <a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of
+								the state is undefined at this moment. By calling <a href="typedoc.factories.declarationstate.html#preventdefault">DeclarationState.preventDefault</a>
+							the declaration will be skipped.</p>
+							<ul>
+								<li><p><a href="typedoc.factories.dispatcher.html#static-event_create_reflection">Dispatcher.EVENT_CREATE_REFLECTION</a><br>
+										Triggered when the dispatcher creates a new reflection instance. The listener receives
+										an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The <a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of
+									the state contains a newly created <a href="typedoc.models.declarationreflection.html">DeclarationReflection</a> instance.</p>
+								</li>
+								<li><p><a href="typedoc.factories.dispatcher.html#static-event_merge_reflection">Dispatcher.EVENT_MERGE_REFLECTION</a><br>
+										Triggered when the dispatcher merges an existing reflection with a new declaration.
+										The listener receives an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>. The
+										<a href="typedoc.factories.declarationstate.html#reflection">DeclarationState.reflection</a> property of the state contains the persistent
+									<a href="typedoc.models.declarationreflection.html">DeclarationReflection</a> instance.</p>
+								</li>
+							</ul>
+						</li>
+						<li><p><a href="typedoc.factories.dispatcher.html#static-event_declaration">Dispatcher.EVENT_DECLARATION</a><br>
+								Triggered when the dispatcher processes a declaration. The listener receives an instance
+							of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>.</p>
+						</li>
+						<li><p><a href="typedoc.factories.dispatcher.html#static-event_end_declaration">Dispatcher.EVENT_END_DECLARATION</a><br>
+								Triggered when the dispatcher has finished processing a declaration. The listener receives
+							an instance of <a href="typedoc.factories.declarationstate.html">DeclarationState</a>.</p>
+						</li>
+					</ul>
+				</li>
+				<li><p><a href="typedoc.factories.dispatcher.html#static-event_end_document">Dispatcher.EVENT_END_DOCUMENT</a><br>
+						Triggered when the dispatcher has finished processing a TypeScript document. The listener
+					receives an instance of <a href="typedoc.factories.documentstate.html">DocumentState</a>.</p>
+				</li>
+			</ul>
+			<p> After the dispatcher has processed all documents, it will enter the resolving phase and
+			trigger the following event flow.</p>
+			<ul>
+				<li><p><a href="typedoc.factories.dispatcher.html#static-event_begin_resolve">Dispatcher.EVENT_BEGIN_RESOLVE</a><br>
+						Triggered when the dispatcher enters the resolving phase. The listener receives an instance
+					of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>.</p>
+					<ul>
+						<li><a href="typedoc.factories.dispatcher.html#static-event_resolve">Dispatcher.EVENT_RESOLVE</a><br>
+							Triggered when the dispatcher resolves a reflection. The listener receives an instance
+						of <a href="typedoc.factories.reflectionevent.html">ReflectionEvent</a>.</li>
+					</ul>
+				</li>
+				<li><p><a href="typedoc.factories.dispatcher.html#static-event_end_resolve">Dispatcher.EVENT_END_RESOLVE</a><br>
+						Triggered when the dispatcher leaves the resolving phase. The listener receives an instance
+					of <a href="typedoc.factories.dispatcherevent.html">DispatcherEvent</a>.</p>
+				</li>
+			</ul>
+			<section class="tsd-hierarchy">
+				<h2>Hierarchy</h2>
+				<ul>
+					<li >
+						<a href="typedoc.eventdispatcher.html" class="tsd-signature-type">EventDispatcher</a>
+						<ul>
+							<li class="target">
+								Dispatcher
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-member-index">
+				<h2>Index</h2>
+				<section class="tsd-member-index-group ">
+					<h3>Constructor methods</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-constructor-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#constructor" class="tsd-kind-icon">constructor</a></li>
+					</ul>
+				</section>
+				<section class="tsd-member-index-group ">
+					<h3>Properties</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin" class="tsd-kind-icon">EVENT_<wbr>BEGIN</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_declaration" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DECLARATION</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_document" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DOCUMENT</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_begin_resolve" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>RESOLVE</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_create_reflection" class="tsd-kind-icon">EVENT_<wbr>CREATE_<wbr>REFLECTION</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_declaration" class="tsd-kind-icon">EVENT_<wbr>DECLARATION</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_end_declaration" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DECLARATION</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_end_document" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DOCUMENT</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_end_resolve" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>RESOLVE</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_merge_reflection" class="tsd-kind-icon">EVENT_<wbr>MERGE_<wbr>REFLECTION</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-event_resolve" class="tsd-kind-icon">EVENT_<wbr>RESOLVE</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-handlers" class="tsd-kind-icon">HANDLERS</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#handlers" class="tsd-kind-icon">handlers</a></li>
+					</ul>
+				</section>
+				<section class="tsd-member-index-group ">
+					<h3>Methods</h3>
+					<ul class="tsd-member-index">
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#createproject" class="tsd-kind-icon">create<wbr>Project</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#dispatch" class="tsd-kind-icon">dispatch</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#ensurereflection" class="tsd-kind-icon">ensure<wbr>Reflection</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-explaindeclaration" class="tsd-kind-icon">explain<wbr>Declaration</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.dispatcher.html#static-flagstostring" class="tsd-kind-icon">flags<wbr>ToString</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#off" class="tsd-kind-icon">off</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.dispatcher.html#on" class="tsd-kind-icon">on</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">process<wbr>State</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a></li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-member-group ">
+				<h2>Constructor methods</h2>
+				<section class="tsd-member tsd-kind-constructor-method tsd-parent-kind-class">
+					<a name="constructor" class="anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>application<span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:160</li>
+								</ul>
+							</aside>
+							<p>Create a new Dispatcher instance.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>application: <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></h5>
+									<p>The application this dispatcher is attached to.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a>
+							</h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_begin" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>BEGIN<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:85</li>
+						</ul>
+					</aside>
+					<p>Triggered once per project before the dispatcher invokes the compiler.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_begin_declaration" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN_<wbr>DECLARATION</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:115</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher starts processing a declaration.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_begin_document" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN_<wbr>DOCUMENT</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DOCUMENT<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:91</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher starts processing a TypeScript document.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_begin_resolve" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>BEGIN_<wbr>RESOLVE</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:133</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher enters the resolving phase.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_create_reflection" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>CREATE_<wbr>REFLECTION</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>CREATE_<wbr>REFLECTION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:103</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher creates a new reflection instance.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_declaration" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>DECLARATION</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:121</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher processes a declaration.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_end_declaration" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>END_<wbr>DECLARATION</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>END_<wbr>DECLARATION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:127</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher has finished processing a declaration.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_end_document" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>END_<wbr>DOCUMENT</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>END_<wbr>DOCUMENT<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:97</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher has finished processing a TypeScript document.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_end_resolve" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>END_<wbr>RESOLVE</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>END_<wbr>RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:145</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher leaves the resolving phase.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_merge_reflection" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>MERGE_<wbr>REFLECTION</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>MERGE_<wbr>REFLECTION<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:109</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher merges an existing reflection with a new declaration.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-event_resolve" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> EVENT_<wbr>RESOLVE</h3>
+					<div class="tsd-signature tsd-kind-icon">EVENT_<wbr>RESOLVE<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:139</li>
+						</ul>
+					</aside>
+					<p>Triggered when the dispatcher resolves a reflection.</p>
+					<dl class="tsd-comment-tags">
+						<dt>event</dt>
+						<dd></dd>
+					</dl>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="static-handlers" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> HANDLERS</h3>
+					<div class="tsd-signature tsd-kind-icon">HANDLERS<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;any&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:151</li>
+						</ul>
+					</aside>
+					<p>Registry containing the handlers, that should be created by default.</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="application" class="anchor"></a>
+					<h3>application</h3>
+					<div class="tsd-signature tsd-kind-icon">application<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.iapplication.html" class="tsd-signature-type">IApplication</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:74</li>
+						</ul>
+					</aside>
+					<p>The application this dispatcher is attached to.</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="handlers" class="anchor"></a>
+					<h3>handlers</h3>
+					<div class="tsd-signature tsd-kind-icon">handlers<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;any&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/factories/Dispatcher.ts:79</li>
+						</ul>
+					</aside>
+					<p>List of all handlers that are attached to the renderer.</p>
+				</section>
+			</section>
+			<section class="tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="compile" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagprivate">private</span> compile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">compile<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:195</li>
+								</ul>
+							</aside>
+							<p>Run the compiler.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
+									<p>The event containing the project and compiler.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="createproject" class="anchor"></a>
+					<h3>create<wbr>Project</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Project<span class="tsd-signature-symbols">(</span>inputFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:177</li>
+								</ul>
+							</aside>
+							<p>Compile the given list of source files and generate a reflection for them.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>inputFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+									<p>A list of source files.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>
+							</h4>
+							<p>The generated root reflection.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="dispatch" class="anchor"></a>
+					<h3>dispatch</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">dispatch<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<p>Inherited from 
+									<a href="typedoc.eventdispatcher.html">EventDispatcher</a>.<a href="typedoc.eventdispatcher.html#dispatch">dispatch</a>
+								</p>
+								<ul>
+									<li>Defined in typedoc/EventDispatcher.ts:66</li>
+								</ul>
+							</aside>
+							<p>Dispatch an event with the given event name.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Additional arguments to pass to the handlers.</p>
+								</li>
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+									<p>The name of the event to dispatch.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ensurereflection" class="anchor"></a>
+					<h3>ensure<wbr>Reflection</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">ensure<wbr>Reflection<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:272</li>
+								</ul>
+							</aside>
+							<p>Ensure that the given state holds a reflection.</p>
+							<p>Reflections should always be created through this function as the dispatcher
+							will hold an array of created reflections for the final resolving phase.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
+									<p>The state the reflection should be created for.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<span class="tsd-signature-type">boolean</span>
+							</h4>
+							<p>TRUE if a new reflection has been created, FALSE if the
+							state already holds a reflection.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="static-explaindeclaration" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> explain<wbr>Declaration</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">explain<wbr>Declaration<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, indent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;&#x27;<span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:309</li>
+								</ul>
+							</aside>
+							<p>Print debug information of the given declaration to the console.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>declaration: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
+									<p>The declaration that should be printed.</p>
+								</li>
+								<li>
+									<h5>indent?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Used internally to indent child declarations.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="static-flagstostring" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagstatic">static</span> flags<wbr>ToString</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">flags<wbr>ToString<span class="tsd-signature-symbols">(</span>flags<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:329</li>
+								</ul>
+							</aside>
+							<p>Return a string that explains the given flag bit mask.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>flags: <span class="tsd-signature-type">any</span></h5>
+									<p>A bit mask containing TypeScript.PullElementFlags bits.</p>
+								</li>
+							</ul>
+							<h4>Returns 
+								<span class="tsd-signature-type">string</span>
+							</h4>
+							<p>A string describing the given bit mask.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="off" class="anchor"></a>
+					<h3>off</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">off<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, handler<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<p>Inherited from 
+									<a href="typedoc.eventdispatcher.html">EventDispatcher</a>.<a href="typedoc.eventdispatcher.html#off">off</a>
+								</p>
+								<ul>
+									<li>Defined in typedoc/EventDispatcher.ts:118</li>
+								</ul>
+							</aside>
+							<p>Remove an event handler.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>event?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>The name of the event whose handlers should be removed.</p>
+								</li>
+								<li>
+									<h5>handler?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>The callback that should be removed.</p>
+								</li>
+								<li>
+									<h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>The scope of the callback that should be removed.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="on" class="anchor"></a>
+					<h3>on</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<p>Inherited from 
+									<a href="typedoc.eventdispatcher.html">EventDispatcher</a>.<a href="typedoc.eventdispatcher.html#on">on</a>
+								</p>
+								<ul>
+									<li>Defined in typedoc/EventDispatcher.ts:96</li>
+								</ul>
+							</aside>
+							<p>Register an event handler for the given event name.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
+									<p>The name of the event the handler should be registered to.</p>
+								</li>
+								<li>
+									<h5>handler: <span class="tsd-signature-type">Function</span></h5>
+									<p>The callback that should be invoked.</p>
+								</li>
+								<li>
+									<h5>priority?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>A numeric value describing the priority of the handler. Handlers
+									with higher priority will be executed earlier.</p>
+								</li>
+								<li>
+									<h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>The scope the callback should be executed in.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="processstate" class="anchor"></a>
+					<h3>process<wbr>State</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">process<wbr>State<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:245</li>
+								</ul>
+							</aside>
+							<p>Process the given state.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>state: <a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a></h5>
+									<p>The state that should be processed.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="resolve" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagprivate">private</span> resolve</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in typedoc/factories/Dispatcher.ts:227</li>
+								</ul>
+							</aside>
+							<p>Resolve all created reflections.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
+									<p>The event containing the project and compiler.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="offset-1 col-3">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../globals.html"><em><wbr>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_assert_.html">"assert"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_buffer_.html">"buffer"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_child_process_.html">"child_<wbr>process"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_cluster_.html">"cluster"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_crypto_.html">"crypto"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_dgram_.html">"dgram"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_dns_.html">"dns"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_domain_.html">"domain"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_events_.html">"events"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_fs_.html">"fs"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_highlight_js_.html">"highlight.js"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_http_.html">"http"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_https_.html">"https"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_minimatch_.html">"minimatch"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_net_.html">"net"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_os_.html">"os"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_path_.html">"path"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_punycode_.html">"punycode"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_querystring_.html">"querystring"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_readline_.html">"readline"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_repl_.html">"repl"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_stream_.html">"stream"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_tls_.html">"tls"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_tty_.html">"tty"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_url_.html">"url"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_util_.html">"util"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_vm_.html">"vm"</a>
+					</li>
+					<li class=" tsd-kind-dynamic-module tsd-is-external">
+						<a href="../modules/_zlib_.html">"zlib"</a>
+					</li>
+					<li class=" tsd-kind-container tsd-is-external">
+						<a href="../modules/nodejs.html">NodeJS</a>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="../modules/typedoc.html">Type<wbr>Doc</a>
+					</li>
+					<li class="current tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
+						<ul>
+						</ul>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="../modules/typescript.html">Type<wbr>Script</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container">
+						<a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
+					</li>
+					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
+						<a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary">
+				<ul>
+					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container">
+						<a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.basepath.html" class="tsd-kind-icon">Base<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.basestate.html" class="tsd-kind-icon">Base<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.commenthandler.html" class="tsd-kind-icon">Comment<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.compiler.html" class="tsd-kind-icon">Compiler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a>
+					</li>
+					<li class="current tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
+						<ul>
+							<li class=" tsd-kind-constructor-method tsd-parent-kind-class">
+								<a href="typedoc.factories.dispatcher.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_begin" class="tsd-kind-icon">EVENT_<wbr>BEGIN</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_begin_declaration" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DECLARATION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_begin_document" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>DOCUMENT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_begin_resolve" class="tsd-kind-icon">EVENT_<wbr>BEGIN_<wbr>RESOLVE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_create_reflection" class="tsd-kind-icon">EVENT_<wbr>CREATE_<wbr>REFLECTION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_declaration" class="tsd-kind-icon">EVENT_<wbr>DECLARATION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_end_declaration" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DECLARATION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_end_document" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>DOCUMENT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_end_resolve" class="tsd-kind-icon">EVENT_<wbr>END_<wbr>RESOLVE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_merge_reflection" class="tsd-kind-icon">EVENT_<wbr>MERGE_<wbr>REFLECTION</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-event_resolve" class="tsd-kind-icon">EVENT_<wbr>RESOLVE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-handlers" class="tsd-kind-icon">HANDLERS</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.factories.dispatcher.html#application" class="tsd-kind-icon">application</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.factories.dispatcher.html#handlers" class="tsd-kind-icon">handlers</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.dispatcher.html#compile" class="tsd-kind-icon">compile</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="typedoc.factories.dispatcher.html#createproject" class="tsd-kind-icon">create<wbr>Project</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="typedoc.factories.dispatcher.html#dispatch" class="tsd-kind-icon">dispatch</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="typedoc.factories.dispatcher.html#ensurereflection" class="tsd-kind-icon">ensure<wbr>Reflection</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-explaindeclaration" class="tsd-kind-icon">explain<wbr>Declaration</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="typedoc.factories.dispatcher.html#static-flagstostring" class="tsd-kind-icon">flags<wbr>ToString</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="typedoc.factories.dispatcher.html#off" class="tsd-kind-icon">off</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="typedoc.factories.dispatcher.html#on" class="tsd-kind-icon">on</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="typedoc.factories.dispatcher.html#processstate" class="tsd-kind-icon">process<wbr>State</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.dispatcher.html#resolve" class="tsd-kind-icon">resolve</a>
+							</li>
+						</ul>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.dispatcherevent.html" class="tsd-kind-icon">Dispatcher<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.documentstate.html" class="tsd-kind-icon">Document<wbr>State</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.functiontypehandler.html" class="tsd-kind-icon">Function<wbr>Type<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.grouphandler.html" class="tsd-kind-icon">Group<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.objectliteralhandler.html" class="tsd-kind-icon">Object<wbr>Literal<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.packagehandler.html" class="tsd-kind-icon">Package<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.reflectionevent.html" class="tsd-kind-icon">Reflection<wbr>Event</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.reflectionhandler.html" class="tsd-kind-icon">Reflection<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.resolvehandler.html" class="tsd-kind-icon">Resolve<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.signaturehandler.html" class="tsd-kind-icon">Signature<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.sourcehandler.html" class="tsd-kind-icon">Source<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.typehandler.html" class="tsd-kind-icon">Type<wbr>Handler</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
 </div>
-
 <script src="../assets/js/main.js"></script>
 <script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
-
 </body>
 </html>
