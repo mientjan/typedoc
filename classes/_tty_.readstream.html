@@ -292,8 +292,8 @@
 					<a name="_write" class="anchor"></a>
 					<h3>_write</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">_write<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, data<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, encoding<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
-						<li class="tsd-signature tsd-kind-icon">_write<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, encoding<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">_write<span class="tsd-signature-symbols">(</span>data<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, encoding<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">_write<span class="tsd-signature-symbols">(</span>data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, encoding<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -307,13 +307,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-								</li>
-								<li>
 									<h5>data: <a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a></h5>
 								</li>
 								<li>
 									<h5>encoding: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -328,13 +328,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-								</li>
-								<li>
 									<h5>data: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>encoding: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -395,8 +395,8 @@
 					<a name="connect" class="anchor"></a>
 					<h3>connect</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>connectionListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
-						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>connectionListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, host<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, connectionListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, host<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, connectionListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -410,10 +410,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>connectionListener?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<h5>connectionListener?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -428,13 +428,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>connectionListener?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>port: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>host?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>port: <span class="tsd-signature-type">number</span></h5>
+									<h5>connectionListener?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -462,7 +462,7 @@
 					<a name="emit" class="anchor"></a>
 					<h3>emit</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -476,10 +476,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>event: <span class="tsd-signature-type">string</span></h5>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -495,8 +495,8 @@
 						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span>data<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
 						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span><span class="tsd-signature-symbols">)</span></li>
 						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span>buffer<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
-						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span>cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
-						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span>cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span>str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbols">(</span>str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -567,10 +567,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -588,13 +588,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1005,7 +1005,7 @@
 					<a name="settimeout" class="anchor"></a>
 					<h3>set<wbr>Timeout</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Timeout<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, timeout<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Timeout<span class="tsd-signature-symbols">(</span>timeout<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1019,10 +1019,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>timeout: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>timeout: <span class="tsd-signature-type">number</span></h5>
+									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1124,10 +1124,10 @@
 					<h3>write</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>buffer<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, fd<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, fd<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>buffer<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, cb<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -1166,13 +1166,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>data: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1190,10 +1190,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1214,13 +1214,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
+									<h5>cb?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1241,13 +1241,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
 									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>fd?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

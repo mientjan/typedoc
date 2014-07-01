@@ -272,7 +272,7 @@
 					<a name="indentmultilinecomment" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> indent<wbr>Multi<wbr>Line<wbr>Comment</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">indent<wbr>Multi<wbr>Line<wbr>Comment<span class="tsd-signature-symbols">(</span>indentThisTrivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, result<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">indent<wbr>Multi<wbr>Line<wbr>Comment<span class="tsd-signature-symbols">(</span>trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, indentThisTrivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, result<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -283,13 +283,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
 									<h5>indentThisTrivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>result: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -302,7 +302,7 @@
 					<a name="static-indentnode" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> indent<wbr>Node</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">indent<wbr>Node<span class="tsd-signature-symbols">(</span>indentAmount<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, indentFirstToken<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, node<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isyntaxnode.html" class="tsd-signature-type">ISyntaxNode</a>, options<span class="tsd-signature-symbols">: </span><a href="formattingoptions.html" class="tsd-signature-type">FormattingOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a></li>
+						<li class="tsd-signature tsd-kind-icon">indent<wbr>Node<span class="tsd-signature-symbols">(</span>node<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isyntaxnode.html" class="tsd-signature-type">ISyntaxNode</a>, indentFirstToken<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, indentAmount<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbols">: </span><a href="formattingoptions.html" class="tsd-signature-type">FormattingOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -313,13 +313,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>indentAmount: <span class="tsd-signature-type">number</span></h5>
+									<h5>node: <a href="../interfaces/typescript.isyntaxnode.html" class="tsd-signature-type">ISyntaxNode</a></h5>
 								</li>
 								<li>
 									<h5>indentFirstToken: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5>node: <a href="../interfaces/typescript.isyntaxnode.html" class="tsd-signature-type">ISyntaxNode</a></h5>
+									<h5>indentAmount: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>options: <a href="formattingoptions.html" class="tsd-signature-type">FormattingOptions</a></h5>
@@ -335,7 +335,7 @@
 					<a name="static-indentnodes" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> indent<wbr>Nodes</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">indent<wbr>Nodes<span class="tsd-signature-symbols">(</span>indentAmount<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, indentFirstToken<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, nodes<span class="tsd-signature-symbols">: </span><a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a><span class="tsd-signature-symbols">[]</span>, options<span class="tsd-signature-symbols">: </span><a href="formattingoptions.html" class="tsd-signature-type">FormattingOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a><span class="tsd-signature-symbols">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">indent<wbr>Nodes<span class="tsd-signature-symbols">(</span>nodes<span class="tsd-signature-symbols">: </span><a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a><span class="tsd-signature-symbols">[]</span>, indentFirstToken<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, indentAmount<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbols">: </span><a href="formattingoptions.html" class="tsd-signature-type">FormattingOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a><span class="tsd-signature-symbols">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -346,13 +346,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>indentAmount: <span class="tsd-signature-type">number</span></h5>
+									<h5>nodes: <a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a><span class="tsd-signature-symbols">[]</span></h5>
 								</li>
 								<li>
 									<h5>indentFirstToken: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5>nodes: <a href="typescript.syntaxnode.html" class="tsd-signature-type">SyntaxNode</a><span class="tsd-signature-symbols">[]</span></h5>
+									<h5>indentAmount: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>options: <a href="formattingoptions.html" class="tsd-signature-type">FormattingOptions</a></h5>
@@ -392,7 +392,7 @@
 					<a name="indentsinglelineorskippedtext" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> indent<wbr>Single<wbr>Line<wbr>OrSkipped<wbr>Text</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">indent<wbr>Single<wbr>Line<wbr>OrSkipped<wbr>Text<span class="tsd-signature-symbols">(</span>indentThisTrivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, result<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">indent<wbr>Single<wbr>Line<wbr>OrSkipped<wbr>Text<span class="tsd-signature-symbols">(</span>trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, indentThisTrivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, result<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -403,13 +403,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
 									<h5>indentThisTrivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>result: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -446,7 +446,7 @@
 					<a name="indentwhitespace" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> indent<wbr>Whitespace</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">indent<wbr>Whitespace<span class="tsd-signature-symbols">(</span>indentThisTrivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, result<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">indent<wbr>Whitespace<span class="tsd-signature-symbols">(</span>trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, indentThisTrivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, result<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -457,13 +457,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
 									<h5>indentThisTrivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>result: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

@@ -126,7 +126,7 @@
 					<a name="add" class="anchor"></a>
 					<h3>add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbols">(</span>data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span>, key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbols">(</span>key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -137,10 +137,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>data: <span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>key: <span class="tsd-signature-type">string</span></h5>
+									<h5>data: <span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -153,7 +153,7 @@
 					<a name="addorupdate" class="anchor"></a>
 					<h3>add<wbr>OrUpdate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>OrUpdate<span class="tsd-signature-symbols">(</span>data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span>, key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>OrUpdate<span class="tsd-signature-symbols">(</span>key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, data<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -164,10 +164,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>data: <span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>key: <span class="tsd-signature-type">string</span></h5>
+									<h5>data: <span class="tsd-signature-type">T in TypeScript.StringHashTable&lt;T&gt;</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -198,7 +198,7 @@
 					<a name="every" class="anchor"></a>
 					<h3>every</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">every<span class="tsd-signature-symbols">(</span>context<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, fn<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">every<span class="tsd-signature-symbols">(</span>fn<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, context<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -208,9 +208,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>context: <span class="tsd-signature-type">any</span></h5>
-								</li>
 								<li>
 									<h5>fn: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -241,6 +238,9 @@
 											</ul>
 										</li>
 									</ul>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -295,7 +295,7 @@
 					<a name="map" class="anchor"></a>
 					<h3>map</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbols">(</span>context<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, fn<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">map<span class="tsd-signature-symbols">(</span>fn<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, context<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -305,9 +305,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>context: <span class="tsd-signature-type">any</span></h5>
-								</li>
 								<li>
 									<h5>fn: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -339,6 +336,9 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">any</span></h5>
+								</li>
 							</ul>
 						</li>
 					</ul>
@@ -368,7 +368,7 @@
 					<a name="some" class="anchor"></a>
 					<h3>some</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">some<span class="tsd-signature-symbols">(</span>context<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, fn<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">some<span class="tsd-signature-symbols">(</span>fn<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, context<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -378,9 +378,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>context: <span class="tsd-signature-type">any</span></h5>
-								</li>
 								<li>
 									<h5>fn: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -411,6 +408,9 @@
 											</ul>
 										</li>
 									</ul>
+								</li>
+								<li>
+									<h5>context: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

@@ -73,7 +73,7 @@
 					<a name="incrementalparse" class="anchor"></a>
 					<h3>incremental<wbr>Parse</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">incremental<wbr>Parse<span class="tsd-signature-symbols">(</span>newText<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a>, oldSyntaxTree<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a>, textChangeRange<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a></li>
+						<li class="tsd-signature tsd-kind-icon">incremental<wbr>Parse<span class="tsd-signature-symbols">(</span>oldSyntaxTree<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a>, textChangeRange<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a>, newText<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -84,13 +84,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>newText: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
-								</li>
-								<li>
 									<h5>oldSyntaxTree: <a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a></h5>
 								</li>
 								<li>
 									<h5>textChangeRange: <a href="../classes/typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a></h5>
+								</li>
+								<li>
+									<h5>newText: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -103,7 +103,7 @@
 					<a name="parse" class="anchor"></a>
 					<h3>parse</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, isDeclaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.parseoptions.html" class="tsd-signature-type">ParseOptions</a>, text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a></li>
+						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a>, isDeclaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, options<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.parseoptions.html" class="tsd-signature-type">ParseOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -117,13 +117,13 @@
 									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
+									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
+								</li>
+								<li>
 									<h5>isDeclaration: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5>options: <a href="../classes/typescript.parseoptions.html" class="tsd-signature-type">ParseOptions</a></h5>
-								</li>
-								<li>
-									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 

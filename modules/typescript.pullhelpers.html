@@ -98,7 +98,7 @@
 					<a name="diagnosticfromdecl" class="anchor"></a>
 					<h3>diagnostic<wbr>From<wbr>Decl</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">diagnostic<wbr>From<wbr>Decl<span class="tsd-signature-symbols">(</span>_arguments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, additionalLocations<span class="tsd-signature-symbols">?: </span><a href="../classes/typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span>, decl<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></li>
+						<li class="tsd-signature tsd-kind-icon">diagnostic<wbr>From<wbr>Decl<span class="tsd-signature-symbols">(</span>decl<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, _arguments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, additionalLocations<span class="tsd-signature-symbols">?: </span><a href="../classes/typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -109,16 +109,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>_arguments?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>additionalLocations?: <a href="../classes/typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>decl: <a href="../classes/typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
 								</li>
 								<li>
 									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>_arguments?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>additionalLocations?: <a href="../classes/typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -281,7 +281,7 @@
 					<a name="issymboldeclaredinscopechain" class="anchor"></a>
 					<h3>is<wbr>Symbol<wbr>Declared<wbr>InScope<wbr>Chain</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Symbol<wbr>Declared<wbr>InScope<wbr>Chain<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, symbol<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Symbol<wbr>Declared<wbr>InScope<wbr>Chain<span class="tsd-signature-symbols">(</span>symbol<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, scopeSymbol<span class="tsd-signature-symbols">: </span><a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -292,10 +292,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>scopeSymbol: <a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
+									<h5>symbol: <a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
 								</li>
 								<li>
-									<h5>symbol: <a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
+									<h5>scopeSymbol: <a href="../classes/typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 

@@ -265,7 +265,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>_typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a>, isInstanceReferenceType<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, referencedTypeSymbol<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullinstantiatedtypereferencesymbol.html" class="tsd-signature-type">PullInstantiatedTypeReferenceSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>referencedTypeSymbol<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, _typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a>, isInstanceReferenceType<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullinstantiatedtypereferencesymbol.html" class="tsd-signature-type">PullInstantiatedTypeReferenceSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -279,13 +279,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>referencedTypeSymbol: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
+								</li>
+								<li>
 									<h5>_typeParameterArgumentMap: <a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a></h5>
 								</li>
 								<li>
 									<h5>isInstanceReferenceType: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>referencedTypeSymbol: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1364,7 +1364,7 @@
 					<a name="findcontainednonmembertype" class="anchor"></a>
 					<h3>find<wbr>Contained<wbr>Non<wbr>Member<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Contained<wbr>Non<wbr>Member<wbr>Type<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, typeName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Contained<wbr>Non<wbr>Member<wbr>Type<span class="tsd-signature-symbols">(</span>typeName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, kind<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1381,10 +1381,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>kind?: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>typeName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>typeName: <span class="tsd-signature-type">string</span></h5>
+									<h5>kind?: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1397,7 +1397,7 @@
 					<a name="findmember" class="anchor"></a>
 					<h3>find<wbr>Member</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Member<span class="tsd-signature-symbols">(</span>lookInParent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Member<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, lookInParent<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1411,10 +1411,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>lookInParent?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>lookInParent?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1427,7 +1427,7 @@
 					<a name="findnestedcontainer" class="anchor"></a>
 					<h3>find<wbr>Nested<wbr>Container</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Nested<wbr>Container<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Nested<wbr>Container<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, kind<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1444,10 +1444,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>kind?: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>kind?: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1460,7 +1460,7 @@
 					<a name="findnestedtype" class="anchor"></a>
 					<h3>find<wbr>Nested<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Nested<wbr>Type<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Nested<wbr>Type<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, kind<span class="tsd-signature-symbols">?: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1477,10 +1477,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>kind?: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>kind?: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1550,7 +1550,7 @@
 					<a name="getaliassymbolname" class="anchor"></a>
 					<h3>get<wbr>Alias<wbr>Symbol<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Alias<wbr>Symbol<wbr>Name<span class="tsd-signature-symbols">(</span>aliasNameGetter<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, aliasPartsNameGetter<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, scopeSymbol<span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, skipInternalAlias<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Alias<wbr>Symbol<wbr>Name<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, aliasNameGetter<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, aliasPartsNameGetter<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, skipInternalAlias<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1563,6 +1563,9 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
+								<li>
+									<h5>scopeSymbol: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
+								</li>
 								<li>
 									<h5>aliasNameGetter: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -1626,9 +1629,6 @@
 									</ul>
 								</li>
 								<li>
-									<h5>scopeSymbol: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
-								</li>
-								<li>
 									<h5>skipInternalAlias?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
@@ -1642,7 +1642,7 @@
 					<a name="getallmembers" class="anchor"></a>
 					<h3>get<wbr>All<wbr>Members</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Members<span class="tsd-signature-symbols">(</span>memberVisiblity<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.getallmembersvisiblity.html" class="tsd-signature-type">GetAllMembersVisiblity</a>, searchDeclKind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<wbr>Members<span class="tsd-signature-symbols">(</span>searchDeclKind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, memberVisiblity<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.getallmembersvisiblity.html" class="tsd-signature-type">GetAllMembersVisiblity</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1656,10 +1656,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>memberVisiblity: <a href="../enums/typescript.getallmembersvisiblity.html" class="tsd-signature-type">GetAllMembersVisiblity</a></h5>
+									<h5>searchDeclKind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
 								</li>
 								<li>
-									<h5>searchDeclKind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+									<h5>memberVisiblity: <a href="../enums/typescript.getallmembersvisiblity.html" class="tsd-signature-type">GetAllMembersVisiblity</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1840,7 +1840,7 @@
 					<a name="getdisplayname" class="anchor"></a>
 					<h3>get<wbr>Display<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Display<wbr>Name<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, skipInternalAliasName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, useConstraintInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Display<wbr>Name<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, useConstraintInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, skipInternalAliasName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1857,10 +1857,10 @@
 									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>skipInternalAliasName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>useConstraintInName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>useConstraintInName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>skipInternalAliasName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -2128,7 +2128,7 @@
 					<a name="getindexsignaturesofaugmentedtype" class="anchor"></a>
 					<h3>get<wbr>Index<wbr>Signatures<wbr>OfAugmented<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Index<wbr>Signatures<wbr>OfAugmented<wbr>Type<span class="tsd-signature-symbols">(</span>globalFunctionInterface<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, globalObjectInterface<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, resolver<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a><span class="tsd-signature-symbols">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Index<wbr>Signatures<wbr>OfAugmented<wbr>Type<span class="tsd-signature-symbols">(</span>resolver<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a>, globalFunctionInterface<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, globalObjectInterface<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a><span class="tsd-signature-symbols">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2142,13 +2142,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>resolver: <a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a></h5>
+								</li>
+								<li>
 									<h5>globalFunctionInterface: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
 								</li>
 								<li>
 									<h5>globalObjectInterface: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
-								</li>
-								<li>
-									<h5>resolver: <a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -2482,7 +2482,7 @@
 					<a name="getscopedname" class="anchor"></a>
 					<h3>get<wbr>Scoped<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Scoped<wbr>Name<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, skipInternalAliasName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, skipTypeParametersInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, useConstraintInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scoped<wbr>Name<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, skipTypeParametersInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, useConstraintInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, skipInternalAliasName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2502,13 +2502,13 @@
 									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>skipInternalAliasName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>skipTypeParametersInName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>useConstraintInName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>skipInternalAliasName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -2521,7 +2521,7 @@
 					<a name="getscopednameex" class="anchor"></a>
 					<h3>get<wbr>Scoped<wbr>Name<wbr>Ex</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Scoped<wbr>Name<wbr>Ex<span class="tsd-signature-symbols">(</span>getPrettyTypeName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, getTypeParamMarkerInfo<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, shouldAllowArrayType<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, skipInternalAliasName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, skipTypeParametersInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, useConstraintInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.membername.html" class="tsd-signature-type">MemberName</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scoped<wbr>Name<wbr>Ex<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, skipTypeParametersInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, useConstraintInName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, getPrettyTypeName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, getTypeParamMarkerInfo<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, skipInternalAliasName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, shouldAllowArrayType<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.membername.html" class="tsd-signature-type">MemberName</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2538,25 +2538,25 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>getPrettyTypeName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>getTypeParamMarkerInfo?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>shouldAllowArrayType?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>skipInternalAliasName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>skipTypeParametersInName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>useConstraintInName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>getPrettyTypeName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>getTypeParamMarkerInfo?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>skipInternalAliasName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>shouldAllowArrayType?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -2641,7 +2641,7 @@
 					<a name="gettypename" class="anchor"></a>
 					<h3>get<wbr>Type<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<wbr>Name<span class="tsd-signature-symbols">(</span>getPrettyTypeName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<wbr>Name<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, getPrettyTypeName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2655,10 +2655,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>getPrettyTypeName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>getPrettyTypeName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -2671,7 +2671,7 @@
 					<a name="gettypenameex" class="anchor"></a>
 					<h3>get<wbr>Type<wbr>Name<wbr>Ex</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<wbr>Name<wbr>Ex<span class="tsd-signature-symbols">(</span>getPrettyTypeName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.membername.html" class="tsd-signature-type">MemberName</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Type<wbr>Name<wbr>Ex<span class="tsd-signature-symbols">(</span>scopeSymbol<span class="tsd-signature-symbols">?: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, getPrettyTypeName<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.membername.html" class="tsd-signature-type">MemberName</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2685,10 +2685,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>getPrettyTypeName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>scopeSymbol?: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>getPrettyTypeName?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -2815,7 +2815,7 @@
 					<a name="getwrappingtypeparameterid" class="anchor"></a>
 					<h3>get<wbr>Wrapping<wbr>Type<wbr>ParameterID</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Wrapping<wbr>Type<wbr>ParameterID<span class="tsd-signature-symbols">(</span>skipTypeArgumentCheck<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Wrapping<wbr>Type<wbr>ParameterID<span class="tsd-signature-symbols">(</span>typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a>, skipTypeArgumentCheck<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2829,10 +2829,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>skipTypeArgumentCheck?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>typeParameterArgumentMap: <a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a></h5>
 								</li>
 								<li>
-									<h5>typeParameterArgumentMap: <a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a></h5>
+									<h5>skipTypeArgumentCheck?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -4129,7 +4129,7 @@
 					<a name="widenedtype" class="anchor"></a>
 					<h3>widened<wbr>Type</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">widened<wbr>Type<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, context<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolutioncontext.html" class="tsd-signature-type">PullTypeResolutionContext</a>, resolver<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">widened<wbr>Type<span class="tsd-signature-symbols">(</span>resolver<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, context<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolutioncontext.html" class="tsd-signature-type">PullTypeResolutionContext</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -4143,13 +4143,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>resolver: <a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a></h5>
+								</li>
+								<li>
 									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
 									<h5>context: <a href="typescript.pulltyperesolutioncontext.html" class="tsd-signature-type">PullTypeResolutionContext</a></h5>
-								</li>
-								<li>
-									<h5>resolver: <a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -4163,7 +4163,7 @@
 					<h3>wraps<wbr>Some<wbr>Type<wbr>Parameter</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
 						<li class="tsd-signature tsd-kind-icon">wraps<wbr>Some<wbr>Type<wbr>Parameter<span class="tsd-signature-symbols">(</span>typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="typescript.candidateinferenceinfo.html" class="tsd-signature-type">CandidateInferenceInfo</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
-						<li class="tsd-signature tsd-kind-icon">wraps<wbr>Some<wbr>Type<wbr>Parameter<span class="tsd-signature-symbols">(</span>skipTypeArgumentCheck<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">wraps<wbr>Some<wbr>Type<wbr>Parameter<span class="tsd-signature-symbols">(</span>typeParameterArgumentMap<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a>, skipTypeArgumentCheck<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -4195,10 +4195,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>skipTypeArgumentCheck?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>typeParameterArgumentMap: <a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a></h5>
 								</li>
 								<li>
-									<h5>typeParameterArgumentMap: <a href="../interfaces/typescript.typeargumentmap.html" class="tsd-signature-type">TypeArgumentMap</a></h5>
+									<h5>skipTypeArgumentCheck?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

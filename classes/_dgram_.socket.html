@@ -203,7 +203,7 @@
 					<a name="bind" class="anchor"></a>
 					<h3>bind</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbols">(</span>address<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbols">(</span>port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, address<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -214,10 +214,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>address?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>port: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>port: <span class="tsd-signature-type">number</span></h5>
+									<h5>address?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -266,7 +266,7 @@
 					<a name="emit" class="anchor"></a>
 					<h3>emit</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -280,10 +280,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>event: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>event: <span class="tsd-signature-type">string</span></h5>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -440,7 +440,7 @@
 					<a name="send" class="anchor"></a>
 					<h3>send</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbols">(</span>address<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, buf<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">send<span class="tsd-signature-symbols">(</span>buf<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, address<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -451,22 +451,22 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>address: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
 									<h5>buf: <a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a></h5>
-								</li>
-								<li>
-									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>length: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
 									<h5>port: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>address: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>

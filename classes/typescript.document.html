@@ -124,7 +124,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>_compiler<span class="tsd-signature-symbols">: </span><a href="typescript.typescriptcompiler.html" class="tsd-signature-type">TypeScriptCompiler</a>, _scriptSnapshot<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, _semanticInfoChain<span class="tsd-signature-symbols">: </span><a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a>, _syntaxTree<span class="tsd-signature-symbols">: </span><a href="typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a>, _topLevelDecl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, byteOrderMark<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, isOpen<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, referencedFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, version<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>_compiler<span class="tsd-signature-symbols">: </span><a href="typescript.typescriptcompiler.html" class="tsd-signature-type">TypeScriptCompiler</a>, _semanticInfoChain<span class="tsd-signature-symbols">: </span><a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, referencedFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, _scriptSnapshot<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, byteOrderMark<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a>, version<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, isOpen<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, _syntaxTree<span class="tsd-signature-symbols">: </span><a href="typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a>, _topLevelDecl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -138,31 +138,31 @@
 									<h5>_compiler: <a href="typescript.typescriptcompiler.html" class="tsd-signature-type">TypeScriptCompiler</a></h5>
 								</li>
 								<li>
+									<h5>_semanticInfoChain: <a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a></h5>
+								</li>
+								<li>
+									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>referencedFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+								</li>
+								<li>
 									<h5>_scriptSnapshot: <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h5>
 								</li>
 								<li>
-									<h5>_semanticInfoChain: <a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a></h5>
+									<h5>byteOrderMark: <a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a></h5>
+								</li>
+								<li>
+									<h5>version: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>isOpen: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5>_syntaxTree: <a href="typescript.syntaxtree.html" class="tsd-signature-type">SyntaxTree</a></h5>
 								</li>
 								<li>
 									<h5>_topLevelDecl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
-								</li>
-								<li>
-									<h5>byteOrderMark: <a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a></h5>
-								</li>
-								<li>
-									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>isOpen: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>referencedFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
-								</li>
-								<li>
-									<h5>version: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -409,7 +409,7 @@
 					<a name="_setastfordecl" class="anchor"></a>
 					<h3>_setASTFor<wbr>Decl</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">_setASTFor<wbr>Decl<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, decl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">_setASTFor<wbr>Decl<span class="tsd-signature-symbols">(</span>decl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -420,10 +420,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
+									<h5>decl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
 								</li>
 								<li>
-									<h5>decl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
+									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 							</ul>
 						</li>
@@ -517,7 +517,7 @@
 					<a name="static-create" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> create</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbols">(</span>byteOrderMark<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a>, compiler<span class="tsd-signature-symbols">: </span><a href="typescript.typescriptcompiler.html" class="tsd-signature-type">TypeScriptCompiler</a>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, isOpen<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, referencedFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, scriptSnapshot<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, semanticInfoChain<span class="tsd-signature-symbols">: </span><a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a>, version<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a></li>
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbols">(</span>compiler<span class="tsd-signature-symbols">: </span><a href="typescript.typescriptcompiler.html" class="tsd-signature-type">TypeScriptCompiler</a>, semanticInfoChain<span class="tsd-signature-symbols">: </span><a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, scriptSnapshot<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, byteOrderMark<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a>, version<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, isOpen<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, referencedFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -528,28 +528,28 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>byteOrderMark: <a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a></h5>
-								</li>
-								<li>
 									<h5>compiler: <a href="typescript.typescriptcompiler.html" class="tsd-signature-type">TypeScriptCompiler</a></h5>
 								</li>
 								<li>
+									<h5>semanticInfoChain: <a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a></h5>
+								</li>
+								<li>
 									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>scriptSnapshot: <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h5>
+								</li>
+								<li>
+									<h5>byteOrderMark: <a href="../enums/typescript.byteordermark.html" class="tsd-signature-type">ByteOrderMark</a></h5>
+								</li>
+								<li>
+									<h5>version: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>isOpen: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5>referencedFiles: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
-								</li>
-								<li>
-									<h5>scriptSnapshot: <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h5>
-								</li>
-								<li>
-									<h5>semanticInfoChain: <a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a></h5>
-								</li>
-								<li>
-									<h5>version: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -688,7 +688,7 @@
 					<a name="getimplicitimportspanworker" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Implicit<wbr>Import<wbr>Span<wbr>Worker</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Implicit<wbr>Import<wbr>Span<wbr>Worker<span class="tsd-signature-symbols">(</span>position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Implicit<wbr>Import<wbr>Span<wbr>Worker<span class="tsd-signature-symbols">(</span>trivia<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -699,10 +699,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>position: <span class="tsd-signature-type">any</span></h5>
+									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>trivia: <span class="tsd-signature-type">any</span></h5>
+									<h5>position: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -862,7 +862,7 @@
 					<a name="update" class="anchor"></a>
 					<h3>update</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbols">(</span>isOpen<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, scriptSnapshot<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, textChangeRange<span class="tsd-signature-symbols">: </span><a href="typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a>, version<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a></li>
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbols">(</span>scriptSnapshot<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, version<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, isOpen<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, textChangeRange<span class="tsd-signature-symbols">: </span><a href="typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -873,16 +873,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>isOpen: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
 									<h5>scriptSnapshot: <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h5>
 								</li>
 								<li>
-									<h5>textChangeRange: <a href="typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a></h5>
+									<h5>version: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>version: <span class="tsd-signature-type">number</span></h5>
+									<h5>isOpen: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>textChangeRange: <a href="typescript.textchangerange.html" class="tsd-signature-type">TextChangeRange</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 

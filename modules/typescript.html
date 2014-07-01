@@ -764,7 +764,7 @@
 					<a name="getdiagnosticmessage" class="anchor"></a>
 					<h3>get<wbr>Diagnostic<wbr>Message</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Diagnostic<wbr>Message<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Diagnostic<wbr>Message<span class="tsd-signature-symbols">(</span>diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -775,10 +775,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args: <span class="tsd-signature-type">Array&lt;any&gt;</span></h5>
+									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
+									<h5>args: <span class="tsd-signature-type">Array&lt;any&gt;</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -861,7 +861,7 @@
 					<a name="getlocalizedtext" class="anchor"></a>
 					<h3>get<wbr>Localized<wbr>Text</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Localized<wbr>Text<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Localized<wbr>Text<span class="tsd-signature-symbols">(</span>diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -872,10 +872,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args: <span class="tsd-signature-type">Array&lt;any&gt;</span></h5>
+									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
+									<h5>args: <span class="tsd-signature-type">Array&lt;any&gt;</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1017,7 +1017,7 @@
 					<a name="getrelativepathtofixedpath" class="anchor"></a>
 					<h3>get<wbr>Relative<wbr>Path<wbr>ToFixed<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Relative<wbr>Path<wbr>ToFixed<wbr>Path<span class="tsd-signature-symbols">(</span>absoluteModPath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, fixedModFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, isAbsoultePathURL<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Relative<wbr>Path<wbr>ToFixed<wbr>Path<span class="tsd-signature-symbols">(</span>fixedModFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, absoluteModPath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, isAbsoultePathURL<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1028,10 +1028,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>absoluteModPath: <span class="tsd-signature-type">string</span></h5>
+									<h5>fixedModFilePath: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>fixedModFilePath: <span class="tsd-signature-type">string</span></h5>
+									<h5>absoluteModPath: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>isAbsoultePathURL?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
@@ -1095,7 +1095,7 @@
 					<a name="hasflag" class="anchor"></a>
 					<h3>has<wbr>Flag</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">has<wbr>Flag<span class="tsd-signature-symbols">(</span>flag<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, val<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Flag<span class="tsd-signature-symbols">(</span>val<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, flag<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1106,10 +1106,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>flag: <span class="tsd-signature-type">number</span></h5>
+									<h5>val: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>val: <span class="tsd-signature-type">number</span></h5>
+									<h5>flag: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1122,7 +1122,7 @@
 					<a name="hasmodifier" class="anchor"></a>
 					<h3>has<wbr>Modifier</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">has<wbr>Modifier<span class="tsd-signature-symbols">(</span>flag<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a>, modifiers<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Modifier<span class="tsd-signature-symbols">(</span>modifiers<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">[]</span>, flag<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1133,10 +1133,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>flag: <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a></h5>
+									<h5>modifiers: <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">[]</span></h5>
 								</li>
 								<li>
-									<h5>modifiers: <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a><span class="tsd-signature-symbols">[]</span></h5>
+									<h5>flag: <a href="../enums/typedoc.models.flags.html" class="tsd-signature-type">Flags</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1407,7 +1407,7 @@
 					<a name="preprocessfile" class="anchor"></a>
 					<h3>pre<wbr>Process<wbr>File</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">pre<wbr>Process<wbr>File<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, readImportFiles<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, sourceText<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ipreprocessedfileinfo.html" class="tsd-signature-type">IPreProcessedFileInfo</a></li>
+						<li class="tsd-signature tsd-kind-icon">pre<wbr>Process<wbr>File<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, sourceText<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a>, readImportFiles<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ipreprocessedfileinfo.html" class="tsd-signature-type">IPreProcessedFileInfo</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1421,10 +1421,10 @@
 									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>readImportFiles?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>sourceText: <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h5>
 								</li>
 								<li>
-									<h5>sourceText: <a href="../interfaces/typescript.iscriptsnapshot.html" class="tsd-signature-type">IScriptSnapshot</a></h5>
+									<h5>readImportFiles?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1563,7 +1563,7 @@
 					<a name="timefunction" class="anchor"></a>
 					<h3>time<wbr>Function</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">time<wbr>Function<span class="tsd-signature-symbols">(</span>func<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, funcDescription<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, logger<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ilogger.html" class="tsd-signature-type">ILogger</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">time<wbr>Function<span class="tsd-signature-symbols">(</span>logger<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ilogger.html" class="tsd-signature-type">ILogger</a>, funcDescription<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, func<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1573,6 +1573,12 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
+								<li>
+									<h5>logger: <a href="../interfaces/typescript.ilogger.html" class="tsd-signature-type">ILogger</a></h5>
+								</li>
+								<li>
+									<h5>funcDescription: <span class="tsd-signature-type">string</span></h5>
+								</li>
 								<li>
 									<h5>func: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -1594,12 +1600,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>funcDescription: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>logger: <a href="../interfaces/typescript.ilogger.html" class="tsd-signature-type">ILogger</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 

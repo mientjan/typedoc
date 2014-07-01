@@ -78,8 +78,8 @@
 					<a name="exec" class="anchor"></a>
 					<h3>exec</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">exec<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, command<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
-						<li class="tsd-signature tsd-kind-icon">exec<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, command<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
+						<li class="tsd-signature tsd-kind-icon">exec<span class="tsd-signature-symbols">(</span>command<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Object</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
+						<li class="tsd-signature tsd-kind-icon">exec<span class="tsd-signature-symbols">(</span>command<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -89,37 +89,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-									<ul>
-										<li>
-											<h5>callback function signature<span class="tsd-signature-symbols"></span></h5>
-											<ul class="tsd-signatures tsd-kind-function-type tsd-parent-kind-parameter tsd-is-external">
-												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>error<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Error</span>, stderr<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, stdout<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbols">)</span></li>
-											</ul>
-											<ul class="tsd-descriptions">
-												<li class="tsd-description"><aside class="tsd-sources">
-														<ul>
-															<li>Defined in lib/node/node.d.ts:629</li>
-														</ul>
-													</aside>
-													<h4>Parameters</h4>
-													<ul>
-														<li>
-															<h5>error: <span class="tsd-signature-type">Error</span></h5>
-														</li>
-														<li>
-															<h5>stderr: <a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a></h5>
-														</li>
-														<li>
-															<h5>stdout: <a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a></h5>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
 								<li>
 									<h5>command: <span class="tsd-signature-type">string</span></h5>
 								</li>
@@ -152,6 +121,37 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<ul>
+										<li>
+											<h5>callback function signature<span class="tsd-signature-symbols"></span></h5>
+											<ul class="tsd-signatures tsd-kind-function-type tsd-parent-kind-parameter tsd-is-external">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>error<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Error</span>, stderr<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a>, stdout<span class="tsd-signature-symbols">: </span><a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a><span class="tsd-signature-symbols">)</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description"><aside class="tsd-sources">
+														<ul>
+															<li>Defined in lib/node/node.d.ts:629</li>
+														</ul>
+													</aside>
+													<h4>Parameters</h4>
+													<ul>
+														<li>
+															<h5>error: <span class="tsd-signature-type">Error</span></h5>
+														</li>
+														<li>
+															<h5>stderr: <a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a></h5>
+														</li>
+														<li>
+															<h5>stdout: <a href="../interfaces/buffer.html" class="tsd-signature-type">Buffer</a></h5>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
 							</ul>
 							<h4>Returns 
 								<a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a>
@@ -164,6 +164,9 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
+								<li>
+									<h5>command: <span class="tsd-signature-type">string</span></h5>
+								</li>
 								<li>
 									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -195,9 +198,6 @@
 										</li>
 									</ul>
 								</li>
-								<li>
-									<h5>command: <span class="tsd-signature-type">string</span></h5>
-								</li>
 							</ul>
 							<h4>Returns 
 								<a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a>
@@ -209,7 +209,7 @@
 					<a name="execfile" class="anchor"></a>
 					<h3>exec<wbr>File</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">exec<wbr>File<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, file<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
+						<li class="tsd-signature tsd-kind-icon">exec<wbr>File<span class="tsd-signature-symbols">(</span>file<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, options<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Object</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -220,7 +220,39 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>file: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
 									<h5>args: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-type">Object</span></h5>
+									<ul>
+										<li>
+											<h5>options.custom<wbr>Fds<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li>
+											<h5>options.cwd<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li>
+											<h5>options.encoding<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li>
+											<h5>options.env<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li>
+											<h5>options.kill<wbr>Signal<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li>
+											<h5>options.max<wbr>Buffer<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
+										</li>
+										<li>
+											<h5>options.stdio<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li>
+											<h5>options.timeout<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">number</span></h5>
+										</li>
+									</ul>
 								</li>
 								<li>
 									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
@@ -253,38 +285,6 @@
 										</li>
 									</ul>
 								</li>
-								<li>
-									<h5>file: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>options: <span class="tsd-signature-type">Object</span></h5>
-									<ul>
-										<li>
-											<h5>options.custom<wbr>Fds<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">any</span></h5>
-										</li>
-										<li>
-											<h5>options.cwd<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li>
-											<h5>options.encoding<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li>
-											<h5>options.env<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">any</span></h5>
-										</li>
-										<li>
-											<h5>options.kill<wbr>Signal<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li>
-											<h5>options.max<wbr>Buffer<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li>
-											<h5>options.stdio<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">any</span></h5>
-										</li>
-										<li>
-											<h5>options.timeout<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">number</span></h5>
-										</li>
-									</ul>
-								</li>
 							</ul>
 							<h4>Returns 
 								<a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a>
@@ -296,7 +296,7 @@
 					<a name="fork" class="anchor"></a>
 					<h3>fork</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">fork<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, modulePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
+						<li class="tsd-signature tsd-kind-icon">fork<span class="tsd-signature-symbols">(</span>modulePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -307,10 +307,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;string&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>modulePath: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>modulePath: <span class="tsd-signature-type">string</span></h5>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;string&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>options?: <span class="tsd-signature-type">Object</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
@@ -337,7 +337,7 @@
 					<a name="spawn" class="anchor"></a>
 					<h3>spawn</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">spawn<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, command<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
+						<li class="tsd-signature tsd-kind-icon">spawn<span class="tsd-signature-symbols">(</span>command<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_child_process_.childprocess.html" class="tsd-signature-type">ChildProcess</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -348,10 +348,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;string&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>command: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>command: <span class="tsd-signature-type">string</span></h5>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;string&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>options?: <span class="tsd-signature-type">Object</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>

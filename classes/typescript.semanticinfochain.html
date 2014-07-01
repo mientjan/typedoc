@@ -546,7 +546,7 @@
 					<a name="adddiagnosticfromast" class="anchor"></a>
 					<h3>add<wbr>Diagnostic<wbr>FromAST</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>_arguments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, additionalLocations<span class="tsd-signature-symbols">?: </span><a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, _arguments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, additionalLocations<span class="tsd-signature-symbols">?: </span><a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -557,16 +557,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>_arguments?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>additionalLocations?: <a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
 									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>_arguments?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>additionalLocations?: <a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -597,7 +597,7 @@
 					<a name="addduplicateidentifierdiagnosticfromast" class="anchor"></a>
 					<h3>add<wbr>Duplicate<wbr>Identifier<wbr>Diagnostic<wbr>FromAST</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Duplicate<wbr>Identifier<wbr>Diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>additionalLocationAST<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, identifier<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Duplicate<wbr>Identifier<wbr>Diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, identifier<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, additionalLocationAST<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -608,13 +608,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>additionalLocationAST: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
-								</li>
-								<li>
 									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
 									<h5>identifier: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>additionalLocationAST: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 							</ul>
 						</li>
@@ -675,7 +675,7 @@
 					<a name="addsyntheticindexsignature" class="anchor"></a>
 					<h3>add<wbr>Synthetic<wbr>Index<wbr>Signature</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Synthetic<wbr>Index<wbr>Signature<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, containingDecl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, containingSymbol<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, indexParamName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, indexParamType<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, returnType<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Synthetic<wbr>Index<wbr>Signature<span class="tsd-signature-symbols">(</span>containingDecl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, containingSymbol<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, indexParamName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, indexParamType<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, returnType<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -686,13 +686,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
-								</li>
-								<li>
 									<h5>containingDecl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
 								</li>
 								<li>
 									<h5>containingSymbol: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
+								</li>
+								<li>
+									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
 									<h5>indexParamName: <span class="tsd-signature-type">string</span></h5>
@@ -738,7 +738,7 @@
 					<a name="cacheglobalsymbol" class="anchor"></a>
 					<h3>cache<wbr>Global<wbr>Symbol</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">cache<wbr>Global<wbr>Symbol<span class="tsd-signature-symbols">(</span>kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, symbol<span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">cache<wbr>Global<wbr>Symbol<span class="tsd-signature-symbols">(</span>symbol<span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>, kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -749,10 +749,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+									<h5>symbol: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
 								</li>
 								<li>
-									<h5>symbol: <a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></h5>
+									<h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
 								</li>
 							</ul>
 						</li>
@@ -762,7 +762,7 @@
 					<a name="diagnosticfromast" class="anchor"></a>
 					<h3>diagnostic<wbr>FromAST</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>_arguments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, additionalLocations<span class="tsd-signature-symbols">?: </span><a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></li>
+						<li class="tsd-signature tsd-kind-icon">diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, diagnosticKey<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, _arguments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, additionalLocations<span class="tsd-signature-symbols">?: </span><a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -773,16 +773,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>_arguments?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>additionalLocations?: <a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
 									<h5>diagnosticKey: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>_arguments?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>additionalLocations?: <a href="typescript.location.html" class="tsd-signature-type">Location</a><span class="tsd-signature-symbols">[]</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -795,7 +795,7 @@
 					<a name="duplicateidentifierdiagnosticfromast" class="anchor"></a>
 					<h3>duplicate<wbr>Identifier<wbr>Diagnostic<wbr>FromAST</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">duplicate<wbr>Identifier<wbr>Diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>additionalLocationAST<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, identifier<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></li>
+						<li class="tsd-signature tsd-kind-icon">duplicate<wbr>Identifier<wbr>Diagnostic<wbr>FromAST<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, identifier<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, additionalLocationAST<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -806,13 +806,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>additionalLocationAST: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
-								</li>
-								<li>
 									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
 									<h5>identifier: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>additionalLocationAST: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -867,7 +867,7 @@
 					<a name="finddecls" class="anchor"></a>
 					<h3>find<wbr>Decls</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Decls<span class="tsd-signature-symbols">(</span>declKind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, declPath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Decls<span class="tsd-signature-symbols">(</span>declPath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, declKind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -878,10 +878,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>declKind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+									<h5>declPath: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
 								</li>
 								<li>
-									<h5>declPath: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+									<h5>declKind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -894,7 +894,7 @@
 					<a name="finddeclsfrompath" class="anchor"></a>
 					<h3>find<wbr>Decls<wbr>From<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Decls<wbr>From<wbr>Path<span class="tsd-signature-symbols">(</span>declKind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, declPath<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Decls<wbr>From<wbr>Path<span class="tsd-signature-symbols">(</span>declPath<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span>, declKind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -905,10 +905,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>declKind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
+									<h5>declPath: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span></h5>
 								</li>
 								<li>
-									<h5>declPath: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">[]</span></h5>
+									<h5>declKind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -972,7 +972,7 @@
 					<a name="findtoplevelsymbol" class="anchor"></a>
 					<h3>find<wbr>Top<wbr>Level<wbr>Symbol</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Top<wbr>Level<wbr>Symbol<span class="tsd-signature-symbols">(</span>doNotGoPastThisDecl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Top<wbr>Level<wbr>Symbol<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, kind<span class="tsd-signature-symbols">: </span><a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a>, doNotGoPastThisDecl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -983,13 +983,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>doNotGoPastThisDecl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>kind: <a href="../enums/typedoc.models.kind.html" class="tsd-signature-type">Kind</a></h5>
 								</li>
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>doNotGoPastThisDecl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1002,7 +1002,7 @@
 					<a name="findtoplevelsymbolindecl" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> find<wbr>Top<wbr>Level<wbr>Symbol<wbr>InDecl</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Top<wbr>Level<wbr>Symbol<wbr>InDecl<span class="tsd-signature-symbols">(</span>doNotGoPastThisDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, kind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, topLevelDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Top<wbr>Level<wbr>Symbol<wbr>InDecl<span class="tsd-signature-symbols">(</span>topLevelDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, kind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, doNotGoPastThisDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1013,16 +1013,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>doNotGoPastThisDecl: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>kind: <span class="tsd-signature-type">any</span></h5>
+									<h5>topLevelDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>name: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>topLevelDecl: <span class="tsd-signature-type">any</span></h5>
+									<h5>kind: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>doNotGoPastThisDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1149,7 +1149,7 @@
 					<a name="getdeclpathcacheid" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Decl<wbr>Path<wbr>CacheID</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Decl<wbr>Path<wbr>CacheID<span class="tsd-signature-symbols">(</span>declKind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, declPath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Decl<wbr>Path<wbr>CacheID<span class="tsd-signature-symbols">(</span>declPath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, declKind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1160,10 +1160,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>declKind: <span class="tsd-signature-type">any</span></h5>
+									<h5>declPath: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>declPath: <span class="tsd-signature-type">any</span></h5>
+									<h5>declKind: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1338,7 +1338,7 @@
 					<a name="invalidate" class="anchor"></a>
 					<h3>invalidate</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">invalidate<span class="tsd-signature-symbols">(</span>newSettings<span class="tsd-signature-symbols">?: </span><a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a>, oldSettings<span class="tsd-signature-symbols">?: </span><a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">invalidate<span class="tsd-signature-symbols">(</span>oldSettings<span class="tsd-signature-symbols">?: </span><a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a>, newSettings<span class="tsd-signature-symbols">?: </span><a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1349,10 +1349,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>newSettings?: <a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>oldSettings?: <a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>oldSettings?: <a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>newSettings?: <a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1449,7 +1449,7 @@
 					<a name="setastfordecl" class="anchor"></a>
 					<h3>setASTFor<wbr>Decl</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">setASTFor<wbr>Decl<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, decl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">setASTFor<wbr>Decl<span class="tsd-signature-symbols">(</span>decl<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a>, ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1460,10 +1460,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
+									<h5>decl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
 								</li>
 								<li>
-									<h5>decl: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
+									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 							</ul>
 						</li>
@@ -1617,7 +1617,7 @@
 					<a name="settingschangeaffectssyntax" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> settings<wbr>Change<wbr>Affects<wbr>Syntax</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">settings<wbr>Change<wbr>Affects<wbr>Syntax<span class="tsd-signature-symbols">(</span>after<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, before<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">settings<wbr>Change<wbr>Affects<wbr>Syntax<span class="tsd-signature-symbols">(</span>before<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, after<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1628,10 +1628,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>after: <span class="tsd-signature-type">any</span></h5>
+									<h5>before: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>before: <span class="tsd-signature-type">any</span></h5>
+									<h5>after: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

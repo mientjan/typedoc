@@ -124,7 +124,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>allowAutomaticSemicolonInsertion<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, codeGenTarget<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a>, codepage<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, createFileLog<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, gatherDiagnostics<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, generateDeclarationFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, mapRoot<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, mapSourceFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, moduleGenTarget<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.modulegentarget.html" class="tsd-signature-type">ModuleGenTarget</a>, noImplicitAny<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, noLib<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, noResolve<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, outDirOption<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, outFileOption<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, propagateEnumConstants<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, removeComments<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, sourceRoot<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, useCaseSensitiveFileResolution<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, watch<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>outFileOption<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, propagateEnumConstants<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, watch<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, noResolve<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, allowAutomaticSemicolonInsertion<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, noImplicitAny<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, noLib<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, codeGenTarget<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a>, moduleGenTarget<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.modulegentarget.html" class="tsd-signature-type">ModuleGenTarget</a>, removeComments<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, outDirOption<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, mapSourceFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, mapRoot<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, sourceRoot<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, generateDeclarationFiles<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, useCaseSensitiveFileResolution<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, gatherDiagnostics<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, codepage<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, createFileLog<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.immutablecompilationsettings.html" class="tsd-signature-type">ImmutableCompilationSettings</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -135,31 +135,19 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>outFileOption: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>propagateEnumConstants: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>watch: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>noResolve: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
 									<h5>allowAutomaticSemicolonInsertion: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>codeGenTarget: <a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a></h5>
-								</li>
-								<li>
-									<h5>codepage: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>createFileLog: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>gatherDiagnostics: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>generateDeclarationFiles: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>mapRoot: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>mapSourceFiles: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>moduleGenTarget: <a href="../enums/typescript.modulegentarget.html" class="tsd-signature-type">ModuleGenTarget</a></h5>
 								</li>
 								<li>
 									<h5>noImplicitAny: <span class="tsd-signature-type">boolean</span></h5>
@@ -168,28 +156,40 @@
 									<h5>noLib: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5>noResolve: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>codeGenTarget: <a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a></h5>
 								</li>
 								<li>
-									<h5>outDirOption: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>outFileOption: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>propagateEnumConstants: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>moduleGenTarget: <a href="../enums/typescript.modulegentarget.html" class="tsd-signature-type">ModuleGenTarget</a></h5>
 								</li>
 								<li>
 									<h5>removeComments: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
+									<h5>outDirOption: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>mapSourceFiles: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>mapRoot: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
 									<h5>sourceRoot: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>generateDeclarationFiles: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
 									<h5>useCaseSensitiveFileResolution: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5>watch: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>gatherDiagnostics: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>codepage: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>createFileLog: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

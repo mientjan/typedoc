@@ -108,7 +108,7 @@
 					<a name="createdirectorystructure" class="anchor"></a>
 					<h3>create<wbr>Directory<wbr>Structure</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Directory<wbr>Structure<span class="tsd-signature-symbols">(</span>dirName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, ioHost<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Directory<wbr>Structure<span class="tsd-signature-symbols">(</span>ioHost<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a>, dirName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -119,10 +119,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>dirName: <span class="tsd-signature-type">string</span></h5>
+									<h5>ioHost: <a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a></h5>
 								</li>
 								<li>
-									<h5>ioHost: <a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a></h5>
+									<h5>dirName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -132,7 +132,7 @@
 					<a name="throwioerror" class="anchor"></a>
 					<h3>throwIOError</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container">
-						<li class="tsd-signature tsd-kind-icon">throwIOError<span class="tsd-signature-symbols">(</span>error<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Error</span>, message<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">throwIOError<span class="tsd-signature-symbols">(</span>message<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, error<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Error</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -143,10 +143,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>error: <span class="tsd-signature-type">Error</span></h5>
+									<h5>message: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>message: <span class="tsd-signature-type">string</span></h5>
+									<h5>error: <span class="tsd-signature-type">Error</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -156,7 +156,7 @@
 					<a name="writefileandfolderstructure" class="anchor"></a>
 					<h3>write<wbr>File<wbr>And<wbr>Folder<wbr>Structure</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-container">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>File<wbr>And<wbr>Folder<wbr>Structure<span class="tsd-signature-symbols">(</span>contents<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, ioHost<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a>, writeByteOrderMark<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>File<wbr>And<wbr>Folder<wbr>Structure<span class="tsd-signature-symbols">(</span>ioHost<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a>, fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, contents<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, writeByteOrderMark<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -167,13 +167,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>contents: <span class="tsd-signature-type">string</span></h5>
+									<h5>ioHost: <a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a></h5>
 								</li>
 								<li>
 									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>ioHost: <a href="../interfaces/typescript.iio.html" class="tsd-signature-type">IIO</a></h5>
+									<h5>contents: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>writeByteOrderMark: <span class="tsd-signature-type">boolean</span></h5>

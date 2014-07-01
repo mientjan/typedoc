@@ -114,7 +114,7 @@
 					<a name="copyto" class="anchor"></a>
 					<h3>copy<wbr>To</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">copy<wbr>To<span class="tsd-signature-symbols">(</span>count<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, destination<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;number&gt;</span>, destinationIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, sourceIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">copy<wbr>To<span class="tsd-signature-symbols">(</span>sourceIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, destination<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;number&gt;</span>, destinationIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, count<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -125,7 +125,7 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>count: <span class="tsd-signature-type">number</span></h5>
+									<h5>sourceIndex: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>destination: <span class="tsd-signature-type">Array&lt;number&gt;</span></h5>
@@ -134,7 +134,7 @@
 									<h5>destinationIndex: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>sourceIndex: <span class="tsd-signature-type">number</span></h5>
+									<h5>count: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -204,7 +204,7 @@
 					<a name="substr" class="anchor"></a>
 					<h3>substr</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">substr<span class="tsd-signature-symbols">(</span>intern<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">substr<span class="tsd-signature-symbols">(</span>start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, intern<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -215,13 +215,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>intern: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>length: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>start: <span class="tsd-signature-type">number</span></h5>
+									<h5>intern: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

@@ -96,7 +96,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>host<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a>, inputFileNames<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, useCaseSensitiveFileResolution<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.referenceresolver.html" class="tsd-signature-type">ReferenceResolver</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>inputFileNames<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, host<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a>, useCaseSensitiveFileResolution<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.referenceresolver.html" class="tsd-signature-type">ReferenceResolver</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -107,10 +107,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>host: <a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a></h5>
+									<h5>inputFileNames: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
 								</li>
 								<li>
-									<h5>inputFileNames: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+									<h5>host: <a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a></h5>
 								</li>
 								<li>
 									<h5>useCaseSensitiveFileResolution: <span class="tsd-signature-type">boolean</span></h5>
@@ -172,7 +172,7 @@
 					<a name="getnormalizedfilepath" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Normalized<wbr>File<wbr>Path</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Normalized<wbr>File<wbr>Path<span class="tsd-signature-symbols">(</span>parentFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Normalized<wbr>File<wbr>Path<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parentFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -183,10 +183,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>parentFilePath: <span class="tsd-signature-type">any</span></h5>
+									<h5>path: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>path: <span class="tsd-signature-type">any</span></h5>
+									<h5>parentFilePath: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -298,7 +298,7 @@
 					<a name="static-resolve" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> resolve</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbols">(</span>host<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a>, inputFileNames<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, useCaseSensitiveFileResolution<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.referenceresolutionresult.html" class="tsd-signature-type">ReferenceResolutionResult</a></li>
+						<li class="tsd-signature tsd-kind-icon">resolve<span class="tsd-signature-symbols">(</span>inputFileNames<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span>, host<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a>, useCaseSensitiveFileResolution<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.referenceresolutionresult.html" class="tsd-signature-type">ReferenceResolutionResult</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -309,10 +309,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>host: <a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a></h5>
+									<h5>inputFileNames: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
 								</li>
 								<li>
-									<h5>inputFileNames: <span class="tsd-signature-type">Array&lt;string&gt;</span></h5>
+									<h5>host: <a href="../interfaces/typescript.ireferenceresolverhost.html" class="tsd-signature-type">IReferenceResolverHost</a></h5>
 								</li>
 								<li>
 									<h5>useCaseSensitiveFileResolution: <span class="tsd-signature-type">boolean</span></h5>

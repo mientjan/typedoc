@@ -207,7 +207,7 @@
 					<a name="listfiles" class="anchor"></a>
 					<h3>list<wbr>Files</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">list<wbr>Files<span class="tsd-signature-symbols">(</span>options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span>, path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, re<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">list<wbr>Files<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, re<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">RegExp</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;string&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -218,18 +218,18 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>re?: <span class="tsd-signature-type">RegExp</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
 									<h5>options?: <span class="tsd-signature-type">Object</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 									<ul>
 										<li>
 											<h5>options.recursive<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">boolean</span></h5>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>path: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>re?: <span class="tsd-signature-type">RegExp</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -242,7 +242,7 @@
 					<a name="readfile" class="anchor"></a>
 					<h3>read<wbr>File</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>File<span class="tsd-signature-symbols">(</span>codepage<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.fileinformation.html" class="tsd-signature-type">FileInformation</a></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>File<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, codepage<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/typescript.fileinformation.html" class="tsd-signature-type">FileInformation</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -253,10 +253,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>codepage: <span class="tsd-signature-type">number</span></h5>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<h5>codepage: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -287,7 +287,7 @@
 					<a name="writefile" class="anchor"></a>
 					<h3>write<wbr>File</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>File<span class="tsd-signature-symbols">(</span>contents<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, writeByteOrderMark<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>File<span class="tsd-signature-symbols">(</span>path<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, contents<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, writeByteOrderMark<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -298,10 +298,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>contents: <span class="tsd-signature-type">string</span></h5>
+									<h5>path: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>path: <span class="tsd-signature-type">string</span></h5>
+									<h5>contents: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>writeByteOrderMark: <span class="tsd-signature-type">boolean</span></h5>

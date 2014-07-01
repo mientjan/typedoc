@@ -138,7 +138,7 @@
 					<a name="dispatch" class="anchor"></a>
 					<h3>dispatch</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">dispatch<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">dispatch<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -150,12 +150,12 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-									<p>Additional arguments to pass to the handlers.</p>
-								</li>
-								<li>
 									<h5>event: <span class="tsd-signature-type">string</span></h5>
 									<p>The name of the event to dispatch.</p>
+								</li>
+								<li>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Additional arguments to pass to the handlers.</p>
 								</li>
 							</ul>
 						</li>
@@ -196,7 +196,7 @@
 					<a name="on" class="anchor"></a>
 					<h3>on</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null<span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, handler<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, scope<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols"> =&nbsp;</span>null, priority<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols"> =&nbsp;</span>0<span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -216,13 +216,13 @@
 									<p>The callback that should be invoked.</p>
 								</li>
 								<li>
+									<h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>The scope the callback should be executed in.</p>
+								</li>
+								<li>
 									<h5>priority?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 									<p>A numeric value describing the priority of the handler. Handlers
 									with higher priority will be executed earlier.</p>
-								</li>
-								<li>
-									<h5>scope?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-									<p>The scope the callback should be executed in.</p>
 								</li>
 							</ul>
 						</li>

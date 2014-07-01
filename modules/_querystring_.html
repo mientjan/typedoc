@@ -90,7 +90,7 @@
 					<a name="parse" class="anchor"></a>
 					<h3>parse</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>eq<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span>, sep<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>str<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, sep<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, eq<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -101,6 +101,12 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>str: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>sep?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
 									<h5>eq?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
@@ -110,12 +116,6 @@
 											<h5>options.max<wbr>Keys<span class="tsd-signature-symbols">?</span> <span class="tsd-signature-type">number</span></h5>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>sep?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>str: <span class="tsd-signature-type">string</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -128,7 +128,7 @@
 					<a name="stringify" class="anchor"></a>
 					<h3>stringify</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">stringify<span class="tsd-signature-symbols">(</span>eq<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, obj<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, sep<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">stringify<span class="tsd-signature-symbols">(</span>obj<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, sep<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, eq<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -139,13 +139,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>eq?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
 									<h5>obj: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>sep?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>eq?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

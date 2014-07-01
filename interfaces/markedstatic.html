@@ -77,8 +77,8 @@
 				<section class="tsd-member tsd-kind-call-signature tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
 					<a name="symbol-6751" class="anchor"></a>
 					<ul class="tsd-signatures tsd-kind-call-signature tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a>, src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a>, callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -90,12 +90,12 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
-								</li>
-								<li>
 									<h5>src: <span class="tsd-signature-type">string</span></h5>
 									<p>String of markdown source to be compiled</p>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -112,16 +112,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
+									<h5>src: <span class="tsd-signature-type">string</span></h5>
+									<p>String of markdown source to be compiled</p>
 								</li>
 								<li>
 									<h5>options?: <a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 									<p>Hash of options</p>
 								</li>
 								<li>
-									<h5>src: <span class="tsd-signature-type">string</span></h5>
-									<p>String of markdown source to be compiled</p>
+									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -138,7 +138,7 @@
 					<a name="lexer" class="anchor"></a>
 					<h3>lexer</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">lexer<span class="tsd-signature-symbols">(</span>options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a>, src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">lexer<span class="tsd-signature-symbols">(</span>src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -149,12 +149,12 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>options?: <a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-									<p>Hash of options</p>
-								</li>
-								<li>
 									<h5>src: <span class="tsd-signature-type">string</span></h5>
 									<p>String of markdown source to be compiled</p>
+								</li>
+								<li>
+									<h5>options?: <a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Hash of options</p>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -167,8 +167,8 @@
 					<a name="parse" class="anchor"></a>
 					<h3>parse</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
-						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span>, options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a>, src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">parse<span class="tsd-signature-symbols">(</span>src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a>, callback<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -180,12 +180,12 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
-									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
-								</li>
-								<li>
 									<h5>src: <span class="tsd-signature-type">string</span></h5>
 									<p>String of markdown source to be compiled</p>
+								</li>
+								<li>
+									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
+									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -202,16 +202,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
+									<h5>src: <span class="tsd-signature-type">string</span></h5>
+									<p>String of markdown source to be compiled</p>
 								</li>
 								<li>
 									<h5>options?: <a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 									<p>Hash of options</p>
 								</li>
 								<li>
-									<h5>src: <span class="tsd-signature-type">string</span></h5>
-									<p>String of markdown source to be compiled</p>
+									<h5>callback?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Function called when the markdownString has been fully parsed when using async highlighting</p>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -225,7 +225,7 @@
 					<a name="parser" class="anchor"></a>
 					<h3>parser</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">parser<span class="tsd-signature-symbols">(</span>options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a>, src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">parser<span class="tsd-signature-symbols">(</span>src<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, options<span class="tsd-signature-symbols">?: </span><a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -236,11 +236,11 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>options?: <a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-									<p>Hash of options</p>
+									<h5>src: <span class="tsd-signature-type">Array&lt;any&gt;</span></h5>
 								</li>
 								<li>
-									<h5>src: <span class="tsd-signature-type">Array&lt;any&gt;</span></h5>
+									<h5>options?: <a href="markedoptions.html" class="tsd-signature-type">MarkedOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<p>Hash of options</p>
 								</li>
 							</ul>
 							<h4>Returns 

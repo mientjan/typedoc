@@ -142,7 +142,7 @@
 					<a name="addchararray" class="anchor"></a>
 					<h3>add<wbr>Char<wbr>Array</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Char<wbr>Array<span class="tsd-signature-symbols">(</span>key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;number&gt;</span>, len<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Char<wbr>Array<span class="tsd-signature-symbols">(</span>key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;number&gt;</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, len<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -156,10 +156,10 @@
 									<h5>key: <span class="tsd-signature-type">Array&lt;number&gt;</span></h5>
 								</li>
 								<li>
-									<h5>len: <span class="tsd-signature-type">number</span></h5>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>start: <span class="tsd-signature-type">number</span></h5>
+									<h5>len: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -172,7 +172,7 @@
 					<a name="addentry" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> add<wbr>Entry</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Entry<span class="tsd-signature-symbols">(</span>hashCode<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, text<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Entry<span class="tsd-signature-symbols">(</span>text<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, hashCode<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -183,10 +183,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>hashCode: <span class="tsd-signature-type">any</span></h5>
+									<h5>text: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>text: <span class="tsd-signature-type">any</span></h5>
+									<h5>hashCode: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -199,7 +199,7 @@
 					<a name="findchararrayentry" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> find<wbr>Char<wbr>Array<wbr>Entry</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Char<wbr>Array<wbr>Entry<span class="tsd-signature-symbols">(</span>hashCode<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, len<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Char<wbr>Array<wbr>Entry<span class="tsd-signature-symbols">(</span>key<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, len<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, hashCode<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -210,16 +210,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>hashCode: <span class="tsd-signature-type">any</span></h5>
+									<h5>key: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>key: <span class="tsd-signature-type">any</span></h5>
+									<h5>start: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>len: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>start: <span class="tsd-signature-type">any</span></h5>
+									<h5>hashCode: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -250,7 +250,7 @@
 					<a name="static-textchararrayequals" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> <span class="tsd-flag ts-flagstatic">static</span> text<wbr>Char<wbr>Array<wbr>Equals</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">text<wbr>Char<wbr>Array<wbr>Equals<span class="tsd-signature-symbols">(</span>array<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, text<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">text<wbr>Char<wbr>Array<wbr>Equals<span class="tsd-signature-symbols">(</span>text<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, array<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -261,16 +261,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>array: <span class="tsd-signature-type">any</span></h5>
+									<h5>text: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>length: <span class="tsd-signature-type">any</span></h5>
+									<h5>array: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>start: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>text: <span class="tsd-signature-type">any</span></h5>
+									<h5>length: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

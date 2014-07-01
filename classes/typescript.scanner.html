@@ -144,7 +144,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, languageVersion<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a>, text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a>, window<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;number&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.scanner.html" class="tsd-signature-type">Scanner</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>fileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a>, languageVersion<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a>, window<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;number&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.scanner.html" class="tsd-signature-type">Scanner</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -158,10 +158,10 @@
 									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>languageVersion: <a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a></h5>
+									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
 								</li>
 								<li>
-									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
+									<h5>languageVersion: <a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a></h5>
 								</li>
 								<li>
 									<h5>window?: <span class="tsd-signature-type">Array&lt;number&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
@@ -275,7 +275,7 @@
 					<a name="createillegalescapediagnostic" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> create<wbr>Illegal<wbr>Escape<wbr>Diagnostic</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Illegal<wbr>Escape<wbr>Diagnostic<span class="tsd-signature-symbols">(</span>end<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Illegal<wbr>Escape<wbr>Diagnostic<span class="tsd-signature-symbols">(</span>start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, end<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -286,10 +286,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>end: <span class="tsd-signature-type">any</span></h5>
+									<h5>start: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>start: <span class="tsd-signature-type">any</span></h5>
+									<h5>end: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -302,7 +302,7 @@
 					<a name="createtoken" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> create<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Token<span class="tsd-signature-symbols">(</span>end<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, fullEnd<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, fullStart<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, isVariableWidthKeyword<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, kind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, leadingTriviaInfo<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, trailingTriviaInfo<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Token<span class="tsd-signature-symbols">(</span>fullStart<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, leadingTriviaInfo<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, kind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, end<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, fullEnd<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, trailingTriviaInfo<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, isVariableWidthKeyword<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -313,19 +313,7 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>end: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>fullEnd: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
 									<h5>fullStart: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>isVariableWidthKeyword: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>kind: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>leadingTriviaInfo: <span class="tsd-signature-type">any</span></h5>
@@ -334,7 +322,19 @@
 									<h5>start: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
+									<h5>kind: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>end: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>fullEnd: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
 									<h5>trailingTriviaInfo: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>isVariableWidthKeyword: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -365,7 +365,7 @@
 					<a name="fetchmoreitems" class="anchor"></a>
 					<h3>fetch<wbr>More<wbr>Items</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">fetch<wbr>More<wbr>Items<span class="tsd-signature-symbols">(</span>argument<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, destinationIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, sourceIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, spaceAvailable<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, window<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;number&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">fetch<wbr>More<wbr>Items<span class="tsd-signature-symbols">(</span>argument<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, sourceIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, window<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;number&gt;</span>, destinationIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, spaceAvailable<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -379,16 +379,16 @@
 									<h5>argument: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>destinationIndex: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
 									<h5>sourceIndex: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>spaceAvailable: <span class="tsd-signature-type">number</span></h5>
+									<h5>window: <span class="tsd-signature-type">Array&lt;number&gt;</span></h5>
 								</li>
 								<li>
-									<h5>window: <span class="tsd-signature-type">Array&lt;number&gt;</span></h5>
+									<h5>destinationIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>spaceAvailable: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -575,7 +575,7 @@
 					<a name="static-isvalididentifier" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> is<wbr>Valid<wbr>Identifier</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">is<wbr>Valid<wbr>Identifier<span class="tsd-signature-symbols">(</span>languageVersion<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a>, text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Valid<wbr>Identifier<span class="tsd-signature-symbols">(</span>text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a>, languageVersion<span class="tsd-signature-symbols">: </span><a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -586,10 +586,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>languageVersion: <a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a></h5>
+									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
 								</li>
 								<li>
-									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
+									<h5>languageVersion: <a href="../enums/typescript.languageversion.html" class="tsd-signature-type">LanguageVersion</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -656,7 +656,7 @@
 					<a name="scan" class="anchor"></a>
 					<h3>scan</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">scan<span class="tsd-signature-symbols">(</span>allowRegularExpression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, diagnostics<span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a><span class="tsd-signature-symbols">[]</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isyntaxtoken.html" class="tsd-signature-type">ISyntaxToken</a></li>
+						<li class="tsd-signature tsd-kind-icon">scan<span class="tsd-signature-symbols">(</span>diagnostics<span class="tsd-signature-symbols">: </span><a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a><span class="tsd-signature-symbols">[]</span>, allowRegularExpression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isyntaxtoken.html" class="tsd-signature-type">ISyntaxToken</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -667,10 +667,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>allowRegularExpression: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>diagnostics: <a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a><span class="tsd-signature-symbols">[]</span></h5>
 								</li>
 								<li>
-									<h5>diagnostics: <a href="typescript.diagnostic.html" class="tsd-signature-type">Diagnostic</a><span class="tsd-signature-symbols">[]</span></h5>
+									<h5>allowRegularExpression: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1232,7 +1232,7 @@
 					<a name="scansyntaxtoken" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> scan<wbr>Syntax<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">scan<wbr>Syntax<wbr>Token<span class="tsd-signature-symbols">(</span>allowRegularExpression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, diagnostics<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">scan<wbr>Syntax<wbr>Token<span class="tsd-signature-symbols">(</span>diagnostics<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, allowRegularExpression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1243,10 +1243,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>allowRegularExpression: <span class="tsd-signature-type">any</span></h5>
+									<h5>diagnostics: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>diagnostics: <span class="tsd-signature-type">any</span></h5>
+									<h5>allowRegularExpression: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1259,7 +1259,7 @@
 					<a name="scantrivia" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> scan<wbr>Trivia</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">scan<wbr>Trivia<span class="tsd-signature-symbols">(</span>isTrailing<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, underlyingText<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, underlyingTextStart<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">scan<wbr>Trivia<span class="tsd-signature-symbols">(</span>underlyingText<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, underlyingTextStart<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, isTrailing<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1270,13 +1270,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>isTrailing: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
 									<h5>underlyingText: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>underlyingTextStart: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>isTrailing: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1289,7 +1289,7 @@
 					<a name="static-scantrivia" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> scan<wbr>Trivia</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">scan<wbr>Trivia<span class="tsd-signature-symbols">(</span>isTrailing<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isyntaxtrivialist.html" class="tsd-signature-type">ISyntaxTriviaList</a></li>
+						<li class="tsd-signature tsd-kind-icon">scan<wbr>Trivia<span class="tsd-signature-symbols">(</span>text<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, isTrailing<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.isyntaxtrivialist.html" class="tsd-signature-type">ISyntaxTriviaList</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1300,16 +1300,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>isTrailing: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>length: <span class="tsd-signature-type">number</span></h5>
+									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
 								</li>
 								<li>
 									<h5>start: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>text: <a href="../interfaces/typescript.isimpletext.html" class="tsd-signature-type">ISimpleText</a></h5>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>isTrailing: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1469,7 +1469,7 @@
 					<a name="substring" class="anchor"></a>
 					<h3>substring</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">substring<span class="tsd-signature-symbols">(</span>end<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, intern<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">substring<span class="tsd-signature-symbols">(</span>start<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, intern<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1480,13 +1480,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>start: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
 									<h5>end: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>intern: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>start: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

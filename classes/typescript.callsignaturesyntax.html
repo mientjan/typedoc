@@ -142,7 +142,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>parameterList<span class="tsd-signature-symbols">: </span><a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a>, parsedInStrictMode<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, typeAnnotation<span class="tsd-signature-symbols">: </span><a href="typescript.typeannotationsyntax.html" class="tsd-signature-type">TypeAnnotationSyntax</a>, typeParameterList<span class="tsd-signature-symbols">: </span><a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.callsignaturesyntax.html" class="tsd-signature-type">CallSignatureSyntax</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>typeParameterList<span class="tsd-signature-symbols">: </span><a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a>, parameterList<span class="tsd-signature-symbols">: </span><a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a>, typeAnnotation<span class="tsd-signature-symbols">: </span><a href="typescript.typeannotationsyntax.html" class="tsd-signature-type">TypeAnnotationSyntax</a>, parsedInStrictMode<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.callsignaturesyntax.html" class="tsd-signature-type">CallSignatureSyntax</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -156,16 +156,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>parameterList: <a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a></h5>
+									<h5>typeParameterList: <a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a></h5>
 								</li>
 								<li>
-									<h5>parsedInStrictMode: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>parameterList: <a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a></h5>
 								</li>
 								<li>
 									<h5>typeAnnotation: <a href="typescript.typeannotationsyntax.html" class="tsd-signature-type">TypeAnnotationSyntax</a></h5>
 								</li>
 								<li>
-									<h5>typeParameterList: <a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a></h5>
+									<h5>parsedInStrictMode: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -355,7 +355,7 @@
 					<a name="findcompletetokenonleft" class="anchor"></a>
 					<h3>find<wbr>Complete<wbr>Token<wbr>OnLeft</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Complete<wbr>Token<wbr>OnLeft<span class="tsd-signature-symbols">(</span>includeSkippedTokens<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.positionedtoken.html" class="tsd-signature-type">PositionedToken</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Complete<wbr>Token<wbr>OnLeft<span class="tsd-signature-symbols">(</span>position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, includeSkippedTokens<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.positionedtoken.html" class="tsd-signature-type">PositionedToken</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -369,10 +369,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>includeSkippedTokens?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>position: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>position: <span class="tsd-signature-type">number</span></h5>
+									<h5>includeSkippedTokens?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -385,7 +385,7 @@
 					<a name="findtoken" class="anchor"></a>
 					<h3>find<wbr>Token</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Token<span class="tsd-signature-symbols">(</span>includeSkippedTokens<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.positionedtoken.html" class="tsd-signature-type">PositionedToken</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Token<span class="tsd-signature-symbols">(</span>position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, includeSkippedTokens<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.positionedtoken.html" class="tsd-signature-type">PositionedToken</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -399,10 +399,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>includeSkippedTokens?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>position: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>position: <span class="tsd-signature-type">number</span></h5>
+									<h5>includeSkippedTokens?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -415,7 +415,7 @@
 					<a name="findtokenonleft" class="anchor"></a>
 					<h3>find<wbr>Token<wbr>OnLeft</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Token<wbr>OnLeft<span class="tsd-signature-symbols">(</span>includeSkippedTokens<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.positionedtoken.html" class="tsd-signature-type">PositionedToken</a></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Token<wbr>OnLeft<span class="tsd-signature-symbols">(</span>position<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, includeSkippedTokens<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.positionedtoken.html" class="tsd-signature-type">PositionedToken</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -429,10 +429,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>includeSkippedTokens?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>position: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>position: <span class="tsd-signature-type">number</span></h5>
+									<h5>includeSkippedTokens?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1060,7 +1060,7 @@
 					<a name="update" class="anchor"></a>
 					<h3>update</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbols">(</span>parameterList<span class="tsd-signature-symbols">: </span><a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a>, typeAnnotation<span class="tsd-signature-symbols">: </span><a href="typescript.typeannotationsyntax.html" class="tsd-signature-type">TypeAnnotationSyntax</a>, typeParameterList<span class="tsd-signature-symbols">: </span><a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.callsignaturesyntax.html" class="tsd-signature-type">CallSignatureSyntax</a></li>
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbols">(</span>typeParameterList<span class="tsd-signature-symbols">: </span><a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a>, parameterList<span class="tsd-signature-symbols">: </span><a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a>, typeAnnotation<span class="tsd-signature-symbols">: </span><a href="typescript.typeannotationsyntax.html" class="tsd-signature-type">TypeAnnotationSyntax</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.callsignaturesyntax.html" class="tsd-signature-type">CallSignatureSyntax</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1071,13 +1071,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>typeParameterList: <a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a></h5>
+								</li>
+								<li>
 									<h5>parameterList: <a href="typescript.parameterlistsyntax.html" class="tsd-signature-type">ParameterListSyntax</a></h5>
 								</li>
 								<li>
 									<h5>typeAnnotation: <a href="typescript.typeannotationsyntax.html" class="tsd-signature-type">TypeAnnotationSyntax</a></h5>
-								</li>
-								<li>
-									<h5>typeParameterList: <a href="typescript.typeparameterlistsyntax.html" class="tsd-signature-type">TypeParameterListSyntax</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 

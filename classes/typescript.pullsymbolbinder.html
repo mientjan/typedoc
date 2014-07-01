@@ -682,7 +682,7 @@
 					<a name="bindparametersymbols" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> bind<wbr>Parameter<wbr>Symbols</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">bind<wbr>Parameter<wbr>Symbols<span class="tsd-signature-symbols">(</span>funcType<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, functionDeclaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameterList<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, signatureSymbol<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">bind<wbr>Parameter<wbr>Symbols<span class="tsd-signature-symbols">(</span>functionDeclaration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameterList<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, funcType<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, signatureSymbol<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -693,13 +693,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>funcType: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
 									<h5>functionDeclaration: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>parameterList: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>funcType: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>signatureSymbol: <span class="tsd-signature-type">any</span></h5>
@@ -898,7 +898,7 @@
 					<a name="finddeclsincontext" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> find<wbr>Decls<wbr>InContext</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">find<wbr>Decls<wbr>InContext<span class="tsd-signature-symbols">(</span>declKind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, searchGlobally<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, startingDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">find<wbr>Decls<wbr>InContext<span class="tsd-signature-symbols">(</span>startingDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, declKind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, searchGlobally<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -909,13 +909,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>startingDecl: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
 									<h5>declKind: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>searchGlobally: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>startingDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -976,7 +976,7 @@
 					<a name="getexistingsymbol" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Existing<wbr>Symbol</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Existing<wbr>Symbol<span class="tsd-signature-symbols">(</span>decl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parent<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, searchKind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Existing<wbr>Symbol<span class="tsd-signature-symbols">(</span>decl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, searchKind<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parent<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -990,10 +990,10 @@
 									<h5>decl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>parent: <span class="tsd-signature-type">any</span></h5>
+									<h5>searchKind: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>searchKind: <span class="tsd-signature-type">any</span></h5>
+									<h5>parent: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1006,7 +1006,7 @@
 					<a name="getindexforinsertingsignatureatendofenclosingdeclinsignaturelist" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Index<wbr>For<wbr>Inserting<wbr>Signature<wbr>AtEnd<wbr>OfEnclosing<wbr>Decl<wbr>InSignature<wbr>List</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Index<wbr>For<wbr>Inserting<wbr>Signature<wbr>AtEnd<wbr>OfEnclosing<wbr>Decl<wbr>InSignature<wbr>List<span class="tsd-signature-symbols">(</span>currentSignatures<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, signature<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Index<wbr>For<wbr>Inserting<wbr>Signature<wbr>AtEnd<wbr>OfEnclosing<wbr>Decl<wbr>InSignature<wbr>List<span class="tsd-signature-symbols">(</span>signature<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, currentSignatures<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1017,10 +1017,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>currentSignatures: <span class="tsd-signature-type">any</span></h5>
+									<h5>signature: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>signature: <span class="tsd-signature-type">any</span></h5>
+									<h5>currentSignatures: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

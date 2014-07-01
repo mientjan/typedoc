@@ -255,7 +255,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>emitOptions<span class="tsd-signature-symbols">: </span><a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a>, emittingFileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, outfile<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, semanticInfoChain<span class="tsd-signature-symbols">: </span><a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.emitter.html" class="tsd-signature-type">Emitter</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>emittingFileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, outfile<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, emitOptions<span class="tsd-signature-symbols">: </span><a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a>, semanticInfoChain<span class="tsd-signature-symbols">: </span><a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.emitter.html" class="tsd-signature-type">Emitter</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -266,13 +266,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>emitOptions: <a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a></h5>
-								</li>
-								<li>
 									<h5>emittingFileName: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>outfile: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
+								</li>
+								<li>
+									<h5>emitOptions: <a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a></h5>
 								</li>
 								<li>
 									<h5>semanticInfoChain: <a href="typescript.semanticinfochain.html" class="tsd-signature-type">SemanticInfoChain</a></h5>
@@ -508,7 +508,7 @@
 					<a name="createsourcemapper" class="anchor"></a>
 					<h3>create<wbr>Source<wbr>Mapper</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Source<wbr>Mapper<span class="tsd-signature-symbols">(</span>document<span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a>, jsFile<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, jsFileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, resolvePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, sourceMapOut<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Source<wbr>Mapper<span class="tsd-signature-symbols">(</span>document<span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a>, jsFileName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, jsFile<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, sourceMapOut<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, resolvePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -522,10 +522,13 @@
 									<h5>document: <a href="typescript.document.html" class="tsd-signature-type">Document</a></h5>
 								</li>
 								<li>
+									<h5>jsFileName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
 									<h5>jsFile: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
 								</li>
 								<li>
-									<h5>jsFileName: <span class="tsd-signature-type">string</span></h5>
+									<h5>sourceMapOut: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
 								</li>
 								<li>
 									<h5>resolvePath: <span class="tsd-signature-type">Function</span></h5>
@@ -554,9 +557,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>sourceMapOut: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
 								</li>
 							</ul>
 						</li>
@@ -590,7 +590,7 @@
 					<a name="emitaccessorbody" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> emit<wbr>Accessor<wbr>Body</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Accessor<wbr>Body<span class="tsd-signature-symbols">(</span>block<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, funcDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameterList<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Accessor<wbr>Body<span class="tsd-signature-symbols">(</span>funcDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameterList<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, block<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -601,13 +601,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>block: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
 									<h5>funcDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>parameterList: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>block: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -620,7 +620,7 @@
 					<a name="emitaccessormemberdeclaration" class="anchor"></a>
 					<h3>emit<wbr>Accessor<wbr>Member<wbr>Declaration</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Accessor<wbr>Member<wbr>Declaration<span class="tsd-signature-symbols">(</span>className<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, funcDecl<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, isProto<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, name<span class="tsd-signature-symbols">: </span><a href="typescript.iasttoken.html" class="tsd-signature-type">IASTToken</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Accessor<wbr>Member<wbr>Declaration<span class="tsd-signature-symbols">(</span>funcDecl<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, name<span class="tsd-signature-symbols">: </span><a href="typescript.iasttoken.html" class="tsd-signature-type">IASTToken</a>, className<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, isProto<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -631,16 +631,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>className: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
 									<h5>funcDecl: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
-									<h5>isProto: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>name: <a href="typescript.iasttoken.html" class="tsd-signature-type">IASTToken</a></h5>
 								</li>
 								<li>
-									<h5>name: <a href="typescript.iasttoken.html" class="tsd-signature-type">IASTToken</a></h5>
+									<h5>className: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>isProto: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -671,7 +671,7 @@
 					<a name="emitanyarrowfunctionexpression" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> emit<wbr>Any<wbr>Arrow<wbr>Function<wbr>Expression</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Any<wbr>Arrow<wbr>Function<wbr>Expression<span class="tsd-signature-symbols">(</span>arrowFunction<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, block<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, expression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, funcName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameters<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Any<wbr>Arrow<wbr>Function<wbr>Expression<span class="tsd-signature-symbols">(</span>arrowFunction<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, funcName<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameters<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, block<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, expression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -685,16 +685,16 @@
 									<h5>arrowFunction: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>block: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>expression: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
 									<h5>funcName: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>parameters: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>block: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>expression: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -968,7 +968,7 @@
 					<a name="emitcommaseparatedlist" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> emit<wbr>Comma<wbr>Separated<wbr>List</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Comma<wbr>Separated<wbr>List<span class="tsd-signature-symbols">(</span>buffer<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, list<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parent<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, preserveNewLines<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Comma<wbr>Separated<wbr>List<span class="tsd-signature-symbols">(</span>parent<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, list<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, buffer<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, preserveNewLines<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -979,13 +979,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>buffer: <span class="tsd-signature-type">any</span></h5>
+									<h5>parent: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>list: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>parent: <span class="tsd-signature-type">any</span></h5>
+									<h5>buffer: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>preserveNewLines: <span class="tsd-signature-type">any</span></h5>
@@ -1001,7 +1001,7 @@
 					<a name="emitcomment" class="anchor"></a>
 					<h3>emit<wbr>Comment</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Comment<span class="tsd-signature-symbols">(</span>comment<span class="tsd-signature-symbols">: </span><a href="typescript.comment.html" class="tsd-signature-type">Comment</a>, first<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, trailing<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Comment<span class="tsd-signature-symbols">(</span>comment<span class="tsd-signature-symbols">: </span><a href="typescript.comment.html" class="tsd-signature-type">Comment</a>, trailing<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, first<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1015,10 +1015,10 @@
 									<h5>comment: <a href="typescript.comment.html" class="tsd-signature-type">Comment</a></h5>
 								</li>
 								<li>
-									<h5>first: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>trailing: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5>trailing: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>first: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1028,7 +1028,7 @@
 					<a name="emitcomments" class="anchor"></a>
 					<h3>emit<wbr>Comments</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Comments<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, onlyPinnedOrTripleSlashComments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, pre<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Comments<span class="tsd-signature-symbols">(</span>ast<span class="tsd-signature-symbols">: </span><a href="typescript.ast.html" class="tsd-signature-type">AST</a>, pre<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, onlyPinnedOrTripleSlashComments<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1042,10 +1042,10 @@
 									<h5>ast: <a href="typescript.ast.html" class="tsd-signature-type">AST</a></h5>
 								</li>
 								<li>
-									<h5>onlyPinnedOrTripleSlashComments?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>pre: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 								<li>
-									<h5>pre: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>onlyPinnedOrTripleSlashComments?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1595,7 +1595,7 @@
 					<a name="emitfunctionbodystatements" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> emit<wbr>Function<wbr>Body<wbr>Statements</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Function<wbr>Body<wbr>Statements<span class="tsd-signature-symbols">(</span>block<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, bodyExpression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, funcDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameterList<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Function<wbr>Body<wbr>Statements<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, funcDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, parameterList<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, block<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, bodyExpression<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1606,19 +1606,19 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>block: <span class="tsd-signature-type">any</span></h5>
-								</li>
-								<li>
-									<h5>bodyExpression: <span class="tsd-signature-type">any</span></h5>
+									<h5>name: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>funcDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>name: <span class="tsd-signature-type">any</span></h5>
+									<h5>parameterList: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>parameterList: <span class="tsd-signature-type">any</span></h5>
+									<h5>block: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>bodyExpression: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -1904,7 +1904,7 @@
 					<a name="emitlist" class="anchor"></a>
 					<h3>emit<wbr>List</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>List<span class="tsd-signature-symbols">(</span>endExclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, list<span class="tsd-signature-symbols">: </span><a href="typescript.isyntaxlist2.html" class="tsd-signature-type">ISyntaxList2</a>, startInclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, useNewLineSeparator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>List<span class="tsd-signature-symbols">(</span>list<span class="tsd-signature-symbols">: </span><a href="typescript.isyntaxlist2.html" class="tsd-signature-type">ISyntaxList2</a>, useNewLineSeparator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, startInclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, endExclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1915,16 +1915,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>endExclusive?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>list: <a href="typescript.isyntaxlist2.html" class="tsd-signature-type">ISyntaxList2</a></h5>
 								</li>
 								<li>
-									<h5>list: <a href="typescript.isyntaxlist2.html" class="tsd-signature-type">ISyntaxList2</a></h5>
+									<h5>useNewLineSeparator?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>startInclusive?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>useNewLineSeparator?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>endExclusive?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -2048,7 +2048,7 @@
 					<a name="emitname" class="anchor"></a>
 					<h3>emit<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Name<span class="tsd-signature-symbols">(</span>addThis<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, name<span class="tsd-signature-symbols">: </span><a href="typescript.identifier.html" class="tsd-signature-type">Identifier</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Name<span class="tsd-signature-symbols">(</span>name<span class="tsd-signature-symbols">: </span><a href="typescript.identifier.html" class="tsd-signature-type">Identifier</a>, addThis<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2059,10 +2059,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>addThis: <span class="tsd-signature-type">boolean</span></h5>
+									<h5>name: <a href="typescript.identifier.html" class="tsd-signature-type">Identifier</a></h5>
 								</li>
 								<li>
-									<h5>name: <a href="typescript.identifier.html" class="tsd-signature-type">Identifier</a></h5>
+									<h5>addThis: <span class="tsd-signature-type">boolean</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -2435,7 +2435,7 @@
 					<a name="emitseparatedlist" class="anchor"></a>
 					<h3>emit<wbr>Separated<wbr>List</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">emit<wbr>Separated<wbr>List<span class="tsd-signature-symbols">(</span>endExclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, list<span class="tsd-signature-symbols">: </span><a href="typescript.iseparatedsyntaxlist2.html" class="tsd-signature-type">ISeparatedSyntaxList2</a>, startInclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, useNewLineSeparator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">emit<wbr>Separated<wbr>List<span class="tsd-signature-symbols">(</span>list<span class="tsd-signature-symbols">: </span><a href="typescript.iseparatedsyntaxlist2.html" class="tsd-signature-type">ISeparatedSyntaxList2</a>, useNewLineSeparator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, startInclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, endExclusive<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -2446,16 +2446,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>endExclusive?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>list: <a href="typescript.iseparatedsyntaxlist2.html" class="tsd-signature-type">ISeparatedSyntaxList2</a></h5>
 								</li>
 								<li>
-									<h5>list: <a href="typescript.iseparatedsyntaxlist2.html" class="tsd-signature-type">ISeparatedSyntaxList2</a></h5>
+									<h5>useNewLineSeparator?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>startInclusive?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>useNewLineSeparator?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>endExclusive?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -3101,7 +3101,7 @@
 					<a name="getmoduledecltoverifychildnamecollision" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Module<wbr>Decl<wbr>ToVerify<wbr>Child<wbr>Name<wbr>Collision</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Module<wbr>Decl<wbr>ToVerify<wbr>Child<wbr>Name<wbr>Collision<span class="tsd-signature-symbols">(</span>changeNameIfAnyDeclarationInContext<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, moduleDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Module<wbr>Decl<wbr>ToVerify<wbr>Child<wbr>Name<wbr>Collision<span class="tsd-signature-symbols">(</span>moduleDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, changeNameIfAnyDeclarationInContext<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -3112,10 +3112,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>changeNameIfAnyDeclarationInContext: <span class="tsd-signature-type">any</span></h5>
+									<h5>moduleDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>moduleDecl: <span class="tsd-signature-type">any</span></h5>
+									<h5>changeNameIfAnyDeclarationInContext: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -3152,7 +3152,7 @@
 					<a name="getmodulename" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> get<wbr>Module<wbr>Name</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Module<wbr>Name<span class="tsd-signature-symbols">(</span>changeNameIfAnyDeclarationInContext<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span>, moduleDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Module<wbr>Name<span class="tsd-signature-symbols">(</span>moduleDecl<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, changeNameIfAnyDeclarationInContext<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -3163,10 +3163,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>changeNameIfAnyDeclarationInContext?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>moduleDecl: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>moduleDecl: <span class="tsd-signature-type">any</span></h5>
+									<h5>changeNameIfAnyDeclarationInContext?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -3824,7 +3824,7 @@
 					<a name="symbolisusedinitsenclosingcontainer" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> symbol<wbr>IsUsed<wbr>InIts<wbr>Enclosing<wbr>Container</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">symbol<wbr>IsUsed<wbr>InIts<wbr>Enclosing<wbr>Container<span class="tsd-signature-symbols">(</span>dynamic<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span>, symbol<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">symbol<wbr>IsUsed<wbr>InIts<wbr>Enclosing<wbr>Container<span class="tsd-signature-symbols">(</span>symbol<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, dynamic<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -3835,10 +3835,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>dynamic?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>symbol: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>symbol: <span class="tsd-signature-type">any</span></h5>
+									<h5>dynamic?: <span class="tsd-signature-type">any</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -3920,7 +3920,7 @@
 					<a name="writelinetooutput" class="anchor"></a>
 					<h3>write<wbr>Line<wbr>ToOutput</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Line<wbr>ToOutput<span class="tsd-signature-symbols">(</span>force<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, s<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Line<wbr>ToOutput<span class="tsd-signature-symbols">(</span>s<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, force<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -3931,10 +3931,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>force?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>s: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>s: <span class="tsd-signature-type">string</span></h5>
+									<h5>force?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -3965,7 +3965,7 @@
 					<a name="writetooutputwithsourcemaprecord" class="anchor"></a>
 					<h3>write<wbr>ToOutput<wbr>With<wbr>Source<wbr>Map<wbr>Record</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>ToOutput<wbr>With<wbr>Source<wbr>Map<wbr>Record<span class="tsd-signature-symbols">(</span>astSpan<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iastspan.html" class="tsd-signature-type">IASTSpan</a>, s<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>ToOutput<wbr>With<wbr>Source<wbr>Map<wbr>Record<span class="tsd-signature-symbols">(</span>s<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, astSpan<span class="tsd-signature-symbols">: </span><a href="../interfaces/typescript.iastspan.html" class="tsd-signature-type">IASTSpan</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -3976,10 +3976,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>astSpan: <a href="../interfaces/typescript.iastspan.html" class="tsd-signature-type">IASTSpan</a></h5>
+									<h5>s: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>s: <span class="tsd-signature-type">string</span></h5>
+									<h5>astSpan: <a href="../interfaces/typescript.iastspan.html" class="tsd-signature-type">IASTSpan</a></h5>
 								</li>
 							</ul>
 						</li>

@@ -250,7 +250,7 @@
 					<a name="static-copy" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> copy</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbols">(</span>destinationArray<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, destinationIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, sourceArray<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, sourceIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbols">(</span>sourceArray<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, sourceIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, destinationArray<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, destinationIndex<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -261,6 +261,12 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>sourceArray: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
+								</li>
+								<li>
+									<h5>sourceIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
 									<h5>destinationArray: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
 								</li>
 								<li>
@@ -268,12 +274,6 @@
 								</li>
 								<li>
 									<h5>length: <span class="tsd-signature-type">number</span></h5>
-								</li>
-								<li>
-									<h5>sourceArray: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
-								</li>
-								<li>
-									<h5>sourceIndex: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -283,7 +283,7 @@
 					<a name="static-createarray" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> create<wbr>Array</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Array<span class="tsd-signature-symbols">(</span>defaultValue<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Array<span class="tsd-signature-symbols">(</span>length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, defaultValue<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -294,10 +294,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>defaultValue: <span class="tsd-signature-type">any</span></h5>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>length: <span class="tsd-signature-type">number</span></h5>
+									<h5>defaultValue: <span class="tsd-signature-type">any</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -527,7 +527,7 @@
 					<a name="static-grow" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> grow</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">grow<span class="tsd-signature-symbols">(</span>array<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, defaultValue<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">T</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">grow<span class="tsd-signature-symbols">(</span>array<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, length<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, defaultValue<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -541,10 +541,10 @@
 									<h5>array: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
 								</li>
 								<li>
-									<h5>defaultValue: <span class="tsd-signature-type">T</span></h5>
+									<h5>length: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>length: <span class="tsd-signature-type">number</span></h5>
+									<h5>defaultValue: <span class="tsd-signature-type">T</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -813,7 +813,7 @@
 					<a name="static-select" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> select</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">select<span class="tsd-signature-symbols">(</span>func<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, values<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;S&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">select<span class="tsd-signature-symbols">(</span>values<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, func<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;S&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -823,6 +823,9 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
+								<li>
+									<h5>values: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
+								</li>
 								<li>
 									<h5>func: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -850,9 +853,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>values: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -975,7 +975,7 @@
 					<a name="static-where" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> where</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">where<span class="tsd-signature-symbols">(</span>func<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, values<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">where<span class="tsd-signature-symbols">(</span>values<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span>, func<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Array&lt;T&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -985,6 +985,9 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
+								<li>
+									<h5>values: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
+								</li>
 								<li>
 									<h5>func: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -1012,9 +1015,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>values: <span class="tsd-signature-type">Array&lt;T&gt;</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

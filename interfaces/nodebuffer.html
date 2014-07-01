@@ -170,7 +170,7 @@
 					<a name="copy" class="anchor"></a>
 					<h3>copy</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbols">(</span>sourceEnd<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, sourceStart<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, targetBuffer<span class="tsd-signature-symbols">: </span><a href="buffer.html" class="tsd-signature-type">Buffer</a>, targetStart<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbols">(</span>targetBuffer<span class="tsd-signature-symbols">: </span><a href="buffer.html" class="tsd-signature-type">Buffer</a>, targetStart<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, sourceStart<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, sourceEnd<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -181,16 +181,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>sourceEnd?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>targetBuffer: <a href="buffer.html" class="tsd-signature-type">Buffer</a></h5>
+								</li>
+								<li>
+									<h5>targetStart?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>sourceStart?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>targetBuffer: <a href="buffer.html" class="tsd-signature-type">Buffer</a></h5>
-								</li>
-								<li>
-									<h5>targetStart?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>sourceEnd?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -203,7 +203,7 @@
 					<a name="fill" class="anchor"></a>
 					<h3>fill</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">fill<span class="tsd-signature-symbols">(</span>end<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">fill<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, offset<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -214,13 +214,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>end?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>offset?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">any</span></h5>
+									<h5>end?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -230,7 +230,7 @@
 					<a name="readdoublebe" class="anchor"></a>
 					<h3>read<wbr>DoubleBE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>DoubleBE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>DoubleBE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -241,10 +241,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -257,7 +257,7 @@
 					<a name="readdoublele" class="anchor"></a>
 					<h3>read<wbr>DoubleLE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>DoubleLE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>DoubleLE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -268,10 +268,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -284,7 +284,7 @@
 					<a name="readfloatbe" class="anchor"></a>
 					<h3>read<wbr>FloatBE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>FloatBE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>FloatBE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -295,10 +295,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -311,7 +311,7 @@
 					<a name="readfloatle" class="anchor"></a>
 					<h3>read<wbr>FloatLE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>FloatLE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>FloatLE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -322,10 +322,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -338,7 +338,7 @@
 					<a name="readint16be" class="anchor"></a>
 					<h3>read<wbr>Int16BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Int16BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Int16BE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -349,10 +349,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -365,7 +365,7 @@
 					<a name="readint16le" class="anchor"></a>
 					<h3>read<wbr>Int16LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Int16LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Int16LE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -376,10 +376,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -392,7 +392,7 @@
 					<a name="readint32be" class="anchor"></a>
 					<h3>read<wbr>Int32BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Int32BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Int32BE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -403,10 +403,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -419,7 +419,7 @@
 					<a name="readint32le" class="anchor"></a>
 					<h3>read<wbr>Int32LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Int32LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Int32LE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -430,10 +430,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -446,7 +446,7 @@
 					<a name="readint8" class="anchor"></a>
 					<h3>read<wbr>Int8</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">read<wbr>Int8<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">read<wbr>Int8<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -457,10 +457,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -473,7 +473,7 @@
 					<a name="readuint16be" class="anchor"></a>
 					<h3>readUInt16BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">readUInt16BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">readUInt16BE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -484,10 +484,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -500,7 +500,7 @@
 					<a name="readuint16le" class="anchor"></a>
 					<h3>readUInt16LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">readUInt16LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">readUInt16LE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -511,10 +511,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -527,7 +527,7 @@
 					<a name="readuint32be" class="anchor"></a>
 					<h3>readUInt32BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">readUInt32BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">readUInt32BE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -538,10 +538,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -554,7 +554,7 @@
 					<a name="readuint32le" class="anchor"></a>
 					<h3>readUInt32LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">readUInt32LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">readUInt32LE<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -565,10 +565,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -581,7 +581,7 @@
 					<a name="readuint8" class="anchor"></a>
 					<h3>readUInt8</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">readUInt8<span class="tsd-signature-symbols">(</span>noAsset<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">readUInt8<span class="tsd-signature-symbols">(</span>offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAsset<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -592,10 +592,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAsset?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>offset: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAsset?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -608,7 +608,7 @@
 					<a name="slice" class="anchor"></a>
 					<h3>slice</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">slice<span class="tsd-signature-symbols">(</span>end<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, start<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="buffer.html" class="tsd-signature-type">Buffer</a></li>
+						<li class="tsd-signature tsd-kind-icon">slice<span class="tsd-signature-symbols">(</span>start<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="buffer.html" class="tsd-signature-type">Buffer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -619,10 +619,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>end?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>start?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>start?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>end?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -653,7 +653,7 @@
 					<a name="tostring" class="anchor"></a>
 					<h3>to<wbr>String</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbols">(</span>encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, end<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, start<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbols">(</span>encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, start<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, end<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -667,10 +667,10 @@
 									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>end?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>start?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>start?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>end?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -683,7 +683,7 @@
 					<a name="write" class="anchor"></a>
 					<h3>write</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, length<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, string<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<span class="tsd-signature-symbols">(</span>string<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, offset<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, length<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">number</span>, encoding<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -694,16 +694,16 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>length?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>string: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
 									<h5>offset?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>string: <span class="tsd-signature-type">string</span></h5>
+									<h5>length?: <span class="tsd-signature-type">number</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
+								<li>
+									<h5>encoding?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -716,7 +716,7 @@
 					<a name="writedoublebe" class="anchor"></a>
 					<h3>write<wbr>DoubleBE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>DoubleBE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>DoubleBE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -727,13 +727,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -743,7 +743,7 @@
 					<a name="writedoublele" class="anchor"></a>
 					<h3>write<wbr>DoubleLE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>DoubleLE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>DoubleLE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -754,13 +754,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -770,7 +770,7 @@
 					<a name="writefloatbe" class="anchor"></a>
 					<h3>write<wbr>FloatBE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>FloatBE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>FloatBE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -781,13 +781,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -797,7 +797,7 @@
 					<a name="writefloatle" class="anchor"></a>
 					<h3>write<wbr>FloatLE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>FloatLE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>FloatLE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -808,13 +808,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -824,7 +824,7 @@
 					<a name="writeint16be" class="anchor"></a>
 					<h3>write<wbr>Int16BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Int16BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int16BE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -835,13 +835,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -851,7 +851,7 @@
 					<a name="writeint16le" class="anchor"></a>
 					<h3>write<wbr>Int16LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Int16LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int16LE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -862,13 +862,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -878,7 +878,7 @@
 					<a name="writeint32be" class="anchor"></a>
 					<h3>write<wbr>Int32BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Int32BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int32BE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -889,13 +889,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -905,7 +905,7 @@
 					<a name="writeint32le" class="anchor"></a>
 					<h3>write<wbr>Int32LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Int32LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int32LE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -916,13 +916,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -932,7 +932,7 @@
 					<a name="writeint8" class="anchor"></a>
 					<h3>write<wbr>Int8</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">write<wbr>Int8<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">write<wbr>Int8<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -943,13 +943,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -959,7 +959,7 @@
 					<a name="writeuint16be" class="anchor"></a>
 					<h3>writeUInt16BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">writeUInt16BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">writeUInt16BE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -970,13 +970,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -986,7 +986,7 @@
 					<a name="writeuint16le" class="anchor"></a>
 					<h3>writeUInt16LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">writeUInt16LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">writeUInt16LE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -997,13 +997,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1013,7 +1013,7 @@
 					<a name="writeuint32be" class="anchor"></a>
 					<h3>writeUInt32BE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">writeUInt32BE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">writeUInt32BE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1024,13 +1024,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1040,7 +1040,7 @@
 					<a name="writeuint32le" class="anchor"></a>
 					<h3>writeUInt32LE</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">writeUInt32LE<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">writeUInt32LE<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1051,13 +1051,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>
@@ -1067,7 +1067,7 @@
 					<a name="writeuint8" class="anchor"></a>
 					<h3>writeUInt8</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">writeUInt8<span class="tsd-signature-symbols">(</span>noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">writeUInt8<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, offset<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, noAssert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -1078,13 +1078,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>offset: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<h5>noAssert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 						</li>

@@ -228,7 +228,7 @@
 					<a name="setimmediate" class="anchor"></a>
 					<h3>set<wbr>Immediate</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Immediate<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Immediate<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -238,9 +238,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
 								<li>
 									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -266,6 +263,9 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
 							</ul>
 							<h4>Returns 
 								<span class="tsd-signature-type">any</span>
@@ -277,7 +277,7 @@
 					<a name="setinterval" class="anchor"></a>
 					<h3>set<wbr>Interval</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Interval<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, ms<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="interfaces/nodejs.timer.html" class="tsd-signature-type">Timer</a></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Interval<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, ms<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="interfaces/nodejs.timer.html" class="tsd-signature-type">Timer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -287,9 +287,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
 								<li>
 									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -318,6 +315,9 @@
 								<li>
 									<h5>ms: <span class="tsd-signature-type">number</span></h5>
 								</li>
+								<li>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+								</li>
 							</ul>
 							<h4>Returns 
 								<a href="interfaces/nodejs.timer.html" class="tsd-signature-type">Timer</a>
@@ -329,7 +329,7 @@
 					<a name="settimeout" class="anchor"></a>
 					<h3>set<wbr>Timeout</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-is-external tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Timeout<span class="tsd-signature-symbols">(</span>args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span>, callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, ms<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="interfaces/nodejs.timer.html" class="tsd-signature-type">Timer</a></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Timeout<span class="tsd-signature-symbols">(</span>callback<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, ms<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, args<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Array&lt;any&gt;</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="interfaces/nodejs.timer.html" class="tsd-signature-type">Timer</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -339,9 +339,6 @@
 							</aside>
 							<h4>Parameters</h4>
 							<ul>
-								<li>
-									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
 								<li>
 									<h5>callback: <span class="tsd-signature-type">Function</span></h5>
 									<ul>
@@ -369,6 +366,9 @@
 								</li>
 								<li>
 									<h5>ms: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>args?: <span class="tsd-signature-type">Array&lt;any&gt;</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

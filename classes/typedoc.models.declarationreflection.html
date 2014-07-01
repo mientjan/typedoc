@@ -105,6 +105,7 @@
 						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.models.declarationreflection.html#isexternal" class="tsd-kind-icon">is<wbr>External</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.declarationreflection.html#isoptional" class="tsd-kind-icon">is<wbr>Optional</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.declarationreflection.html#isprivate" class="tsd-kind-icon">is<wbr>Private</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.declarationreflection.html#issignature" class="tsd-kind-icon">is<wbr>Signature</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.declarationreflection.html#isstatic" class="tsd-kind-icon">is<wbr>Static</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.declarationreflection.html#kind" class="tsd-kind-icon">kind</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.declarationreflection.html#kindstring" class="tsd-kind-icon">kind<wbr>String</a></li>
@@ -208,7 +209,7 @@
 					<div class="tsd-signature tsd-kind-icon">css<wbr>Classes<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:185</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:190</li>
 						</ul>
 					</aside>
 					<p>A list of generated css classes that should be applied to representations of this
@@ -332,7 +333,7 @@
 					<div class="tsd-signature tsd-kind-icon">inherited<wbr>From<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:179</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:184</li>
 						</ul>
 					</aside>
 					<p>A type that points to the reflection this reflection has been inherited from.</p>
@@ -344,7 +345,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Exported<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:159</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:164</li>
 						</ul>
 					</aside>
 					<p>Is this member exported?</p>
@@ -369,7 +370,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Optional<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:144</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:149</li>
 						</ul>
 					</aside>
 					<p>Whether this reflection is an optional component or not.</p>
@@ -381,10 +382,21 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Private<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:149</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:154</li>
 						</ul>
 					</aside>
 					<p>Is this a private member?</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="issignature" class="anchor"></a>
+					<h3>is<wbr>Signature</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Signature<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:142</li>
+						</ul>
+					</aside>
+					<p>Is this a signature reflection?</p>
 				</section>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="isstatic" class="anchor"></a>
@@ -392,7 +404,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Static<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:154</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:159</li>
 						</ul>
 					</aside>
 					<p>Is this a static member?</p>
@@ -439,7 +451,7 @@
 					<div class="tsd-signature tsd-kind-icon">overwrites<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:172</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:177</li>
 						</ul>
 					</aside>
 					<p>A type that points to the reflection that has been overwritten by this reflection.</p>
@@ -502,7 +514,7 @@
 					<div class="tsd-signature tsd-kind-icon">type<wbr>Hierarchy<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.models.ideclarationhierarchy.html" class="tsd-signature-type">IDeclarationHierarchy</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:165</li>
+							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:170</li>
 						</ul>
 					</aside>
 					<p>Contains a simplified representation of the type hierarchy suitable for being
@@ -581,17 +593,21 @@
 					<a name="static-flagstostring" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagstatic">static</span> flags<wbr>ToString</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">flags<wbr>ToString<span class="tsd-signature-symbols">(</span>enumeration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, separator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;, &#x27;, value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">flags<wbr>ToString<span class="tsd-signature-symbols">(</span>value<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, enumeration<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, separator<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbols"> =&nbsp;</span>&#x27;, &#x27;<span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:258</li>
+									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:263</li>
 								</ul>
 							</aside>
 							<p>Return a string representation of the given value based upon the given enumeration.</p>
 							<h4>Parameters</h4>
 							<ul>
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+									<p>The value that contains the bit mask that should be explained.</p>
+								</li>
 								<li>
 									<h5>enumeration: <span class="tsd-signature-type">any</span></h5>
 									<p>The enumeration the bits in the value correspond to.</p>
@@ -599,10 +615,6 @@
 								<li>
 									<h5>separator?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 									<p>A string used to concat the found flags.</p>
-								</li>
-								<li>
-									<h5>value: <span class="tsd-signature-type">number</span></h5>
-									<p>The value that contains the bit mask that should be explained.</p>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -757,7 +769,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:192</li>
+									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:197</li>
 								</ul>
 							</aside>
 							<p>Test whether this reflection is of the given kind.</p>
@@ -774,7 +786,7 @@
 						</li>
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:197</li>
+									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:202</li>
 								</ul>
 							</aside>
 							<p>Test whether this reflection is of the given kind.</p>
@@ -803,7 +815,7 @@
 									<a href="typedoc.models.basereflection.html">BaseReflection</a>.<a href="typedoc.models.basereflection.html#toreflectionstring">toReflectionString</a>
 								</p>
 								<ul>
-									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:232</li>
+									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:237</li>
 								</ul>
 							</aside>
 							<p>Return a string representation of this reflection and all of its children.</p>
@@ -832,7 +844,7 @@
 									<a href="typedoc.models.basereflection.html">BaseReflection</a>.<a href="typedoc.models.basereflection.html#tostring">toString</a>
 								</p>
 								<ul>
-									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:219</li>
+									<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:224</li>
 								</ul>
 							</aside>
 							<p>Return a string representation of this reflection.</p>
@@ -1104,6 +1116,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="typedoc.models.declarationreflection.html#isprivate" class="tsd-kind-icon">is<wbr>Private</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.models.declarationreflection.html#issignature" class="tsd-kind-icon">is<wbr>Signature</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="typedoc.models.declarationreflection.html#isstatic" class="tsd-kind-icon">is<wbr>Static</a>

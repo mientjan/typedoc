@@ -111,7 +111,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>context<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolutioncontext.html" class="tsd-signature-type">PullTypeResolutionContext</a>, contextualSignature<span class="tsd-signature-symbols">: </span><a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a>, resolver<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a>, shouldFixContextualSignatureParameterTypes<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span>, signatureBeingInferred<span class="tsd-signature-symbols">: </span><a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.contextualsignatureinstantiationtypeargumentinferencecontext.html" class="tsd-signature-type">ContextualSignatureInstantiationTypeArgumentInferenceContext</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>resolver<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a>, context<span class="tsd-signature-symbols">: </span><a href="typescript.pulltyperesolutioncontext.html" class="tsd-signature-type">PullTypeResolutionContext</a>, signatureBeingInferred<span class="tsd-signature-symbols">: </span><a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a>, contextualSignature<span class="tsd-signature-symbols">: </span><a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a>, shouldFixContextualSignatureParameterTypes<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.contextualsignatureinstantiationtypeargumentinferencecontext.html" class="tsd-signature-type">ContextualSignatureInstantiationTypeArgumentInferenceContext</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -125,19 +125,19 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>resolver: <a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a></h5>
+								</li>
+								<li>
 									<h5>context: <a href="typescript.pulltyperesolutioncontext.html" class="tsd-signature-type">PullTypeResolutionContext</a></h5>
+								</li>
+								<li>
+									<h5>signatureBeingInferred: <a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a></h5>
 								</li>
 								<li>
 									<h5>contextualSignature: <a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a></h5>
 								</li>
 								<li>
-									<h5>resolver: <a href="typescript.pulltyperesolver.html" class="tsd-signature-type">PullTypeResolver</a></h5>
-								</li>
-								<li>
 									<h5>shouldFixContextualSignatureParameterTypes: <span class="tsd-signature-type">boolean</span></h5>
-								</li>
-								<li>
-									<h5>signatureBeingInferred: <a href="typescript.pullsignaturesymbol.html" class="tsd-signature-type">PullSignatureSymbol</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -262,7 +262,7 @@
 					<a name="addcandidateforinference" class="anchor"></a>
 					<h3>add<wbr>Candidate<wbr>For<wbr>Inference</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">add<wbr>Candidate<wbr>For<wbr>Inference<span class="tsd-signature-symbols">(</span>candidate<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a>, param<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypeparametersymbol.html" class="tsd-signature-type">PullTypeParameterSymbol</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Candidate<wbr>For<wbr>Inference<span class="tsd-signature-symbols">(</span>param<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypeparametersymbol.html" class="tsd-signature-type">PullTypeParameterSymbol</a>, candidate<span class="tsd-signature-symbols">: </span><a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -276,10 +276,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>candidate: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
+									<h5>param: <a href="typescript.pulltypeparametersymbol.html" class="tsd-signature-type">PullTypeParameterSymbol</a></h5>
 								</li>
 								<li>
-									<h5>param: <a href="typescript.pulltypeparametersymbol.html" class="tsd-signature-type">PullTypeParameterSymbol</a></h5>
+									<h5>candidate: <a href="typescript.pulltypesymbol.html" class="tsd-signature-type">PullTypeSymbol</a></h5>
 								</li>
 							</ul>
 						</li>

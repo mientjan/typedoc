@@ -93,8 +93,8 @@
 					<a name="connect" class="anchor"></a>
 					<h3>connect</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>options<span class="tsd-signature-symbols">?: </span><a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a>, port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, secureConnectListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_tls_.cleartextstream.html" class="tsd-signature-type">ClearTextStream</a></li>
-						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>host<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a>, port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, secureConnectListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_tls_.cleartextstream.html" class="tsd-signature-type">ClearTextStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, options<span class="tsd-signature-symbols">?: </span><a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a>, secureConnectListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_tls_.cleartextstream.html" class="tsd-signature-type">ClearTextStream</a></li>
+						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>port<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span>, host<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbols">?: </span><a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a>, secureConnectListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_tls_.cleartextstream.html" class="tsd-signature-type">ClearTextStream</a></li>
 						<li class="tsd-signature tsd-kind-icon">connect<span class="tsd-signature-symbols">(</span>options<span class="tsd-signature-symbols">: </span><a href="../interfaces/_tls_.tlsoptions.html" class="tsd-signature-type">TlsOptions</a>, secureConnectionListener<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../classes/_tls_.cleartextstream.html" class="tsd-signature-type">ClearTextStream</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
@@ -106,10 +106,10 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>options?: <a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>port: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
-									<h5>port: <span class="tsd-signature-type">number</span></h5>
+									<h5>options?: <a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>secureConnectListener?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
@@ -143,13 +143,13 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
+									<h5>port: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
 									<h5>host?: <span class="tsd-signature-type">string</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
 									<h5>options?: <a href="../interfaces/_tls_.connectionoptions.html" class="tsd-signature-type">ConnectionOptions</a> <span class="tsd-flag ts-flagoptional">optional</span></h5>
-								</li>
-								<li>
-									<h5>port: <span class="tsd-signature-type">number</span></h5>
 								</li>
 								<li>
 									<h5>secureConnectListener?: <span class="tsd-signature-type">Function</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
@@ -215,7 +215,7 @@
 					<a name="createsecurepair" class="anchor"></a>
 					<h3>create<wbr>Secure<wbr>Pair</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-dynamic-module tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">create<wbr>Secure<wbr>Pair<span class="tsd-signature-symbols">(</span>credentials<span class="tsd-signature-symbols">?: </span><a href="../interfaces/_crypto_.credentials.html" class="tsd-signature-type">Credentials</a>, isServer<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, rejectUnauthorized<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, requestCert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/_tls_.securepair.html" class="tsd-signature-type">SecurePair</a></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Secure<wbr>Pair<span class="tsd-signature-symbols">(</span>credentials<span class="tsd-signature-symbols">?: </span><a href="../interfaces/_crypto_.credentials.html" class="tsd-signature-type">Credentials</a>, isServer<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, requestCert<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span>, rejectUnauthorized<span class="tsd-signature-symbols">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/_tls_.securepair.html" class="tsd-signature-type">SecurePair</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -232,10 +232,10 @@
 									<h5>isServer?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>rejectUnauthorized?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>requestCert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 								<li>
-									<h5>requestCert?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
+									<h5>rejectUnauthorized?: <span class="tsd-signature-type">boolean</span> <span class="tsd-flag ts-flagoptional">optional</span></h5>
 								</li>
 							</ul>
 							<h4>Returns 

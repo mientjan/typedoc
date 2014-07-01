@@ -103,7 +103,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>document<span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a>, emitOptions<span class="tsd-signature-symbols">: </span><a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a>, jsFile<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, jsFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, resolvePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span>, sourceMapOut<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.sourcemapper.html" class="tsd-signature-type">SourceMapper</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>jsFile<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, sourceMapOut<span class="tsd-signature-symbols">: </span><a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a>, document<span class="tsd-signature-symbols">: </span><a href="typescript.document.html" class="tsd-signature-type">Document</a>, jsFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">string</span>, emitOptions<span class="tsd-signature-symbols">: </span><a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a>, resolvePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.sourcemapper.html" class="tsd-signature-type">SourceMapper</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -114,16 +114,19 @@
 							<h4>Parameters</h4>
 							<ul>
 								<li>
-									<h5>document: <a href="typescript.document.html" class="tsd-signature-type">Document</a></h5>
-								</li>
-								<li>
-									<h5>emitOptions: <a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a></h5>
-								</li>
-								<li>
 									<h5>jsFile: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
 								</li>
 								<li>
+									<h5>sourceMapOut: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
+								</li>
+								<li>
+									<h5>document: <a href="typescript.document.html" class="tsd-signature-type">Document</a></h5>
+								</li>
+								<li>
 									<h5>jsFilePath: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>emitOptions: <a href="typescript.emitoptions.html" class="tsd-signature-type">EmitOptions</a></h5>
 								</li>
 								<li>
 									<h5>resolvePath: <span class="tsd-signature-type">Function</span></h5>
@@ -152,9 +155,6 @@
 											</ul>
 										</li>
 									</ul>
-								</li>
-								<li>
-									<h5>sourceMapOut: <a href="typescript.textwriter.html" class="tsd-signature-type">TextWriter</a></h5>
 								</li>
 							</ul>
 							<h4>Returns 
@@ -439,7 +439,7 @@
 					<a name="setsourcemapoptions" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> set<wbr>Source<wbr>Map<wbr>Options</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">set<wbr>Source<wbr>Map<wbr>Options<span class="tsd-signature-symbols">(</span>document<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, emitOptions<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, jsFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, resolvePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Source<wbr>Map<wbr>Options<span class="tsd-signature-symbols">(</span>document<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, jsFilePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, emitOptions<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span>, resolvePath<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -453,10 +453,10 @@
 									<h5>document: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>emitOptions: <span class="tsd-signature-type">any</span></h5>
+									<h5>jsFilePath: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
-									<h5>jsFilePath: <span class="tsd-signature-type">any</span></h5>
+									<h5>emitOptions: <span class="tsd-signature-type">any</span></h5>
 								</li>
 								<li>
 									<h5>resolvePath: <span class="tsd-signature-type">any</span></h5>
