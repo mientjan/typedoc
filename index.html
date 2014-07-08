@@ -82,6 +82,9 @@ $ typedoc
 			<p>Specifies the location the documentation should be written to.</p>
 			<p><code>--name &lt;Documentation title&gt;</code></p>
 			<p>Set the name of the project that will be used in the header of the template.</p>
+			<p><code>--readme &lt;path/to/readme|none&gt;</code></p>
+			<p>Path to the readme file that should be displayed on the index page. Pass <code>none</code> to disable the index page
+			and start the documentation on the globals page.</p>
 			<p><code>--module &lt;commonjs or amd&gt;</code></p>
 			<p>Specify module code generation: &quot;commonjs&quot; or &quot;amd&quot;</p>
 			<p><code>--target &lt;ES3 or ES5&gt;</code></p>
@@ -146,8 +149,20 @@ $ typedoc
 		<div class="offset-1 col-3">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class=" ">
-						<a href="globals.html"><em><wbr>Globals</em></a>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="modules/typedoc.html">Type<wbr>Doc</a>
+					</li>
+					<li class=" tsd-kind-container">
+						<a href="modules/typescript.html">Type<wbr>Script</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
 					</li>
 					<li class=" tsd-kind-dynamic-module tsd-is-external">
 						<a href="modules/_assert_.html">"assert"</a>
@@ -242,81 +257,122 @@ $ typedoc
 					<li class=" tsd-kind-container tsd-is-external">
 						<a href="modules/nodejs.html">NodeJS</a>
 					</li>
-					<li class=" tsd-kind-container">
-						<a href="modules/typedoc.html">Type<wbr>Doc</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
-					</li>
-					<li class=" tsd-kind-container">
-						<a href="modules/typescript.html">Type<wbr>Script</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
-					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary">
+				<ul>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/buffer.html" class="tsd-kind-icon">Buffer</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/handlebarscommon.html" class="tsd-kind-icon">Handlebars<wbr>Common</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/handlebarsruntimestatic.html" class="tsd-kind-icon">Handlebars<wbr>Runtime<wbr>Static</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/handlebarsstatic.html" class="tsd-kind-icon">Handlebars<wbr>Static</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/handlebarstemplatable.html" class="tsd-kind-icon">Handlebars<wbr>Templatable</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/handlebarstemplatedelegate.html" class="tsd-kind-icon">Handlebars<wbr>Template<wbr>Delegate</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/logger.html" class="tsd-kind-icon">Logger</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/markedoptions.html" class="tsd-kind-icon">Marked<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/markedstatic.html" class="tsd-kind-icon">Marked<wbr>Static</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external tsd-is-not-exported">
+						<a href="interfaces/nodebuffer.html" class="tsd-kind-icon">Node<wbr>Buffer</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external tsd-is-not-exported">
+						<a href="classes/enumerator.html" class="tsd-kind-icon">Enumerator</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external tsd-is-not-exported">
+						<a href="classes/formattingoptions.html" class="tsd-kind-icon">Formatting<wbr>Options</a>
+					</li>
+					<li class=" tsd-kind-class tsd-is-external tsd-is-not-exported">
+						<a href="classes/safestring.html" class="tsd-kind-icon">Safe<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-external tsd-is-not-exported">
+						<a href="objects/slowbuffer.html" class="tsd-kind-icon">Slow<wbr>Buffer</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-external tsd-is-not-exported">
+						<a href="objects/module.html" class="tsd-kind-icon">module</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-external tsd-is-not-exported">
+						<a href="objects/require.html" class="tsd-kind-icon">require</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#clearimmediate" class="tsd-kind-icon">clear<wbr>Immediate</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#clearinterval" class="tsd-kind-icon">clear<wbr>Interval</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#cleartimeout" class="tsd-kind-icon">clear<wbr>Timeout</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#setimmediate" class="tsd-kind-icon">set<wbr>Immediate</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#setinterval" class="tsd-kind-icon">set<wbr>Interval</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#settimeout" class="tsd-kind-icon">set<wbr>Timeout</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#fs" class="tsd-kind-icon">FS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#handlebars" class="tsd-kind-icon">Handlebars</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#highlightjs" class="tsd-kind-icon">HighlightJS</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#marked" class="tsd-kind-icon">Marked</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#minimatch" class="tsd-kind-icon">Minimatch</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#path" class="tsd-kind-icon">Path</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#util" class="tsd-kind-icon">Util</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#vm" class="tsd-kind-icon">VM</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#__dirname" class="tsd-kind-icon">__dirname</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#__filename" class="tsd-kind-icon">__filename</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#exports" class="tsd-kind-icon">exports</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#global" class="tsd-kind-icon">global</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#marked" class="tsd-kind-icon">marked</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external tsd-is-not-exported">
+						<a href="globals.html#process" class="tsd-kind-icon">process</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#typescriptpath" class="tsd-kind-icon">type<wbr>Script<wbr>Path</a>
+					</li>
+				</ul>
 			</nav>
 		</div>
 	</div>

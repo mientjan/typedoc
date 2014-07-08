@@ -78,6 +78,7 @@
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#name" class="tsd-kind-icon">name</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#needshelp" class="tsd-kind-icon">needs<wbr>Help</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#outputdirectory" class="tsd-kind-icon">output<wbr>Directory</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#readme" class="tsd-kind-icon">readme</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#shouldprintversiononly" class="tsd-kind-icon">should<wbr>Print<wbr>Version<wbr>Only</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#theme" class="tsd-kind-icon">theme</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.settings.html#verbose" class="tsd-kind-icon">verbose</a></li>
@@ -103,7 +104,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/Settings.ts:72</li>
+									<li>Defined in typedoc/Settings.ts:78</li>
 								</ul>
 							</aside>
 							<p>Create a new Settings instance.</p>
@@ -133,7 +134,7 @@
 					<div class="tsd-signature tsd-kind-icon">exclude<wbr>Externals<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:45</li>
+							<li>Defined in typedoc/Settings.ts:51</li>
 						</ul>
 					</aside>
 					<p>Should externally resolved TypeScript files be ignored?</p>
@@ -144,7 +145,7 @@
 					<div class="tsd-signature tsd-kind-icon">exclude<wbr>Pattern<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:35</li>
+							<li>Defined in typedoc/Settings.ts:41</li>
 						</ul>
 					</aside>
 					<p>A pattern for files that should be excluded when a path is specified as source.</p>
@@ -155,7 +156,7 @@
 					<div class="tsd-signature tsd-kind-icon">external<wbr>Pattern<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:50</li>
+							<li>Defined in typedoc/Settings.ts:56</li>
 						</ul>
 					</aside>
 					<p>Define a pattern for files that should be considered being external.</p>
@@ -166,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">include<wbr>Declarations<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:40</li>
+							<li>Defined in typedoc/Settings.ts:46</li>
 						</ul>
 					</aside>
 					<p>Should declaration files be documented?</p>
@@ -199,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">needs<wbr>Help<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:55</li>
+							<li>Defined in typedoc/Settings.ts:61</li>
 						</ul>
 					</aside>
 					<p>Does the user want to display the help message?</p>
@@ -216,12 +217,24 @@
 					<p>The path of the output directory.</p>
 				</section>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="readme" class="anchor"></a>
+					<h3>readme</h3>
+					<div class="tsd-signature tsd-kind-icon">readme<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in typedoc/Settings.ts:36</li>
+						</ul>
+					</aside>
+					<p>The location of the readme file that should be displayed on the index page. Set this to &#39;none&#39; to
+					remove the index page and start with the globals page.</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="shouldprintversiononly" class="anchor"></a>
 					<h3>should<wbr>Print<wbr>Version<wbr>Only</h3>
 					<div class="tsd-signature tsd-kind-icon">should<wbr>Print<wbr>Version<wbr>Only<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:60</li>
+							<li>Defined in typedoc/Settings.ts:66</li>
 						</ul>
 					</aside>
 					<p>Does the user want to know the version number?</p>
@@ -243,7 +256,7 @@
 					<div class="tsd-signature tsd-kind-icon">verbose<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/Settings.ts:65</li>
+							<li>Defined in typedoc/Settings.ts:71</li>
 						</ul>
 					</aside>
 					<p>Should verbose messages be printed?</p>
@@ -260,7 +273,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/Settings.ts:153</li>
+									<li>Defined in typedoc/Settings.ts:159</li>
 								</ul>
 							</aside>
 							<p>Create and initialize an instance of OptionsParser to read command line arguments.</p>
@@ -282,7 +295,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/Settings.ts:111</li>
+									<li>Defined in typedoc/Settings.ts:117</li>
 								</ul>
 							</aside>
 							<p>Expand the list of input files.</p>
@@ -301,7 +314,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/Settings.ts:80</li>
+									<li>Defined in typedoc/Settings.ts:86</li>
 								</ul>
 							</aside>
 							<p>Read the settings from command line arguments.</p>
@@ -322,175 +335,22 @@
 		<div class="offset-1 col-3">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class=" ">
-						<a href="../globals.html"><em><wbr>Globals</em></a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_assert_.html">"assert"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_buffer_.html">"buffer"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_child_process_.html">"child_<wbr>process"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_cluster_.html">"cluster"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_crypto_.html">"crypto"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_dgram_.html">"dgram"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_dns_.html">"dns"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_domain_.html">"domain"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_events_.html">"events"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_fs_.html">"fs"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_fs_extra_.html">"fs-<wbr>extra"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_highlight_js_.html">"highlight.js"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_http_.html">"http"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_https_.html">"https"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_minimatch_.html">"minimatch"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_net_.html">"net"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_os_.html">"os"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_path_.html">"path"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_punycode_.html">"punycode"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_querystring_.html">"querystring"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_readline_.html">"readline"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_repl_.html">"repl"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_stream_.html">"stream"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_string_decoder_.html">"string_<wbr>decoder"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_tls_.html">"tls"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_tty_.html">"tty"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_url_.html">"url"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_util_.html">"util"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_vm_.html">"vm"</a>
-					</li>
-					<li class=" tsd-kind-dynamic-module tsd-is-external">
-						<a href="../modules/_zlib_.html">"zlib"</a>
-					</li>
-					<li class=" tsd-kind-container tsd-is-external">
-						<a href="../modules/nodejs.html">NodeJS</a>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
 					</li>
 					<li class="current tsd-kind-container">
 						<a href="../modules/typedoc.html">Type<wbr>Doc</a>
 						<ul>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/typedoc.factories.html">Factories</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/typedoc.models.html">Models</a>
+							</li>
+							<li class=" tsd-kind-container tsd-parent-kind-container">
+								<a href="../modules/typedoc.output.html">Output</a>
+							</li>
 						</ul>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="../modules/typedoc.factories.html">Type<wbr>Doc.<wbr>Factories</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="../modules/typedoc.models.html">Type<wbr>Doc.<wbr>Models</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="../modules/typedoc.output.html">Type<wbr>Doc.<wbr>Output</a>
-					</li>
-					<li class=" tsd-kind-container">
-						<a href="../modules/typescript.html">Type<wbr>Script</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.asthelpers.html">Type<wbr>Script.ASTHelpers</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.bitmatrix.html">Type<wbr>Script.<wbr>Bit<wbr>Matrix</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.bitvector.html">Type<wbr>Script.<wbr>Bit<wbr>Vector</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.collections.html">Type<wbr>Script.<wbr>Collections</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.compilerdiagnostics.html">Type<wbr>Script.<wbr>Compiler<wbr>Diagnostics</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.declarationcreator.html">Type<wbr>Script.<wbr>Declaration<wbr>Creator</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container">
-						<a href="../modules/typescript.ioutils.html">Type<wbr>Script.IOUtils</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.indentation.html">Type<wbr>Script.<wbr>Indentation</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.integerutilities.html">Type<wbr>Script.<wbr>Integer<wbr>Utilities</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.linemap1.html">Type<wbr>Script.<wbr>Line<wbr>Map1</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.parser.html">Type<wbr>Script.<wbr>Parser</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.pullhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Helpers</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.pullinstantiationhelpers.html">Type<wbr>Script.<wbr>Pull<wbr>Instantiation<wbr>Helpers</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.scriptsnapshot.html">Type<wbr>Script.<wbr>Script<wbr>Snapshot</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.simpletext.html">Type<wbr>Script.<wbr>Simple<wbr>Text</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.syntax.html">Type<wbr>Script.<wbr>Syntax</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.syntaxfacts.html">Type<wbr>Script.<wbr>Syntax<wbr>Facts</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.textfactory.html">Type<wbr>Script.<wbr>Text<wbr>Factory</a>
-					</li>
-					<li class=" tsd-kind-container tsd-parent-kind-container tsd-is-external">
-						<a href="../modules/typescript.textutilities.html">Type<wbr>Script.<wbr>Text<wbr>Utilities</a>
 					</li>
 				</ul>
 			</nav>
@@ -546,6 +406,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="typedoc.settings.html#outputdirectory" class="tsd-kind-icon">output<wbr>Directory</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.settings.html#readme" class="tsd-kind-icon">readme</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="typedoc.settings.html#shouldprintversiononly" class="tsd-kind-icon">should<wbr>Print<wbr>Version<wbr>Only</a>
