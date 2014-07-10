@@ -55,6 +55,7 @@
 			<blockquote>
 				<p>Documentation generator for TypeScript projects.</p>
 			</blockquote>
+			<p><a href="https://travis-ci.org/sebastian-lenz/typedoc"><img src="https://travis-ci.org/sebastian-lenz/typedoc.svg?branch=master" alt="Build Status"></a> <a href="http://badge.fury.io/js/typedoc"><img src="https://badge.fury.io/js/typedoc.svg" alt="NPM version"></a></p>
 			<h2 id="installation">Installation</h2>
 			<p>TypeDoc runs on Node.js and is available as an NPM package. You can install TypeDoc
 			in your project&#39;s directory as usual:</p>
@@ -144,6 +145,34 @@ $ typedoc
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">doSomething</span><span class="hljs-params">(target:any, arg:any)</span><span class="hljs-type">:number</span> {</span>
     <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
 }
+</code></pre>
+			<h3 id="modules">Modules</h3>
+			<p>Modules can be commented like any other elements in TypeScript. As modules can be defined in multiple
+				files, TypeDoc selects the longest comment by default. One may override this behaviour with the special
+			<code>@preferred</code> comment tag.</p>
+			<pre><code class="lang-typescript"><span class="hljs-comment">/**
+ * Actual module comment.
+ * @preferred
+ */</span>
+<span class="hljs-module"><span class="hljs-keyword">module</span> <span class="hljs-title">MyModule</span> {</span> }
+</code></pre>
+			<pre><code class="lang-typescript"><span class="hljs-comment">/**
+ * Dismissed module comment.
+ * This is the longer comment but will be dismissed in favor of the preferred comment.
+ */</span>
+<span class="hljs-module"><span class="hljs-keyword">module</span> <span class="hljs-title">MyModule</span> {</span> }
+</code></pre>
+			<h3 id="dynamic-modules">Dynamic modules</h3>
+			<p>The first doc comment within a file is used as the doc comment of a dynamic module. However, you must
+			ensure that the first declaration also has as doc comment.</p>
+			<pre><code class="lang-typescript"><span class="hljs-comment">/**
+ * This is a doc comment for a dynamic module.
+ */</span>
+
+<span class="hljs-comment">/**
+ * This is a doc comment for "someVar".
+ */</span>
+<span class="hljs-keyword">var</span> someVar:<span class="hljs-literal">string</span> = <span class="hljs-string">"value"</span>;
 </code></pre>
 		</div>
 		<div class="offset-1 col-3">

@@ -71,46 +71,46 @@
 				<section class="tsd-member-index-group ">
 					<h3>Properties</h3>
 					<ul class="tsd-member-index">
-						<li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#children" class="tsd-kind-icon">children</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#istarget" class="tsd-kind-icon">is<wbr>Target</a></li>
-						<li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#type" class="tsd-kind-icon">type</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#next" class="tsd-kind-icon">next</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-interface"><a href="typedoc.models.ideclarationhierarchy.html#types" class="tsd-kind-icon">types</a></li>
 					</ul>
 				</section>
 			</section>
 			<section class="tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="children" class="anchor"></a>
-					<h3><span class="tsd-flag ts-flagoptional">optional</span> children</h3>
-					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbols">?:</span> <a href="typedoc.models.ideclarationhierarchy.html" class="tsd-signature-type">IDeclarationHierarchy</a><span class="tsd-signature-symbols">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:32</li>
-						</ul>
-					</aside>
-					<p>A list of a children of this node.</p>
-				</section>
-				<section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="istarget" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagoptional">optional</span> is<wbr>Target</h3>
 					<div class="tsd-signature tsd-kind-icon">is<wbr>Target<span class="tsd-signature-symbols">?:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:37</li>
+							<li>Defined in src/typedoc/models/reflections/DeclarationReflection.ts:37</li>
 						</ul>
 					</aside>
-					<p>Is this the entry within the type hierarchy of the target type?</p>
+					<p>Is this the entry containing the target type?</p>
 				</section>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="type" class="anchor"></a>
-					<h3>type</h3>
-					<div class="tsd-signature tsd-kind-icon">type<span class="tsd-signature-symbols">:</span> <a href="../classes/typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a></div>
+					<a name="next" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagoptional">optional</span> next</h3>
+					<div class="tsd-signature tsd-kind-icon">next<span class="tsd-signature-symbols">?:</span> <a href="typedoc.models.ideclarationhierarchy.html" class="tsd-signature-type">IDeclarationHierarchy</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/DeclarationReflection.ts:27</li>
+							<li>Defined in src/typedoc/models/reflections/DeclarationReflection.ts:32</li>
 						</ul>
 					</aside>
-					<p>The type represented by this node in the hierarchy.</p>
+					<p>The next hierarchy level.</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="types" class="anchor"></a>
+					<h3>types</h3>
+					<div class="tsd-signature tsd-kind-icon">types<span class="tsd-signature-symbols">:</span> <a href="../classes/typedoc.models.basetype.html" class="tsd-signature-type">BaseType</a><span class="tsd-signature-symbols">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/typedoc/models/reflections/DeclarationReflection.ts:27</li>
+						</ul>
+					</aside>
+					<p>The types represented by this node in the hierarchy.</p>
 				</section>
 			</section>
 		</div>
@@ -148,13 +148,13 @@
 						<a href="typedoc.models.ideclarationhierarchy.html" class="tsd-kind-icon">IDeclaration<wbr>Hierarchy</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="typedoc.models.ideclarationhierarchy.html#children" class="tsd-kind-icon">children</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-interface">
 								<a href="typedoc.models.ideclarationhierarchy.html#istarget" class="tsd-kind-icon">is<wbr>Target</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="typedoc.models.ideclarationhierarchy.html#type" class="tsd-kind-icon">type</a>
+								<a href="typedoc.models.ideclarationhierarchy.html#next" class="tsd-kind-icon">next</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="typedoc.models.ideclarationhierarchy.html#types" class="tsd-kind-icon">types</a>
 							</li>
 						</ul>
 					</li>

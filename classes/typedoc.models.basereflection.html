@@ -70,13 +70,13 @@
 			<section class="tsd-hierarchy">
 				<h2>Hierarchy</h2>
 				<ul>
-					<li class="target">
+					<li>
 						BaseReflection
 						<ul>
-							<li >
+							<li>
 								<a href="typedoc.models.projectreflection.html" class="tsd-signature-type">ProjectReflection</a>
 							</li>
-							<li >
+							<li>
 								<a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a>
 							</li>
 						</ul>
@@ -103,6 +103,7 @@
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.basereflection.html#id" class="tsd-kind-icon">id</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.basereflection.html#isexternal" class="tsd-kind-icon">is<wbr>External</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.basereflection.html#name" class="tsd-kind-icon">name</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.basereflection.html#originalname" class="tsd-kind-icon">original<wbr>Name</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.basereflection.html#parent" class="tsd-kind-icon">parent</a></li>
 						<li class="tsd-kind-property tsd-parent-kind-class"><a href="typedoc.models.basereflection.html#url" class="tsd-kind-icon">url</a></li>
 					</ul>
@@ -131,7 +132,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:85</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:101</li>
 								</ul>
 							</aside>
 							<p>Create a new BaseReflection instance.</p>
@@ -150,7 +151,7 @@
 					<div class="tsd-signature tsd-kind-icon">alias<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:78</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:94</li>
 						</ul>
 					</aside>
 					<p>Url safe alias for this reflection.</p>
@@ -166,7 +167,7 @@
 					<div class="tsd-signature tsd-kind-icon">anchor<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:59</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:75</li>
 						</ul>
 					</aside>
 					<p>The name of the anchor of this child.</p>
@@ -177,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:34</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:45</li>
 						</ul>
 					</aside>
 					<p>The children of this reflection.</p>
@@ -188,7 +189,7 @@
 					<div class="tsd-signature tsd-kind-icon">comment<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.comment.html" class="tsd-signature-type">Comment</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:49</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:65</li>
 						</ul>
 					</aside>
 					<p>The parsed documentation comment attached to this reflection.</p>
@@ -199,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">groups<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.reflectiongroup.html" class="tsd-signature-type">ReflectionGroup</a><span class="tsd-signature-symbols">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:39</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:50</li>
 						</ul>
 					</aside>
 					<p>All children grouped by their kind.</p>
@@ -210,7 +211,7 @@
 					<div class="tsd-signature tsd-kind-icon">has<wbr>Own<wbr>Document<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:66</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:82</li>
 						</ul>
 					</aside>
 					<p>Is the url pointing to an individual document?</p>
@@ -222,7 +223,7 @@
 					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:24</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:35</li>
 						</ul>
 					</aside>
 					<p>Unique id of this reflection.</p>
@@ -233,7 +234,7 @@
 					<div class="tsd-signature tsd-kind-icon">is<wbr>External<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:71</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:87</li>
 						</ul>
 					</aside>
 					<p>Is this a declaration from an external document?</p>
@@ -244,10 +245,21 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:44</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:55</li>
 						</ul>
 					</aside>
 					<p>The symbol name of this reflection.</p>
+				</section>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="originalname" class="anchor"></a>
+					<h3>original<wbr>Name</h3>
+					<div class="tsd-signature tsd-kind-icon">original<wbr>Name<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:60</li>
+						</ul>
+					</aside>
+					<p>The original name of the TypeScript declaration.</p>
 				</section>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-class">
 					<a name="parent" class="anchor"></a>
@@ -255,7 +267,7 @@
 					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbols">:</span> <a href="typedoc.models.basereflection.html" class="tsd-signature-type">BaseReflection</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:29</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:40</li>
 						</ul>
 					</aside>
 					<p>The reflection this reflection is a child of.</p>
@@ -266,7 +278,7 @@
 					<div class="tsd-signature tsd-kind-icon">url<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:54</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:70</li>
 						</ul>
 					</aside>
 					<p>The url of this reflection in the generated documentation.</p>
@@ -284,7 +296,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:176</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:192</li>
 								</ul>
 							</aside>
 							<p>Try to find a reflection by its name.</p>
@@ -302,7 +314,7 @@
 						</li>
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:181</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:197</li>
 								</ul>
 							</aside>
 							<p>Try to find a reflection by its name.</p>
@@ -329,7 +341,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:161</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:177</li>
 								</ul>
 							</aside>
 							<p>Return an url safe alias for this reflection.</p>
@@ -349,7 +361,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:110</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:126</li>
 								</ul>
 							</aside>
 							<p>Return a child by its name.</p>
@@ -367,7 +379,7 @@
 						</li>
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:115</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:131</li>
 								</ul>
 							</aside>
 							<p>Return a child by its name.</p>
@@ -394,7 +406,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:147</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:163</li>
 								</ul>
 							</aside>
 							<p>Return a list of all children of a certain kind.</p>
@@ -421,7 +433,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:98</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:114</li>
 								</ul>
 							</aside>
 							<p>Return the full name of this reflection.</p>
@@ -449,7 +461,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:213</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:229</li>
 								</ul>
 							</aside>
 							<p>Return a string representation of this reflection and all of its children.</p>
@@ -475,7 +487,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/models/reflections/BaseReflection.ts:203</li>
+									<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:219</li>
 								</ul>
 							</aside>
 							<p>Return a string representation of this reflection.</p>
@@ -555,6 +567,9 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="typedoc.models.basereflection.html#name" class="tsd-kind-icon">name</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="typedoc.models.basereflection.html#originalname" class="tsd-kind-icon">original<wbr>Name</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
 								<a href="typedoc.models.basereflection.html#parent" class="tsd-kind-icon">parent</a>

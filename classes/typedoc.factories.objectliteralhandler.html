@@ -64,10 +64,10 @@
 			<section class="tsd-hierarchy">
 				<h2>Hierarchy</h2>
 				<ul>
-					<li >
+					<li>
 						<a href="typedoc.factories.basehandler.html" class="tsd-signature-type">BaseHandler</a>
 						<ul>
-							<li class="target">
+							<li>
 								ObjectLiteralHandler
 							</li>
 						</ul>
@@ -92,7 +92,7 @@
 					<h3>Methods</h3>
 					<ul class="tsd-member-index">
 						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.objectliteralhandler.html#static-getliteraldeclaration" class="tsd-kind-icon">get<wbr>Literal<wbr>Declaration</a></li>
-						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.objectliteralhandler.html#ondeclaration" class="tsd-kind-icon">on<wbr>Declaration</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.objectliteralhandler.html#onenddeclaration" class="tsd-kind-icon">on<wbr>End<wbr>Declaration</a></li>
 					</ul>
 				</section>
 			</section>
@@ -110,7 +110,7 @@
 									<a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#constructor">constructor</a>
 								</p>
 								<ul>
-									<li>Defined in typedoc/factories/handlers/ObjectLiteralHandler.ts:12</li>
+									<li>Defined in src/typedoc/factories/handlers/ObjectLiteralHandler.ts:12</li>
 								</ul>
 							</aside>
 							<p>Create a new ObjectLiteralHandler instance.</p>
@@ -139,7 +139,7 @@
 							<a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#dispatcher">dispatcher</a>
 						</p>
 						<ul>
-							<li>Defined in typedoc/factories/BaseHandler.ts:10</li>
+							<li>Defined in src/typedoc/factories/BaseHandler.ts:10</li>
 						</ul>
 					</aside>
 					<p>The dispatcher this handler is attached to.</p>
@@ -156,7 +156,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/factories/handlers/ObjectLiteralHandler.ts:55</li>
+									<li>Defined in src/typedoc/factories/handlers/ObjectLiteralHandler.ts:55</li>
 								</ul>
 							</aside>
 							<h4>Parameters</h4>
@@ -172,18 +172,18 @@
 					</ul>
 				</section>
 				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="ondeclaration" class="anchor"></a>
-					<h3><span class="tsd-flag ts-flagprivate">private</span> on<wbr>Declaration</h3>
+					<a name="onenddeclaration" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagprivate">private</span> on<wbr>End<wbr>Declaration</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Declaration<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>End<wbr>Declaration<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/factories/handlers/ObjectLiteralHandler.ts:24</li>
+									<li>Defined in src/typedoc/factories/handlers/ObjectLiteralHandler.ts:24</li>
 								</ul>
 							</aside>
-							<p>Triggered when the dispatcher starts processing a declaration.</p>
+							<p>Triggered when the dispatcher has finished processing a declaration.</p>
 							<h4>Parameters</h4>
 							<ul>
 								<li>
@@ -223,14 +223,14 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
 						<a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-kind-icon">IModule<wbr>Comment</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a>
@@ -251,6 +251,9 @@
 						<a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.deepcommenthandler.html" class="tsd-kind-icon">Deep<wbr>Comment<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -263,6 +266,9 @@
 						<a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.exporthandler.html" class="tsd-kind-icon">Export<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -273,6 +279,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.modulecommenthandler.html" class="tsd-kind-icon">Module<wbr>Comment<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a>
@@ -290,7 +299,7 @@
 								<a href="typedoc.factories.objectliteralhandler.html#static-getliteraldeclaration" class="tsd-kind-icon">get<wbr>Literal<wbr>Declaration</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="typedoc.factories.objectliteralhandler.html#ondeclaration" class="tsd-kind-icon">on<wbr>Declaration</a>
+								<a href="typedoc.factories.objectliteralhandler.html#onenddeclaration" class="tsd-kind-icon">on<wbr>End<wbr>Declaration</a>
 							</li>
 						</ul>
 					</li>

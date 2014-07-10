@@ -57,12 +57,16 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8">
+			<p>Holds all logic used to analyze the output of the TypeScript compiler and generate reflections.</p>
+			<p>The <a href="../classes/typedoc.factories.dispatcher.html">Dispatcher</a> class is the central controller within this namespace. When invoked it fires a
+			series of <a href="../classes/typedoc.factories.dispatcherevent.html">DispatcherEvent</a> events consumed by <a href="../classes/typedoc.factories.basehandler.html">BaseHandler</a> instances.</p>
 			<section class="tsd-member-index">
 				<h2>Index</h2>
 				<section class="tsd-member-index-group ">
 					<h3>Interfaces</h3>
 					<ul class="tsd-member-index">
 						<li class="tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported"><a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a></li>
+						<li class="tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported"><a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-kind-icon">IModule<wbr>Comment</a></li>
 						<li class="tsd-kind-interface tsd-parent-kind-container"><a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a></li>
 						<li class="tsd-kind-interface tsd-parent-kind-container"><a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a></li>
 					</ul>
@@ -70,21 +74,23 @@
 				<section class="tsd-member-index-group ">
 					<h3>Classes</h3>
 					<ul class="tsd-member-index">
-						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.basepath.html" class="tsd-kind-icon">Base<wbr>Path</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.basestate.html" class="tsd-kind-icon">Base<wbr>State</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.commenthandler.html" class="tsd-kind-icon">Comment<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.compiler.html" class="tsd-kind-icon">Compiler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a></li>
+						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.deepcommenthandler.html" class="tsd-kind-icon">Deep<wbr>Comment<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.dispatcherevent.html" class="tsd-kind-icon">Dispatcher<wbr>Event</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.documentstate.html" class="tsd-kind-icon">Document<wbr>State</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a></li>
+						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.exporthandler.html" class="tsd-kind-icon">Export<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.functiontypehandler.html" class="tsd-kind-icon">Function<wbr>Type<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.grouphandler.html" class="tsd-kind-icon">Group<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a></li>
+						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.modulecommenthandler.html" class="tsd-kind-icon">Module<wbr>Comment<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.objectliteralhandler.html" class="tsd-kind-icon">Object<wbr>Literal<wbr>Handler</a></li>
 						<li class="tsd-kind-class tsd-parent-kind-container"><a href="../classes/typedoc.factories.packagehandler.html" class="tsd-kind-icon">Package<wbr>Handler</a></li>
@@ -125,14 +131,14 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
 						<a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-kind-icon">IModule<wbr>Comment</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="../classes/typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a>
@@ -153,6 +159,9 @@
 						<a href="../classes/typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.factories.deepcommenthandler.html" class="tsd-kind-icon">Deep<wbr>Comment<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -165,6 +174,9 @@
 						<a href="../classes/typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.factories.exporthandler.html" class="tsd-kind-icon">Export<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -175,6 +187,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="../classes/typedoc.factories.modulecommenthandler.html" class="tsd-kind-icon">Module<wbr>Comment<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="../classes/typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a>

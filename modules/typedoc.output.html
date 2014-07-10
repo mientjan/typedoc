@@ -57,6 +57,11 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8">
+			<p>Holds all logic used render and output the final documentation.</p>
+			<p>The <a href="../classes/typedoc.output.renderer.html">Renderer</a> class is the central controller within this namespace. When invoked it creates
+				an instance of <a href="../classes/typedoc.output.basetheme.html">BaseTheme</a> which defines the layout of the documentation and fires a
+				series of <a href="../classes/typedoc.output.outputevent.html">OutputEvent</a> events. Instances of <a href="../classes/typedoc.output.baseplugin.html">BasePlugin</a> can listen to these events and
+			alter the generated output.</p>
 			<section class="tsd-member-index">
 				<h2>Index</h2>
 				<section class="tsd-member-index-group tsd-is-not-exported">
@@ -109,7 +114,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/output/plugins/MarkedPlugin.ts:206</li>
+									<li>Defined in src/typedoc/output/plugins/MarkedPlugin.ts:206</li>
 								</ul>
 							</aside>
 							<p>TypeScript HighlightJS definition.</p>

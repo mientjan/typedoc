@@ -57,6 +57,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8">
+			<p>Holds all data models used by TypeDoc.</p>
+			<p>The <a href="../classes/typedoc.models.basereflection.html">BaseReflection</a> is base class of all reflection models. The subclass <a href="../classes/typedoc.models.projectreflection.html">ProjectReflection</a>
+				serves as the root container for the current project while <a href="../classes/typedoc.models.declarationreflection.html">DeclarationReflection</a> instances
+				form the structure of the project. Most of the other classes in this namespace are referenced by this
+			two base classes.</p>
+			<p>The models <a href="../classes/typedoc.models.navigationitem.html">NavigationItem</a> and <a href="../classes/typedoc.models.urlmapping.html">UrlMapping</a> are special as they are only used by the <a href="../classes/typedoc.output.renderer.html">Renderer</a>
+			while creating the final output.</p>
 			<section class="tsd-member-index">
 				<h2>Index</h2>
 				<section class="tsd-member-index-group ">
@@ -108,7 +115,7 @@
 					<div class="tsd-signature tsd-kind-icon">REFLECTION_<wbr>ID<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/models/reflections/BaseReflection.ts:5</li>
+							<li>Defined in src/typedoc/models/reflections/BaseReflection.ts:16</li>
 						</ul>
 					</aside>
 					<p>Current reflection id.</p>

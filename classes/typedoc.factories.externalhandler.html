@@ -64,10 +64,10 @@
 			<section class="tsd-hierarchy">
 				<h2>Hierarchy</h2>
 				<ul>
-					<li >
+					<li>
 						<a href="typedoc.factories.basehandler.html" class="tsd-signature-type">BaseHandler</a>
 						<ul>
-							<li class="target">
+							<li>
 								ExternalHandler
 							</li>
 						</ul>
@@ -113,7 +113,7 @@
 									<a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#constructor">constructor</a>
 								</p>
 								<ul>
-									<li>Defined in typedoc/factories/handlers/ExternalHandler.ts:28</li>
+									<li>Defined in src/typedoc/factories/handlers/ExternalHandler.ts:28</li>
 								</ul>
 							</aside>
 							<p>Create a new ExternalHandler instance.</p>
@@ -142,7 +142,7 @@
 							<a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#dispatcher">dispatcher</a>
 						</p>
 						<ul>
-							<li>Defined in typedoc/factories/BaseHandler.ts:10</li>
+							<li>Defined in src/typedoc/factories/BaseHandler.ts:10</li>
 						</ul>
 					</aside>
 					<p>The dispatcher this handler is attached to.</p>
@@ -153,7 +153,7 @@
 					<div class="tsd-signature tsd-kind-icon">exclude<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/factories/handlers/ExternalHandler.ts:15</li>
+							<li>Defined in src/typedoc/factories/handlers/ExternalHandler.ts:15</li>
 						</ul>
 					</aside>
 					<p>Should externally resolved TypeScript files be ignored?</p>
@@ -164,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">input<wbr>Files<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Array&lt;string&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/factories/handlers/ExternalHandler.ts:10</li>
+							<li>Defined in src/typedoc/factories/handlers/ExternalHandler.ts:10</li>
 						</ul>
 					</aside>
 					<p>An array of normalized input file names.</p>
@@ -175,7 +175,7 @@
 					<div class="tsd-signature tsd-kind-icon">pattern<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/factories/handlers/ExternalHandler.ts:20</li>
+							<li>Defined in src/typedoc/factories/handlers/ExternalHandler.ts:20</li>
 						</ul>
 					</aside>
 					<p>Compiled pattern for files that should be considered being external.</p>
@@ -192,7 +192,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/factories/handlers/ExternalHandler.ts:41</li>
+									<li>Defined in src/typedoc/factories/handlers/ExternalHandler.ts:41</li>
 								</ul>
 							</aside>
 							<p>Triggered once per project before the dispatcher invokes the compiler.</p>
@@ -215,7 +215,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/factories/handlers/ExternalHandler.ts:64</li>
+									<li>Defined in src/typedoc/factories/handlers/ExternalHandler.ts:64</li>
 								</ul>
 							</aside>
 							<p>Triggered when the dispatcher starts processing a TypeScript document.</p>
@@ -258,14 +258,14 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
 						<a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-kind-icon">IModule<wbr>Comment</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-container">
-						<a href="typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a>
@@ -286,6 +286,9 @@
 						<a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.deepcommenthandler.html" class="tsd-kind-icon">Deep<wbr>Comment<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -296,6 +299,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.exporthandler.html" class="tsd-kind-icon">Export<wbr>Handler</a>
 					</li>
 					<li class="current tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a>
@@ -331,6 +337,9 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.modulecommenthandler.html" class="tsd-kind-icon">Module<wbr>Comment<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a>

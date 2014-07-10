@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>AstHandler | TypeDoc Documentation</title>
+	<title>ModuleCommentHandler | TypeDoc Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -50,25 +50,31 @@
 					<a href="../modules/typedoc.factories.html">Factories</a>
 				</li>
 				<li>
-					<a href="typedoc.factories.asthandler.html">AstHandler</a>
+					<a href="typedoc.factories.modulecommenthandler.html">ModuleCommentHandler</a>
 				</li>
 			</ul>
-			<h1>Class AstHandler</h1>
+			<h1>Class ModuleCommentHandler</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8">
-			<p>A handler that analyzes the AST and extracts data not represented by declarations.</p>
+			<p>A handler that extracts comments of containers like modules.</p>
+			<p>The <a href="typedoc.factories.commenthandler.html">CommentHandler</a> only extracts comments directly attached to the current
+				declaration, while this handler looks up the comments of the parent ast of the given
+				declaration if it is some container. As modules might be defined multiple times,
+			this handler stores the found comments and applies them in the resolving phase.</p>
+			<p>If multiple comments for the same module are found, the longest comment will be preferred.
+			One may explicitly set the preferred module comment by appending the tag <code>@preferred</code>.</p>
 			<section class="tsd-hierarchy">
 				<h2>Hierarchy</h2>
 				<ul>
-					<li >
+					<li>
 						<a href="typedoc.factories.basehandler.html" class="tsd-signature-type">BaseHandler</a>
 						<ul>
-							<li class="target">
-								AstHandler
+							<li>
+								ModuleCommentHandler
 							</li>
 						</ul>
 					</li>
@@ -79,25 +85,23 @@
 				<section class="tsd-member-index-group ">
 					<h3>Constructor methods</h3>
 					<ul class="tsd-member-index">
-						<li class="tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite"><a href="typedoc.factories.asthandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						<li class="tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite"><a href="typedoc.factories.modulecommenthandler.html#constructor" class="tsd-kind-icon">constructor</a></li>
 					</ul>
 				</section>
 				<section class="tsd-member-index-group ">
 					<h3>Properties</h3>
 					<ul class="tsd-member-index">
-						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.asthandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
-						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.asthandler.html#exports" class="tsd-kind-icon">exports</a></li>
-						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.asthandler.html#factory" class="tsd-kind-icon">factory</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.modulecommenthandler.html#comments" class="tsd-kind-icon">comments</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="typedoc.factories.modulecommenthandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a></li>
+						<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.modulecommenthandler.html#factory" class="tsd-kind-icon">factory</a></li>
 					</ul>
 				</section>
-				<section class="tsd-member-index-group ">
+				<section class="tsd-member-index-group tsd-is-private">
 					<h3>Methods</h3>
 					<ul class="tsd-member-index">
-						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.asthandler.html#getexportedidentifier" class="tsd-kind-icon">get<wbr>Exported<wbr>Identifier</a></li>
-						<li class="tsd-kind-method tsd-parent-kind-class"><a href="typedoc.factories.asthandler.html#getexportedsymbol" class="tsd-kind-icon">get<wbr>Exported<wbr>Symbol</a></li>
-						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="typedoc.factories.asthandler.html#static-markasexported" class="tsd-kind-icon">mark<wbr>AsExported</a></li>
-						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.asthandler.html#onbegin" class="tsd-kind-icon">on<wbr>Begin</a></li>
-						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.asthandler.html#onbegindeclaration" class="tsd-kind-icon">on<wbr>Begin<wbr>Declaration</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.modulecommenthandler.html#onbegin" class="tsd-kind-icon">on<wbr>Begin</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.modulecommenthandler.html#onbeginresolve" class="tsd-kind-icon">on<wbr>Begin<wbr>Resolve</a></li>
+						<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="typedoc.factories.modulecommenthandler.html#ondeclaration" class="tsd-kind-icon">on<wbr>Declaration</a></li>
 					</ul>
 				</section>
 			</section>
@@ -107,7 +111,7 @@
 					<a name="constructor" class="anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>dispatcher<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.asthandler.html" class="tsd-signature-type">AstHandler</a></li>
+						<li class="tsd-signature tsd-kind-icon">constructor<span class="tsd-signature-symbols">(</span>dispatcher<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcher.html" class="tsd-signature-type">Dispatcher</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typedoc.factories.modulecommenthandler.html" class="tsd-signature-type">ModuleCommentHandler</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
@@ -115,10 +119,10 @@
 									<a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#constructor">constructor</a>
 								</p>
 								<ul>
-									<li>Defined in typedoc/factories/handlers/AstHandler.ts:48</li>
+									<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:53</li>
 								</ul>
 							</aside>
-							<p>Create a new AstHandler instance.</p>
+							<p>Create a new ModuleCommentHandler instance.</p>
 							<h4>Parameters</h4>
 							<ul>
 								<li>
@@ -127,7 +131,7 @@
 								</li>
 							</ul>
 							<h4>Returns 
-								<a href="typedoc.factories.asthandler.html" class="tsd-signature-type">AstHandler</a>
+								<a href="typedoc.factories.modulecommenthandler.html" class="tsd-signature-type">ModuleCommentHandler</a>
 							</h4>
 						</li>
 					</ul>
@@ -135,6 +139,41 @@
 			</section>
 			<section class="tsd-member-group ">
 				<h2>Properties</h2>
+				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="comments" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagprivate">private</span> comments</h3>
+					<div class="tsd-signature tsd-kind-icon">comments<span class="tsd-signature-symbols">:</span> <span class="tsd-signature-type">Object</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:45</li>
+						</ul>
+					</aside>
+					<p>List of discovered module comments.</p>
+					<section class="tsd-member tsd-kind-index-signature tsd-parent-kind-property">
+						<a name="comments.comments_index_signature" class="anchor"></a>
+						<h3>comments index signature</h3>
+						<ul class="tsd-signatures tsd-kind-index-signature tsd-parent-kind-property">
+							<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbols">(</span>id<span class="tsd-signature-symbols">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-signature-type">IModuleComment</a></li>
+						</ul>
+						<ul class="tsd-descriptions">
+							<li class="tsd-description"><aside class="tsd-sources">
+									<ul>
+										<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:45</li>
+									</ul>
+								</aside>
+								<h4>Parameters</h4>
+								<ul>
+									<li>
+										<h5>id: <span class="tsd-signature-type">number</span></h5>
+									</li>
+								</ul>
+								<h4>Returns 
+									<a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-signature-type">IModuleComment</a>
+								</h4>
+							</li>
+						</ul>
+					</section>
+				</section>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
 					<a name="dispatcher" class="anchor"></a>
 					<h3>dispatcher</h3>
@@ -144,21 +183,10 @@
 							<a href="typedoc.factories.basehandler.html">BaseHandler</a>.<a href="typedoc.factories.basehandler.html#dispatcher">dispatcher</a>
 						</p>
 						<ul>
-							<li>Defined in typedoc/factories/BaseHandler.ts:10</li>
+							<li>Defined in src/typedoc/factories/BaseHandler.ts:10</li>
 						</ul>
 					</aside>
 					<p>The dispatcher this handler is attached to.</p>
-				</section>
-				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
-					<a name="exports" class="anchor"></a>
-					<h3><span class="tsd-flag ts-flagprivate">private</span> exports</h3>
-					<div class="tsd-signature tsd-kind-icon">exports<span class="tsd-signature-symbols">:</span> <a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-signature-type">IExportInfo</a><span class="tsd-signature-symbols">[]</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in typedoc/factories/handlers/AstHandler.ts:39</li>
-						</ul>
-					</aside>
-					<p>Collected ambient module export data.</p>
 				</section>
 				<section class="tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 					<a name="factory" class="anchor"></a>
@@ -166,91 +194,14 @@
 					<div class="tsd-signature tsd-kind-icon">factory<span class="tsd-signature-symbols">:</span> <a href="typescript.astwalkerfactory.html" class="tsd-signature-type">AstWalkerFactory</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in typedoc/factories/handlers/AstHandler.ts:34</li>
+							<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:40</li>
 						</ul>
 					</aside>
 					<p>The ast walker factory.</p>
 				</section>
 			</section>
-			<section class="tsd-member-group ">
+			<section class="tsd-member-group tsd-is-private">
 				<h2>Methods</h2>
-				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getexportedidentifier" class="anchor"></a>
-					<h3>get<wbr>Exported<wbr>Identifier</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Exported<wbr>Identifier<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.identifier.html" class="tsd-signature-type">Identifier</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
-								<ul>
-									<li>Defined in typedoc/factories/handlers/AstHandler.ts:141</li>
-								</ul>
-							</aside>
-							<p>Try to find the identifier of the export assignment within the given declaration.</p>
-							<h4>Parameters</h4>
-							<ul>
-								<li>
-									<h5>declaration: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
-									<p>The declaration whose export assignment should be resolved.</p>
-								</li>
-							</ul>
-							<h4>Returns 
-								<a href="typescript.identifier.html" class="tsd-signature-type">Identifier</a>
-							</h4>
-							<p>The found identifier or NULL.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="getexportedsymbol" class="anchor"></a>
-					<h3>get<wbr>Exported<wbr>Symbol</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Exported<wbr>Symbol<span class="tsd-signature-symbols">(</span>declaration<span class="tsd-signature-symbols">: </span><a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a><span class="tsd-signature-symbols">)</span><span class="tsd-signature-symbols">: </span><a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
-								<ul>
-									<li>Defined in typedoc/factories/handlers/AstHandler.ts:166</li>
-								</ul>
-							</aside>
-							<p>Try to find the compiler symbol exported by the given declaration.</p>
-							<h4>Parameters</h4>
-							<ul>
-								<li>
-									<h5>declaration: <a href="typescript.pulldecl.html" class="tsd-signature-type">PullDecl</a></h5>
-									<p>The declaration whose export assignment should be resolved.</p>
-								</li>
-							</ul>
-							<h4>Returns 
-								<a href="typescript.pullsymbol.html" class="tsd-signature-type">PullSymbol</a>
-							</h4>
-							<p>The found compiler symbol or NULL.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="static-markasexported" class="anchor"></a>
-					<h3><span class="tsd-flag ts-flagstatic">static</span> mark<wbr>AsExported</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">mark<wbr>AsExported<span class="tsd-signature-symbols">(</span>reflection<span class="tsd-signature-symbols">: </span><a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a><span class="tsd-signature-symbols">)</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description"><aside class="tsd-sources">
-								<ul>
-									<li>Defined in typedoc/factories/handlers/AstHandler.ts:184</li>
-								</ul>
-							</aside>
-							<p>Mark the given reflection and all of its children as being exported.</p>
-							<h4>Parameters</h4>
-							<ul>
-								<li>
-									<h5>reflection: <a href="typedoc.models.declarationreflection.html" class="tsd-signature-type">DeclarationReflection</a></h5>
-									<p>The reflection that should be marked as being exported.</p>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
 					<a name="onbegin" class="anchor"></a>
 					<h3><span class="tsd-flag ts-flagprivate">private</span> on<wbr>Begin</h3>
@@ -260,7 +211,7 @@
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/factories/handlers/AstHandler.ts:63</li>
+									<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:69</li>
 								</ul>
 							</aside>
 							<p>Triggered once per project before the dispatcher invokes the compiler.</p>
@@ -275,18 +226,41 @@
 					</ul>
 				</section>
 				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="onbegindeclaration" class="anchor"></a>
-					<h3><span class="tsd-flag ts-flagprivate">private</span> on<wbr>Begin<wbr>Declaration</h3>
+					<a name="onbeginresolve" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagprivate">private</span> on<wbr>Begin<wbr>Resolve</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">on<wbr>Begin<wbr>Declaration<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Begin<wbr>Resolve<span class="tsd-signature-symbols">(</span>event<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a><span class="tsd-signature-symbols">)</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description"><aside class="tsd-sources">
 								<ul>
-									<li>Defined in typedoc/factories/handlers/AstHandler.ts:73</li>
+									<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:143</li>
 								</ul>
 							</aside>
-							<p>Triggered when the dispatcher starts processing a declaration.</p>
+							<p>Triggered when the dispatcher enters the resolving phase.</p>
+							<h4>Parameters</h4>
+							<ul>
+								<li>
+									<h5>event: <a href="typedoc.factories.dispatcherevent.html" class="tsd-signature-type">DispatcherEvent</a></h5>
+									<p>An event object containing the related project and compiler instance.</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="ondeclaration" class="anchor"></a>
+					<h3><span class="tsd-flag ts-flagprivate">private</span> on<wbr>Declaration</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Declaration<span class="tsd-signature-symbols">(</span>state<span class="tsd-signature-symbols">: </span><a href="typedoc.factories.declarationstate.html" class="tsd-signature-type">DeclarationState</a><span class="tsd-signature-symbols">)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description"><aside class="tsd-sources">
+								<ul>
+									<li>Defined in src/typedoc/factories/handlers/ModuleCommentHandler.ts:79</li>
+								</ul>
+							</aside>
+							<p>Triggered when the dispatcher processes a declaration.</p>
 							<h4>Parameters</h4>
 							<ul>
 								<li>
@@ -326,43 +300,14 @@
 					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
 						<a href="../interfaces/typedoc.factories.iexportinfo.html" class="tsd-kind-icon">IExport<wbr>Info</a>
 					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-container tsd-is-not-exported">
+						<a href="../interfaces/typedoc.factories.imodulecomment.html" class="tsd-kind-icon">IModule<wbr>Comment</a>
+					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.ireflectionhandlermergestrategy.html" class="tsd-kind-icon">IReflection<wbr>Handler<wbr>Merge<wbr>Strategy</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-container">
 						<a href="../interfaces/typedoc.factories.iscriptsnapshot.html" class="tsd-kind-icon">IScript<wbr>Snapshot</a>
-					</li>
-					<li class="current tsd-kind-class tsd-parent-kind-container">
-						<a href="typedoc.factories.asthandler.html" class="tsd-kind-icon">Ast<wbr>Handler</a>
-						<ul>
-							<li class=" tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
-								<a href="typedoc.factories.asthandler.html#constructor" class="tsd-kind-icon">constructor</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
-								<a href="typedoc.factories.asthandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="typedoc.factories.asthandler.html#exports" class="tsd-kind-icon">exports</a>
-							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="typedoc.factories.asthandler.html#factory" class="tsd-kind-icon">factory</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="typedoc.factories.asthandler.html#getexportedidentifier" class="tsd-kind-icon">get<wbr>Exported<wbr>Identifier</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="typedoc.factories.asthandler.html#getexportedsymbol" class="tsd-kind-icon">get<wbr>Exported<wbr>Symbol</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="typedoc.factories.asthandler.html#static-markasexported" class="tsd-kind-icon">mark<wbr>AsExported</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="typedoc.factories.asthandler.html#onbegin" class="tsd-kind-icon">on<wbr>Begin</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="typedoc.factories.asthandler.html#onbegindeclaration" class="tsd-kind-icon">on<wbr>Begin<wbr>Declaration</a>
-							</li>
-						</ul>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.basehandler.html" class="tsd-kind-icon">Base<wbr>Handler</a>
@@ -383,6 +328,9 @@
 						<a href="typedoc.factories.declarationstate.html" class="tsd-kind-icon">Declaration<wbr>State</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.deepcommenthandler.html" class="tsd-kind-icon">Deep<wbr>Comment<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.dispatcher.html" class="tsd-kind-icon">Dispatcher</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -395,6 +343,9 @@
 						<a href="typedoc.factories.dynamicmodulehandler.html" class="tsd-kind-icon">Dynamic<wbr>Module<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.exporthandler.html" class="tsd-kind-icon">Export<wbr>Handler</a>
+					</li>
+					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.externalhandler.html" class="tsd-kind-icon">External<wbr>Handler</a>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
@@ -405,6 +356,32 @@
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.inheritancehandler.html" class="tsd-kind-icon">Inheritance<wbr>Handler</a>
+					</li>
+					<li class="current tsd-kind-class tsd-parent-kind-container">
+						<a href="typedoc.factories.modulecommenthandler.html" class="tsd-kind-icon">Module<wbr>Comment<wbr>Handler</a>
+						<ul>
+							<li class=" tsd-kind-constructor-method tsd-parent-kind-class tsd-is-overwrite">
+								<a href="typedoc.factories.modulecommenthandler.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.modulecommenthandler.html#comments" class="tsd-kind-icon">comments</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="typedoc.factories.modulecommenthandler.html#dispatcher" class="tsd-kind-icon">dispatcher</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.modulecommenthandler.html#factory" class="tsd-kind-icon">factory</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.modulecommenthandler.html#onbegin" class="tsd-kind-icon">on<wbr>Begin</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.modulecommenthandler.html#onbeginresolve" class="tsd-kind-icon">on<wbr>Begin<wbr>Resolve</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="typedoc.factories.modulecommenthandler.html#ondeclaration" class="tsd-kind-icon">on<wbr>Declaration</a>
+							</li>
+						</ul>
 					</li>
 					<li class=" tsd-kind-class tsd-parent-kind-container">
 						<a href="typedoc.factories.nullhandler.html" class="tsd-kind-icon">Null<wbr>Handler</a>
